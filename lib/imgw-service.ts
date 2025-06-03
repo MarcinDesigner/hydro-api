@@ -64,6 +64,12 @@ export class IMGWService {
   
   static async fetchCurrentAPIData(): Promise<any[]> {
     try {
+      // Unikaj połączeń z API podczas build
+      if (process.env.NODE_ENV === 'production' && !process.env.VERCEL_URL) {
+        console.log('Skipping API call during build');
+        return [];
+      }
+      
       const response = await axios.get(this.config.baseUrl, {
         timeout: 15000,
         headers: {

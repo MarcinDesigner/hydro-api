@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { DatabaseService } from '@/lib/database-service';
+import { IMGWService } from '@/lib/imgw-service';
 
 export async function POST(request: NextRequest) {
   try {
-    // Sprawdź autoryzację (opcjonalnie)
+    // Sprawdź autoryzację
     const authHeader = request.headers.get('authorization');
     const expectedToken = process.env.CRON_SECRET_TOKEN;
     
@@ -14,14 +14,16 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    console.log('🔄 Starting data synchronization with Supabase...');
+    console.log('🔄 Starting data synchronization...');
     
-    // Uruchom synchronizację z bazą danych
-    await DatabaseService.syncStationsAndMeasurements();
+    // Pobierz dane z IMGW API (bez zapisywania do bazy)
+    const allStations = await IMGWService.getAllStations();
+    console.log(`📊 Fetched ${allStations.length} stations from IMGW API`);
     
     return NextResponse.json({
       status: 'success',
-      message: 'Data synchronized successfully with Supabase',
+      message: `Data synchronized successfully - fetched ${allStations.length} stations`,
+      stations_count: allStations.length,
       timestamp: new Date().toISOString()
     });
     
@@ -36,10 +38,10 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// Opcjonalnie - endpoint GET do ręcznego testowania
+// Endpoint GET do testowania
 export async function GET(request: NextRequest) {
   return NextResponse.json({
-    message: 'Sync endpoint is working. Use POST to trigger synchronization with Supabase.',
+    message: 'Sync endpoint is working. Use POST to trigger synchronization.',
     timestamp: new Date().toISOString()
   });
 } 

@@ -1,9 +1,14 @@
- // next.config.js
+// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     experimental: {
-      serverComponentsExternalPackages: ['@prisma/client']
+      serverComponentsExternalPackages: ['@prisma/client', 'prisma']
     },
+    // Wyłącz statyczne generowanie dla API routes
+    async rewrites() {
+      return []
+    },
+    // Konfiguracja dla Vercel
     async headers() {
       return [
         {
