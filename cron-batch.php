@@ -1,7 +1,7 @@
 <?php
 /**
  * Batch skrypt cron dla Hydro API
- * Pobiera wszystkie 866 stacji w cyklu ~87 minut (10 stacji co minutę)
+ * Pobiera wszystkie 866 stacji w cyklu ~18 minut (50 stacji co minutę)
  * Uruchom co minutę: * * * * * /usr/bin/php /path/to/cron-batch.php
  */
 

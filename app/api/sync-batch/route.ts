@@ -25,8 +25,8 @@ export async function POST(request: NextRequest) {
     const now = new Date();
     const minuteOfHour = now.getMinutes();
     
-    // Podziel stacje na batche po 10
-    const batchSize = 10;
+    // Podziel stacje na batche po 50 (optymalne na podstawie testów)
+    const batchSize = 50;
     const totalBatches = Math.ceil(smartStations.length / batchSize);
     
     // Oblicz który batch pobrać (rotacja co minutę)
@@ -148,7 +148,7 @@ export async function POST(request: NextRequest) {
 export async function GET(request: NextRequest) {
   try {
     const smartStations = await SmartDataService.getSmartStationsData();
-    const batchSize = 10;
+    const batchSize = 50;
     const totalBatches = Math.ceil(smartStations.length / batchSize);
     
     return NextResponse.json({
