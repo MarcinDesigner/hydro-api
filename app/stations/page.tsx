@@ -2,8 +2,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Search, Filter, MapPin, TrendingUp, TrendingDown, Minus } from 'lucide-react';
+import { Search, Filter, MapPin, TrendingUp, TrendingDown, Minus, Eye, Settings } from 'lucide-react';
+import Link from 'next/link';
 import { StationCard } from '@/components/StationCard';
+import { StationEditModal } from '@/components/StationEditModal';
 import { StationData } from '@/types/hydro';
 
 export default function StationsPage() {
@@ -15,6 +17,8 @@ export default function StationsPage() {
   const [selectedRiver, setSelectedRiver] = useState('');
   const [selectedTrend, setSelectedTrend] = useState('');
   const [showFilters, setShowFilters] = useState(false);
+  const [editingStation, setEditingStation] = useState<StationData | null>(null);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
   useEffect(() => {
     fetchStations();
@@ -85,6 +89,37 @@ export default function StationsPage() {
 
   const trendStats = getTrendStats();
 
+  const handleEditStation = (station: StationData) => {
+    setEditingStation(station);
+    setIsEditModalOpen(true);
+  };
+
+  const handleSaveStation = async (stationId: string, data: { riverName: string; warningLevel: number | null; alarmLevel: number | null }) => {
+    try {
+      const response = await fetch(`/api/stations/${stationId}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to update station');
+      }
+
+      // Odśwież listę stacji
+      await fetchStations();
+      
+      // Pokaż komunikat sukcesu (opcjonalnie)
+      console.log('Station updated successfully');
+    } catch (error) {
+      console.error('Error updating station:', error);
+      throw error;
+    }
+  };
+
   if (loading) {
     return (
       <div className="space-y-6">
@@ -112,13 +147,22 @@ export default function StationsPage() {
             {filteredStations.length} z {stations.length} stacji
           </p>
         </div>
-        <button
-          onClick={() => setShowFilters(!showFilters)}
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors"
-        >
-          <Filter className="h-4 w-4" />
-          <span>Filtry</span>
-        </button>
+        <div className="flex items-center space-x-3">
+          <Link
+            href="/stations/visibility"
+            className="flex items-center space-x-2 px-4 py-2 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors"
+          >
+            <Eye className="h-4 w-4" />
+            <span>Zarządzaj widocznością</span>
+          </Link>
+          <button
+            onClick={() => setShowFilters(!showFilters)}
+            className="flex items-center space-x-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors"
+          >
+            <Filter className="h-4 w-4" />
+            <span>Filtry</span>
+          </button>
+        </div>
       </div>
 
       {/* Trend summary */}
@@ -249,7 +293,11 @@ export default function StationsPage() {
       {/* Stations grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredStations.map((station) => (
-          <StationCard key={station.id_stacji} station={station} />
+          <StationCard 
+            key={station.id_stacji} 
+            station={station} 
+            onEdit={handleEditStation}
+          />
         ))}
       </div>
 
@@ -262,6 +310,19 @@ export default function StationsPage() {
             Nie znaleziono stacji pasujących do wybranych filtrów.
           </p>
         </div>
+      )}
+
+      {/* Edit Modal */}
+      {editingStation && (
+        <StationEditModal
+          station={editingStation}
+          isOpen={isEditModalOpen}
+          onClose={() => {
+            setIsEditModalOpen(false);
+            setEditingStation(null);
+          }}
+          onSave={handleSaveStation}
+        />
       )}
     </div>
   );

@@ -41,7 +41,7 @@ function syncHydroData() {
             'method' => 'POST',
             'header' => implode("\r\n", $headers),
             'content' => json_encode(['source' => 'cron']),
-            'timeout' => 60
+            'timeout' => 300
         ]
     ]);
     

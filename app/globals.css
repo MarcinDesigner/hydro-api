@@ -3,6 +3,97 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Leaflet CSS */
+@import 'leaflet/dist/leaflet.css';
+
+/* Custom styles for map */
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom station markers */
+.custom-station-marker {
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.custom-station-marker:hover {
+  transform: scale(1.1);
+  z-index: 1000;
+}
+
+/* High priority markers (alarm/warning) */
+.high-priority-marker {
+  z-index: 1000 !important;
+  position: relative !important;
+}
+
+.high-priority-marker svg {
+  filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.6));
+}
+
+/* Pulsing effect for alarm markers */
+.high-priority-marker.alarm-marker {
+  animation: alarmPulse 2s infinite;
+  transform-origin: center center;
+}
+
+/* Ensure alarm markers are always visible */
+.leaflet-marker-icon.alarm-marker {
+  z-index: 2000 !important;
+}
+
+@keyframes alarmPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.6));
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 12px rgba(239, 68, 68, 0.8));
+  }
+}
+
+/* Status dot animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.status-dot.bg-green-500 {
+  background-color: #10b981;
+}
+
+.status-dot.bg-red-500 {
+  background-color: #ef4444;
+}
+
+.status-dot.bg-yellow-500 {
+  background-color: #f59e0b;
+}
+
+.status-dot.bg-gray-500 {
+  background-color: #6b7280;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

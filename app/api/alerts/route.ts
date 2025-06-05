@@ -1,16 +1,17 @@
 // app/api/alerts/route.ts
 import { NextRequest, NextResponse } from 'next/server';
-import { IMGWService } from '@/lib/imgw-service';
+import { SmartDataService } from '@/lib/smart-data-service';
 
 export async function GET() {
   try {
-    // Pobierz wszystkie stacje
-    const stations = await IMGWService.getAllStations();
+    // Pobierz inteligentne dane ze wszystkich stacji (najświeższe z obu endpointów)
+    const stations = await SmartDataService.getSmartStationsData();
     
-    // Generuj proste alerty na podstawie poziomu wody
+    // Generuj alerty na podstawie rzeczywistych poziomów alarmowych
     const alerts = stations
-      .filter(station => station.waterLevel && station.waterLevel > 300) // Przykładowy próg
-      .slice(0, 10) // Ograniczenie do 10 alertów
+      .filter(station => 
+        station.alarmStatus === 'warning' || station.alarmStatus === 'alarm'
+      )
       .map((station, index) => ({
         id: `alert_${station.id}_${Date.now()}_${index}`,
         station: {
@@ -19,10 +20,19 @@ export async function GET() {
           river: station.river || 'Nieznana rzeka',
           voivodeship: station.voivodeship || 'Nieznane województwo'
         },
-        alertType: station.waterLevel && station.waterLevel > 500 ? 'critical' : 'warning',
-        message: `Wysoki poziom wody: ${station.waterLevel}cm`,
-        waterLevel: station.waterLevel,
-        thresholdLevel: 300,
+        alertType: station.alarmStatus === 'alarm' ? 'alarm' : 'warning',
+        message: station.alarmMessage || `${station.alarmStatus === 'alarm' ? 'Alarm' : 'Ostrzeżenie'}: ${station.waterLevel}cm`,
+        waterLevel: station.waterLevel || 0,
+        thresholdLevel: station.alarmStatus === 'alarm' 
+          ? (typeof station.alarmLevel === 'number' ? station.alarmLevel : 0)
+          : (typeof station.warningLevel === 'number' ? station.warningLevel : 0),
+        warningLevel: station.warningLevel,
+        alarmLevel: station.alarmLevel,
+        coordinates: {
+          longitude: station.longitude,
+          latitude: station.latitude,
+          source: station.coordinatesSource
+        },
         createdAt: new Date().toISOString(),
         isActive: true
       }));

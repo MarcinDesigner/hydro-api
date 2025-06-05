@@ -192,6 +192,86 @@ interface NormalizedStationData {
 
 ## Zalecenia użycia
 
+## Zarządzanie widocznością stacji
+
+### GET `/api/stations/visibility`
+Pobiera statystyki widoczności stacji.
+
+**Odpowiedź:**
+```json
+{
+  "status": "success",
+  "data": {
+    "totalStations": 609,
+    "visibleStations": 605,
+    "hiddenStations": 4,
+    "hiddenStationsList": [
+      {
+        "stationId": "150160330",
+        "isVisible": false,
+        "hiddenAt": "2024-01-15T10:30:00.000Z",
+        "hiddenBy": "API User",
+        "reason": "Station maintenance"
+      }
+    ]
+  }
+}
+```
+
+### POST `/api/stations/visibility`
+Ustawia widoczność stacji.
+
+**Żądanie:**
+```json
+{
+  "stationId": "150160330",
+  "isVisible": false,
+  "reason": "Station maintenance"
+}
+```
+
+### GET `/api/stations/{id}/visibility`
+Sprawdza widoczność konkretnej stacji.
+
+### POST `/api/stations/{id}/visibility`
+Przełącza widoczność stacji.
+
+**Żądanie:**
+```json
+{
+  "reason": "Toggle from map"
+}
+```
+
+### PUT `/api/stations/{id}/visibility`
+Ustawia konkretną widoczność stacji.
+
+**Żądanie:**
+```json
+{
+  "isVisible": true,
+  "reason": "Station back online"
+}
+```
+
+## Panel zarządzania widocznością
+
+Dostępny pod adresem `/stations/visibility`:
+
+1. **Statystyki** - liczba widocznych/ukrytych stacji
+2. **Lista wszystkich stacji** - z możliwością ukrywania/pokazywania
+3. **Przycisk "Pokaż wszystkie"** - przywraca widoczność wszystkich stacji
+4. **Historia ukryć** - data i powód ukrycia stacji
+
+## Ukrywanie stacji z mapy
+
+Na mapie stacji (`/map`) każda stacja ma przycisk "Ukryj stację w API":
+
+1. **Kliknij marker stacji** na mapie
+2. **Kliknij "Ukryj stację w API"** w popup
+3. **Stacja zostanie ukryta** we wszystkich endpointach API
+4. **Mapa się odświeży** automatycznie
+
 ### Kiedy używać `/hydro`:
 - ✅ Potrzebujesz nazw rzek i województw
 - ✅ Analizujesz zjawiska lodowe/zarastania

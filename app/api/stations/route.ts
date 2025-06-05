@@ -1,6 +1,7 @@
 // app/api/stations/route.ts
 import { NextRequest, NextResponse } from 'next/server';
-import { IMGWService } from '@/lib/imgw-service';
+import { SmartDataService } from '@/lib/smart-data-service';
+import { prisma } from '@/lib/prisma';
 
 export async function GET(request: NextRequest) {
   try {
@@ -9,9 +10,36 @@ export async function GET(request: NextRequest) {
     const voivodeship = searchParams.get('voivodeship');
     const river = searchParams.get('river');
     const limit = searchParams.get('limit');
+    const freshOnly = searchParams.get('fresh') === 'true';
 
-    // Pobierz prawdziwe dane z API IMGW
-    let allStations = await IMGWService.getAllStations();
+    // Pobierz inteligentne dane ze wszystkich stacji (najświeższe z obu endpointów)
+    let allStations = await SmartDataService.getSmartStationsData();
+
+    // Pobierz dane z bazy danych dla wszystkich stacji
+    let dbStationsMap = new Map();
+    try {
+      const dbStations = await prisma.station.findMany({
+        select: {
+          stationCode: true,
+          riverName: true,
+          warningLevel: true,
+          alarmLevel: true,
+        }
+      });
+
+      // Utwórz mapę dla szybkiego dostępu do danych z bazy
+      dbStationsMap = new Map(
+        dbStations.map(station => [station.stationCode, station])
+      );
+    } catch (dbError) {
+      console.warn('Database connection failed, using API data only:', dbError);
+      // Kontynuuj bez danych z bazy
+    }
+
+    // Filtrowanie po świeżości danych
+    if (freshOnly) {
+      allStations = allStations.filter(station => station.dataFreshness === 'fresh');
+    }
 
     // Filtrowanie po województwie
     if (voivodeship) {
@@ -35,24 +63,37 @@ export async function GET(request: NextRequest) {
       }
     }
 
-    // Przekształć dane do standardowego formatu
-    const formattedStations = allStations.map(station => ({
-      id_stacji: station.id,
-      stacja: station.name,
-      rzeka: station.river,
-      województwo: station.voivodeship,
-      stan_wody: station.waterLevel?.toString() || null,
-      stan_wody_data_pomiaru: station.waterLevelDate,
-      przelyw: station.flow?.toString() || null,
-      temperatura_wody: station.waterTemp?.toString() || null,
-      source: station.source,
-      longitude: station.longitude,
-      latitude: station.latitude,
-      poziom_ostrzegawczy: null, // Brak w API IMGW
-      poziom_alarmowy: null,     // Brak w API IMGW
-      trend: 'stable' as const,  // Wymagałoby porównania z poprzednimi danymi
-      zmiana_poziomu: '0'        // Wymagałoby porównania z poprzednimi danymi
-    }));
+    // Przekształć dane do standardowego formatu z dodatkowymi informacjami o świeżości
+    const formattedStations = allStations.map(station => {
+      const dbStation = dbStationsMap.get(station.id);
+      
+      return {
+        id_stacji: station.id,
+        stacja: station.name,
+        rzeka: dbStation?.riverName || station.river, // Priorytet dla danych z bazy
+        województwo: station.voivodeship,
+        stan_wody: station.waterLevel?.toString() || null,
+        stan_wody_data_pomiaru: station.waterLevelDate,
+        przelyw: station.flow?.toString() || null,
+        przelyw_data_pomiaru: station.flowDate,
+        // Współrzędne z cache lub hydro2
+        longitude: station.longitude,
+        latitude: station.latitude,
+        coordinates_source: station.coordinatesSource,
+        // Poziomy alarmowe - priorytet dla danych z bazy
+        poziom_ostrzegawczy: dbStation?.warningLevel?.toString() || station.warningLevel,
+        poziom_alarmowy: dbStation?.alarmLevel?.toString() || station.alarmLevel,
+        status_alarmowy: station.alarmStatus,
+        komunikat_alarmowy: station.alarmMessage,
+        // Informacje o świeżości danych
+        source: station.source,
+        data_freshness: station.dataFreshness,
+        hours_old: station.hoursOld,
+        is_fresh: station.dataFreshness === 'fresh',
+        trend: 'stable' as const,  // Wymagałoby porównania z poprzednimi danymi
+        zmiana_poziomu: '0'        // Wymagałoby porównania z poprzednimi danymi
+      };
+    });
 
     return NextResponse.json({
       status: 'success',

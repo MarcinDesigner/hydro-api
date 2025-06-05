@@ -16,6 +16,13 @@ interface Alert {
   message: string;
   waterLevel: number;
   thresholdLevel: number;
+  warningLevel?: number | 'nie określono';
+  alarmLevel?: number | 'nie określono';
+  coordinates?: {
+    longitude: number | null;
+    latitude: number | null;
+    source: string;
+  };
   createdAt: string;
   isActive: boolean;
 }
@@ -238,28 +245,120 @@ export default function AlertsPage() {
                   <div className="text-right">
                     <div className="font-bold text-lg">{alert.waterLevel} cm</div>
                     <div className="text-xs text-gray-500">
-                      Próg: {alert.thresholdLevel} cm
+                      Aktualny próg: {alert.thresholdLevel} cm
                     </div>
                   </div>
                 </div>
                 
+                {/* Poziomy ostrzegawczy i alarmowy */}
+                {(alert.warningLevel || alert.alarmLevel) && (
+                  <div className="mt-2 text-xs text-gray-600">
+                    {alert.warningLevel && typeof alert.warningLevel === 'number' && (
+                      <div className="flex justify-between">
+                        <span>Poziom ostrzegawczy:</span>
+                        <span className="font-medium text-yellow-600">{alert.warningLevel} cm</span>
+                      </div>
+                    )}
+                    {alert.alarmLevel && typeof alert.alarmLevel === 'number' && (
+                      <div className="flex justify-between">
+                        <span>Poziom alarmowy:</span>
+                        <span className="font-medium text-red-600">{alert.alarmLevel} cm</span>
+                      </div>
+                    )}
+                  </div>
+                )}
+                
                 {/* Progress bar */}
                 <div className="mt-2">
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div
-                      className={`h-2 rounded-full ${
-                        alert.alertType === 'alarm' ? 'bg-red-500' : 'bg-yellow-500'
-                      }`}
-                      style={{
-                        width: `${Math.min((alert.waterLevel / alert.thresholdLevel) * 100, 100)}%`
-                      }}
-                    ></div>
-                  </div>
-                  <div className="flex justify-between text-xs text-gray-500 mt-1">
-                    <span>0 cm</span>
-                    <span>{alert.thresholdLevel} cm ({alert.alertType === 'alarm' ? 'alarm' : 'ostrzegawczy'})</span>
-                  </div>
+                  {(() => {
+                    // Oblicz maksymalny poziom (największy z dostępnych progów + 10%)
+                    const maxLevel = Math.max(
+                      alert.thresholdLevel,
+                      typeof alert.warningLevel === 'number' ? alert.warningLevel : 0,
+                      typeof alert.alarmLevel === 'number' ? alert.alarmLevel : 0,
+                      alert.waterLevel
+                    ) * 1.1;
+                    
+                    return (
+                      <>
+                        <div className="relative w-full bg-gray-200 rounded-full h-3">
+                          {/* Pasek aktualnego poziomu */}
+                          <div
+                            className={`h-3 rounded-full ${
+                              alert.alertType === 'alarm' ? 'bg-red-500' : 'bg-yellow-500'
+                            }`}
+                            style={{
+                              width: `${Math.min((alert.waterLevel / maxLevel) * 100, 100)}%`
+                            }}
+                          ></div>
+                          
+                          {/* Linia progu ostrzegawczego */}
+                          {typeof alert.warningLevel === 'number' && (
+                            <div
+                              className="absolute top-0 w-0.5 h-3 bg-yellow-600"
+                              style={{
+                                left: `${Math.min((alert.warningLevel / maxLevel) * 100, 100)}%`
+                              }}
+                              title={`Próg ostrzegawczy: ${alert.warningLevel} cm`}
+                            ></div>
+                          )}
+                          
+                          {/* Linia progu alarmowego */}
+                          {typeof alert.alarmLevel === 'number' && (
+                            <div
+                              className="absolute top-0 w-0.5 h-3 bg-red-600"
+                              style={{
+                                left: `${Math.min((alert.alarmLevel / maxLevel) * 100, 100)}%`
+                              }}
+                              title={`Próg alarmowy: ${alert.alarmLevel} cm`}
+                            ></div>
+                          )}
+                        </div>
+                        
+                        <div className="flex justify-between text-xs text-gray-500 mt-1">
+                          <span>0 cm</span>
+                          <span>{Math.round(maxLevel)} cm (maks. skala)</span>
+                        </div>
+                        
+                        {/* Legenda progów */}
+                        <div className="flex items-center space-x-4 text-xs text-gray-600 mt-1">
+                          {typeof alert.warningLevel === 'number' && (
+                            <div className="flex items-center space-x-1">
+                              <div className="w-2 h-2 bg-yellow-600"></div>
+                              <span>Ostrzegawczy: {alert.warningLevel} cm</span>
+                            </div>
+                          )}
+                          {typeof alert.alarmLevel === 'number' && (
+                            <div className="flex items-center space-x-1">
+                              <div className="w-2 h-2 bg-red-600"></div>
+                              <span>Alarmowy: {alert.alarmLevel} cm</span>
+                            </div>
+                          )}
+                        </div>
+                      </>
+                    );
+                  })()}
                 </div>
+                
+                {/* Współrzędne */}
+                {alert.coordinates && 
+                 typeof alert.coordinates.longitude === 'number' && 
+                 typeof alert.coordinates.latitude === 'number' && (
+                  <div className="mt-2 pt-2 border-t border-gray-100">
+                    <div className="text-xs text-gray-600">
+                      <div className="flex justify-between">
+                        <span>Współrzędne:</span>
+                        <span className="font-mono">
+                          {alert.coordinates.latitude.toFixed(4)}°N, {alert.coordinates.longitude.toFixed(4)}°E
+                        </span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Źródło:</span>
+                        <span className="capitalize">{alert.coordinates.source}</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Timestamp */}

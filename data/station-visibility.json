@@ -1,0 +1,37 @@
+[
+  {
+    "stationId": "154170080",
+    "isVisible": true,
+    "reason": "Restored all stations visibility"
+  },
+  {
+    "stationId": "151140030",
+    "isVisible": true,
+    "reason": "Restored all stations visibility"
+  },
+  {
+    "stationId": "153190040",
+    "isVisible": true,
+    "reason": "Restored all stations visibility"
+  },
+  {
+    "stationId": "149210120",
+    "isVisible": true,
+    "reason": "Restored all stations visibility"
+  },
+  {
+    "stationId": "154190080",
+    "isVisible": true,
+    "reason": "Restored all stations visibility"
+  },
+  {
+    "stationId": "154180220",
+    "isVisible": true,
+    "reason": "Restored all stations visibility"
+  },
+  {
+    "stationId": "154190050",
+    "isVisible": true,
+    "reason": "Restored all stations visibility"
+  }
+]

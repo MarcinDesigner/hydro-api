@@ -2,13 +2,14 @@
 'use client';
 
 import { StationData } from '@/types/hydro';
-import { MapPin, Droplets, Thermometer, TrendingUp, TrendingDown, Minus, AlertTriangle } from 'lucide-react';
+import { MapPin, Droplets, Thermometer, TrendingUp, TrendingDown, Minus, AlertTriangle, Edit } from 'lucide-react';
 
 interface StationCardProps {
   station: StationData;
+  onEdit?: (station: StationData) => void;
 }
 
-export function StationCard({ station }: StationCardProps) {
+export function StationCard({ station, onEdit }: StationCardProps) {
   const getTrendIcon = () => {
     switch (station.trend) {
       case 'rising':
@@ -117,12 +118,25 @@ export function StationCard({ station }: StationCardProps) {
           </div>
         </div>
         
-        {/* Alert indicator */}
-        {alertLevel !== 'normal' && (
-          <div className={`p-1 rounded-full ${alertLevel === 'alarm' ? 'bg-red-100' : 'bg-yellow-100'}`}>
-            <AlertTriangle className={`h-4 w-4 ${alertLevel === 'alarm' ? 'text-red-600' : 'text-yellow-600'}`} />
-          </div>
-        )}
+        <div className="flex items-center space-x-2">
+          {/* Edit button */}
+          {onEdit && (
+            <button
+              onClick={() => onEdit(station)}
+              className="p-1 rounded-full hover:bg-gray-100 transition-colors"
+              title="Edytuj stację"
+            >
+              <Edit className="h-4 w-4 text-gray-600" />
+            </button>
+          )}
+          
+          {/* Alert indicator */}
+          {alertLevel !== 'normal' && (
+            <div className={`p-1 rounded-full ${alertLevel === 'alarm' ? 'bg-red-100' : 'bg-yellow-100'}`}>
+              <AlertTriangle className={`h-4 w-4 ${alertLevel === 'alarm' ? 'text-red-600' : 'text-yellow-600'}`} />
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Water level */}
