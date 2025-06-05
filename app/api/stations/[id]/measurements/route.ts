@@ -65,8 +65,8 @@ export async function GET(
     const stats = {
       totalMeasurements: measurements.length,
       dateRange: {
-        from: measurements.length > 0 ? measurements[measurements.length - 1].measurementTimestamp : null,
-        to: measurements.length > 0 ? measurements[0].measurementTimestamp : null
+        from: measurements.length > 0 ? measurements[measurements.length - 1]?.measurementTimestamp : null,
+        to: measurements.length > 0 ? measurements[0]?.measurementTimestamp : null
       },
       waterLevel: (() => {
         const validMeasurements = measurements.filter(m => m.waterLevel !== null);
