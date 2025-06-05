@@ -160,8 +160,8 @@ export class SmartDataService {
       flowDate: item.przeplyw_data || null,
       river: item.rzeka,
       voivodeship: item.wojewodztwo,
-      longitude: item.lon,
-      latitude: item.lat,
+      longitude: typeof item.lon === 'number' ? item.lon : parseFloat(item.lon),
+      latitude: typeof item.lat === 'number' ? item.lat : parseFloat(item.lat),
       source: 'hydro2',
       timestamp: new Date().toISOString()
     };
@@ -251,8 +251,8 @@ export class SmartDataService {
         if (!selectedData.longitude || !selectedData.latitude) {
           const cachedCoordinates = await CoordinatesCache.getCoordinates(stationId);
           if (cachedCoordinates) {
-            selectedData.longitude = cachedCoordinates.longitude;
-            selectedData.latitude = cachedCoordinates.latitude;
+            selectedData.longitude = Number(cachedCoordinates.longitude);
+            selectedData.latitude = Number(cachedCoordinates.latitude);
             selectedData.coordinatesSource = 'cache';
           } else {
             selectedData.coordinatesSource = 'none';

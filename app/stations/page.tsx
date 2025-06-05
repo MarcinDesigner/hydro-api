@@ -48,22 +48,22 @@ export default function StationsPage() {
     // Filtrowanie po nazwie stacji/rzece
     if (searchTerm) {
       filtered = filtered.filter(station =>
-        station.stacja.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        station.rzeka.toLowerCase().includes(searchTerm.toLowerCase())
+        station.stacja?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        station.rzeka?.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
 
     // Filtrowanie po województwie
     if (selectedVoivodeship) {
       filtered = filtered.filter(station =>
-        station.województwo.toLowerCase().includes(selectedVoivodeship.toLowerCase())
+        station.województwo?.toLowerCase().includes(selectedVoivodeship.toLowerCase())
       );
     }
 
     // Filtrowanie po rzece
     if (selectedRiver) {
       filtered = filtered.filter(station =>
-        station.rzeka.toLowerCase().includes(selectedRiver.toLowerCase())
+        station.rzeka?.toLowerCase().includes(selectedRiver.toLowerCase())
       );
     }
 

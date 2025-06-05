@@ -4,7 +4,7 @@ interface BadgeProps {
   className?: string;
 }
 
-export default function Badge({ 
+function Badge({ 
   children, 
   variant = 'default', 
   className = '' 
@@ -23,4 +23,7 @@ export default function Badge({
       {children}
     </span>
   );
-} 
+}
+
+export default Badge;
+export { Badge }; 
