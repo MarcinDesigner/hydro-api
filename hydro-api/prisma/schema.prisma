@@ -1,0 +1,79 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+  engineType = "library"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Station {
+  id                  String        @id @default(cuid())
+  stationCode         String        @unique @map("station_code")
+  stationName         String        @map("station_name")
+  riverName           String?       @map("river_name")
+  voivodeship         String?       @map("voivodeship")
+  latitude            Float?
+  longitude           Float?
+  warningLevel        Int?          @map("warning_level")
+  alarmLevel          Int?          @map("alarm_level")
+  apiVisible          Boolean       @default(true) @map("api_visible")
+  createdAt           DateTime      @default(now()) @map("created_at")
+  updatedAt           DateTime      @updatedAt @map("updated_at")
+  measurements        Measurement[]
+  alerts              Alert[]
+
+  @@map("stations")
+}
+
+model Measurement {
+  id                    String   @id @default(cuid())
+  stationId             String   @map("station_id")
+  measurementTimestamp  DateTime @map("measurement_timestamp")
+  waterLevel            Int?     @map("water_level")
+  flowRate              Float?   @map("flow_rate")
+  temperature           Float?   @map("temperature")
+  source                String   // 'hydro' lub 'hydro2'
+  createdAt             DateTime @default(now()) @map("created_at")
+
+  station Station @relation(fields: [stationId], references: [id], onDelete: Cascade)
+  alerts  Alert[]
+
+  @@index([stationId, measurementTimestamp])
+  @@map("measurements")
+}
+
+model Alert {
+  id              String    @id @default(cuid())
+  stationId       String    @map("station_id")
+  measurementId   String?   @map("measurement_id")
+  alertType       String    @map("alert_type") // 'warning' lub 'alarm'
+  message         String
+  waterLevel      Int?      @map("water_level")
+  thresholdLevel  Int?      @map("threshold_level")
+  isActive        Boolean   @default(true) @map("is_active")
+  resolvedAt      DateTime? @map("resolved_at")
+  createdAt       DateTime  @default(now()) @map("created_at")
+
+  station     Station      @relation(fields: [stationId], references: [id], onDelete: Cascade)
+  measurement Measurement? @relation(fields: [measurementId], references: [id], onDelete: SetNull)
+
+  @@index([stationId, isActive])
+  @@index([alertType, isActive])
+  @@map("alerts")
+}
+
+model RiversMapping {
+  id             String    @id @default(cuid())
+  originalName   String    @unique @map("original_name")
+  normalizedName String    @map("normalized_name")
+  displayName    String    @map("display_name")
+  basin          String?
+  order          Int?
+  createdAt      DateTime  @default(now()) @map("created_at")
+  updatedAt      DateTime  @updatedAt @map("updated_at")
+
+  @@map("rivers_mapping")
+}

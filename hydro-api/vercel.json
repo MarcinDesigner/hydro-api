@@ -1,0 +1,19 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "outputDirectory": ".next",
+  "functions": {
+    "app/api/**/*.ts": {
+      "maxDuration": 30
+    }
+  },
+  "env": {
+    "IMGW_API_URL": "https://danepubliczne.imgw.pl/api/data",
+    "IMGW_API_ENDPOINT": "hydro",
+    "SYNC_INTERVAL_MINUTES": "60",
+    "PRISMA_CLIENT_ENGINE_TYPE": "binary",
+    "PGOPTIONS": "--client-min-messages=warning"
+  }
+} 
