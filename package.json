@@ -3,16 +3,16 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "cd hydro-api && next dev",
-    "build": "cd hydro-api && prisma generate && next build",
-    "start": "cd hydro-api && next start",
-    "lint": "cd hydro-api && next lint",
-    "postinstall": "cd hydro-api && prisma generate",
-    "db:generate": "cd hydro-api && prisma generate",
-    "db:push": "cd hydro-api && prisma db push",
-    "db:migrate": "cd hydro-api && prisma migrate dev",
-    "db:seed": "cd hydro-api && node prisma/seed.js",
-    "db:import": "cd hydro-api && psql $DATABASE_URL -f ./prisma/sample_data.sql"
+    "dev": "next dev",
+    "build": "prisma generate && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postinstall": "prisma generate",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "node prisma/seed.js",
+    "db:import": "psql $DATABASE_URL -f ./prisma/sample_data.sql"
   },
   "dependencies": {
     "@prisma/client": "^5.19.1",
