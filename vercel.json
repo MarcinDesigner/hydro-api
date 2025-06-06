@@ -3,12 +3,6 @@
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "outputDirectory": "hydro-api/.next",
-  "functions": {
-    "hydro-api/app/api/**/*.ts": {
-      "maxDuration": 30
-    }
-  },
   "env": {
     "IMGW_API_URL": "https://danepubliczne.imgw.pl/api/data",
     "IMGW_API_ENDPOINT": "hydro",
