@@ -1,0 +1,5234 @@
+[
+  {
+    "stationCode": "149180010",
+    "id": "cmbjkvicx02h3ikijd6a83mut",
+    "name": "Krzyżanowice",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149180020",
+    "id": "cmbjkth80022aikijv4ysnxmi",
+    "name": "Chałupki",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149180030",
+    "id": "cmbjr1o5801uujo0jskftia9y",
+    "name": "ŁAZISKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149180040",
+    "id": "cmbjrknp103ccjo0js739z1ql",
+    "name": "GOŁKOWICE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149180050",
+    "id": "cmbjrkpoj03cfjo0j8w4pklm3",
+    "name": "ZEBRZYDOWICE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149180060",
+    "id": "cmbjrdgrs02sbjo0jh8rtg1xk",
+    "name": "CIESZYN",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149180070",
+    "id": "cmbjl02pe032uikijb3282fye",
+    "name": "Cieszyn",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149180080",
+    "id": "cmbjkosfu0177ikijwft2ypf0",
+    "name": "Drogomyśl",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149180090",
+    "id": "cmbjkskxi01wrikijca450ts9",
+    "name": "Borki Mizerów",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149180100",
+    "id": "cmbjkwzuv02qmikijpscsatx0",
+    "name": "Skoczów",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149180110",
+    "id": "cmbjkty0u0257ikijgtw9eftz",
+    "name": "Ustroń Obłaziec",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "149180120",
+    "id": "cmbjkto2n023jikij87nsed2a",
+    "name": "Górki Wielkie",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "149180130",
+    "id": "cmbjkoawe013yikijel05gbva",
+    "name": "Istebna",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149180140",
+    "id": "cmbjkucyq028dikijgx79hh44",
+    "name": "Wisła",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149180160",
+    "id": "cmbjkqnyf01juikijz3h0c7n4",
+    "name": "Wisła Czarne",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "149180180",
+    "id": "cmbjkp6cv019xikijl4y4d6fo",
+    "name": "Wisła Czarne",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149180200",
+    "id": "cmbjku96b027eikijktg8n8e5",
+    "name": "Wisła Czarne",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149180210",
+    "id": "cmbjkoddh014hikijttvkxgjr",
+    "name": "Zabrzeg",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149180220",
+    "id": "cmbjkv0qk02dhikijz7yvywk3",
+    "name": "Pszczyna",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "149180230",
+    "id": "cmbjksqxr01y0ikijg98kspwu",
+    "name": "Podkępie",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "149180240",
+    "id": "cmbjkswjn01ytikijfikwj8w4",
+    "name": "Goczałkowice",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149180250",
+    "id": "cmbjkpenh01biikijetk2eue6",
+    "name": "Czechowice Dziedzice",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149180300",
+    "id": "cmbjkst0j01y8ikij1f1hrqfi",
+    "name": "Olza",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149180390",
+    "id": "cmbjrkrmi03cijo0ju2bqew5u",
+    "name": "MIZERÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149190010",
+    "id": "cmbjkr73g01nbikijv6wshvio",
+    "name": "Czechowice-Bestwina",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149190020",
+    "id": "cmbjkt1g101znikijkit8ug70",
+    "name": "Kamesznica",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149190030",
+    "id": "cmbjku5ty026rikijcdksszhp",
+    "name": "Mikuszowice",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149190040",
+    "id": "cmbjkv3rx02e1ikijfiyc3s9o",
+    "name": "Ujsoły",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149190050",
+    "id": "cmbjkwe3t02mwikij66b9vkik",
+    "name": "Rajcza",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "149190060",
+    "id": "cmbjkrmpj01q5ikij3jxmfqa3",
+    "name": "Jawiszowice",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149190070",
+    "id": "cmbjkt670020likij8ox1lr0n",
+    "name": "Łodygowice",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "149190080",
+    "id": "cmbjktp4b023oikijdjvlwp97",
+    "name": "Cięcina",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149190090",
+    "id": "cmbjkq9xr01h6ikijx7cpkabp",
+    "name": "Żabnica",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149190100",
+    "id": "cmbjkwahh02mbikij121r4pcs",
+    "name": "Żywiec",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149190120",
+    "id": "cmbjkpo9u01d8ikijc9gh52vm",
+    "name": "Czaniec (Kobiernice)",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149190140",
+    "id": "cmbjkqlhn01jcikiju6ckkdqk",
+    "name": "Łękawica",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149190150",
+    "id": "cmbjkuskv02bsikijweabs3a3",
+    "name": "Pewel Mała",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149190160",
+    "id": "cmbjkssx101y7ikijb3nm8eaq",
+    "name": "Rudze",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149190170",
+    "id": "cmbjkoere014oikij8unwmulx",
+    "name": "Zator",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149190180",
+    "id": "cmbjkqre101kgikijr17kamvd",
+    "name": "Wadowice",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "149190200",
+    "id": "cmbjkvdl002g8ikijbvuv3o1g",
+    "name": "Sucha Beskidzka",
+    "measurementsCount": 12
+  },
+  {
+    "stationCode": "149190210",
+    "id": "cmbjkv9g202feikijn0t23la2",
+    "name": "Sucha Beskidzka 2",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "149190220",
+    "id": "cmbjkr0tx01maikijtj4d2ok3",
+    "name": "Skawica Dolna",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149190230",
+    "id": "cmbjkr76z01ncikij3ibuqm5f",
+    "name": "Czernichów - Prom",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149190250",
+    "id": "cmbjrln1c03drjo0j50g5xacw",
+    "name": "JABŁONKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149190260",
+    "id": "cmbjkr4aw01msikijhsb5l8gs",
+    "name": "Osielec",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "149190270",
+    "id": "cmbjkrt3o01rhikijg4xken9v",
+    "name": "Radziszów",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "149190280",
+    "id": "cmbjktk5g022tikijhfc1a6pf",
+    "name": "Koniówka",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "149190290",
+    "id": "cmbjkvs6q02j8ikijqkzqqyt7",
+    "name": "Jordanów",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "149190300",
+    "id": "cmbjkpsvl01e0ikijyykk5qwa",
+    "name": "Kościelisko-Kiry",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "149190310",
+    "id": "cmbjkpyl001f6ikijyar7gvee",
+    "name": "Stróża",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149190320",
+    "id": "cmbjrrce803prjo0j470crm5n",
+    "name": "ZAKOPANE-DOL.STRĄŻYSKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149190340",
+    "id": "cmbjkwl3402nzikijzua23o4f",
+    "name": "Rabka 2",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "149190350",
+    "id": "cmbjkx7q502rrikijyqinhlgm",
+    "name": "Krzczonów",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149190360",
+    "id": "cmbjkponx01d9ikijoaoagx8v",
+    "name": "Ludźmierz",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149190370",
+    "id": "cmbjkwwu302q4ikijo59ri1k9",
+    "name": "Lubień",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149190380",
+    "id": "cmbjkvl3402hqikijbxi1el87",
+    "name": "Zakopane Harenda",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149190390",
+    "id": "cmbjkr57m01n1ikijho5s692h",
+    "name": "Ludźmierz",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149190480",
+    "id": "cmbjroy9o03knjo0j8n2zxo62",
+    "name": "ZEMBRZYCE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149190490",
+    "id": "cmbjrn7o203gujo0jz39eponm",
+    "name": "BYSTRA 2",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149190500",
+    "id": "cmbjrodqq03jdjo0j0trnmqvb",
+    "name": "RZYKI",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149190510",
+    "id": "cmbjrktjw03cljo0jdj5u4c92",
+    "name": "BRODY",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149200010",
+    "id": "cmbjkpf8301bnikijbe26uevd",
+    "name": "Poronin",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149200020",
+    "id": "cmbjku1z00261ikijqaiv8rsm",
+    "name": "Szaflary",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149200030",
+    "id": "cmbjksg5t01vtikijb8n5l5zk",
+    "name": "Nowy Targ",
+    "measurementsCount": 15
+  },
+  {
+    "stationCode": "149200040",
+    "id": "cmbjkqhar01ikikiji2w8yzik",
+    "name": "Kasinka Mała",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149200050",
+    "id": "cmbjksc2v01v7ikijejj881lo",
+    "name": "Nowy Targ - Kowaniec",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "149200060",
+    "id": "cmbjkogoh014zikijmkigbmon",
+    "name": "Mszana Dolna",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "149200080",
+    "id": "cmbjkv06l02daikij9mpofops",
+    "name": "Mszana Dolna",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149200090",
+    "id": "cmbjks13w01t5ikij4p9msxwy",
+    "name": "Dobczyce",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "149200100",
+    "id": "cmbjkolmi0164ikijk5htxhku",
+    "name": "Łysa Polana",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149200110",
+    "id": "cmbjktnw4023iikijk4qj3tpb",
+    "name": "Trybsz 2",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "149200120",
+    "id": "cmbjks35g01tgikijll0fc9t2",
+    "name": "Niedzica",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149200130",
+    "id": "cmbjkopna016oikij3woxshn0",
+    "name": "Stradomka",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149200140",
+    "id": "cmbjkse1y01viikijto6cabx8",
+    "name": "Sromowce Wyżne",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149200150",
+    "id": "cmbjkt3um0205ikijitl7h5wj",
+    "name": "Tylmanowa",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "149200160",
+    "id": "cmbjkopcb016nikij0gva5cbe",
+    "name": "Krościenko",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149200170",
+    "id": "cmbjku40f026iikijewans0s4",
+    "name": "Proszówki",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "149200180",
+    "id": "cmbjrrgwp03q2jo0jysy5lbis",
+    "name": "SZCZAWNICA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149200190",
+    "id": "cmbjksvd301yrikijdcd8dk78",
+    "name": "Gołkowice",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "149200200",
+    "id": "cmbjks17c01t6ikij053zbmpm",
+    "name": "Jakubkowice",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "149200220",
+    "id": "cmbjkyy1g02y8ikijjsltlfv6",
+    "name": "Stary Sącz",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149200230",
+    "id": "cmbjkqu8e01kyikij60rtywza",
+    "name": "Czchów",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149200240",
+    "id": "cmbjks6o501u4ikijeu7qvztc",
+    "name": "Nowy Sącz",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149200250",
+    "id": "cmbjks2h201taikij7hvqknup",
+    "name": "Nowy Sącz",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149200260",
+    "id": "cmbjkvz7u02kkikij5zb129e8",
+    "name": "Nowy Sącz 1",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149200270",
+    "id": "cmbjkpfhr01brikijeuxdp5gh",
+    "name": "Łabowa",
+    "measurementsCount": 3
+  },
+  {
+    "stationCode": "149200280",
+    "id": "cmbjkutho02c0ikijp46qxzkf",
+    "name": "Zgłobice",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149200290",
+    "id": "cmbjkryqh01snikij0ymzammb",
+    "name": "Muszyna",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149200300",
+    "id": "cmbjrlgqx03dijo0j3ndmkg05",
+    "name": "MUSZYNA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149200310",
+    "id": "cmbjku7y50278ikijtp2b68oy",
+    "name": "Grybów",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "149200320",
+    "id": "cmbjkp9sa01akikiji58q6a6w",
+    "name": "Koszyce Wielkie",
+    "measurementsCount": 11
+  },
+  {
+    "stationCode": "149200330",
+    "id": "cmbjkqkxb01jaikijmsummli4",
+    "name": "Ciężkowice",
+    "measurementsCount": 11
+  },
+  {
+    "stationCode": "149200360",
+    "id": "cmbjkt19001zkikijhcddkwzc",
+    "name": "Lipnica Murowana",
+    "measurementsCount": 0
+  },
+  {
+    "stationCode": "149200370",
+    "id": "cmbjkpmg201cuikijhnqg1y0s",
+    "name": "Brzesko-Okocim",
+    "measurementsCount": 0
+  },
+  {
+    "stationCode": "149200480",
+    "id": "cmbjkop58016mikij0y5m1lu0",
+    "name": "Łapanów",
+    "measurementsCount": 0
+  },
+  {
+    "stationCode": "149200510",
+    "id": "cmbjkr08801m4ikijeg3nona1",
+    "name": "Brzesko-Miasto",
+    "measurementsCount": 0
+  },
+  {
+    "stationCode": "149200520",
+    "id": "cmbjrm7fd03epjo0j9zu8p15f",
+    "name": "PIERZCHÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149200530",
+    "id": "cmbjrn2am03gkjo0jgx2qfktm",
+    "name": "SKRZYNKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149200540",
+    "id": "cmbjrkvhf03cojo0jxry5bew7",
+    "name": "GDÓW 2",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149209990",
+    "id": "cmbjrkxin03crjo0ji2411ujg",
+    "name": "PIEKIEŁKO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149210010",
+    "id": "cmbjkprkb01dwikijdatbd4x9",
+    "name": "Ropa",
+    "measurementsCount": 15
+  },
+  {
+    "stationCode": "149210020",
+    "id": "cmbjrlazf03dajo0jxsl23kiq",
+    "name": "GORLICE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149210030",
+    "id": "cmbjkpjei01ceikijsvth6i07",
+    "name": "Klęczany",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "149210040",
+    "id": "cmbjkqatx01heikijt6h5qjem",
+    "name": "Łabuzie",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "149210050",
+    "id": "cmbjkonof016eikijqjyqyh7v",
+    "name": "Krajowice",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149210060",
+    "id": "cmbjks9np01urikijrptf535e",
+    "name": "Topoliny",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149210070",
+    "id": "cmbjkqog901jyikijt904np2m",
+    "name": "Żółków",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "149210080",
+    "id": "cmbjkptdk01e3ikijt1yhilka",
+    "name": "Jasło",
+    "measurementsCount": 13
+  },
+  {
+    "stationCode": "149210090",
+    "id": "cmbjkohd90158ikij36gsh4fz",
+    "name": "Krempna-Kotań",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "149210100",
+    "id": "cmbjkupwp02b7ikij9e2g8mqu",
+    "name": "Zboiska",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149210110",
+    "id": "cmbjksmwl01x3ikij3m1ioqow",
+    "name": "Krosno",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149210120",
+    "id": "cmbjn1a2h0006zvzuk6q4hovp",
+    "name": "Godowa",
+    "measurementsCount": 14
+  },
+  {
+    "stationCode": "149210130",
+    "id": "cmbjkrsbj01r7ikijina1gm0v",
+    "name": "Żarnowa",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149210140",
+    "id": "cmbjkubgd0282ikijplsvhpp1",
+    "name": "Iskrzynia",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "149210150",
+    "id": "cmbjkox9i0181ikij2sygo9qj",
+    "name": "Puławy",
+    "measurementsCount": 13
+  },
+  {
+    "stationCode": "149210160",
+    "id": "cmbjkrbq201o5ikijobzhsm7c",
+    "name": "Sieniawa",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149210180",
+    "id": "cmbjrklhc03c9jo0jws2ee4xt",
+    "name": "KUNKOWA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149210190",
+    "id": "cmbjrjzgc03bcjo0jlb9pb202",
+    "name": "UŚCIE GORLICKIE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149210200",
+    "id": "cmbjrpwil03mojo0j838fvaf5",
+    "name": "UŚCIE GORLICKIE-ZDYNIA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149210210",
+    "id": "cmbjrk1o303bfjo0jjutkpfll",
+    "name": "PASTWISKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149210450",
+    "id": "cmbjrk3lh03bijo0jgalgh0k4",
+    "name": "DARÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149210460",
+    "id": "cmbjrk5l303bljo0j1miji0ll",
+    "name": "ODRZECHOWA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149210470",
+    "id": "cmbjrk7jv03bojo0j9l8s9o98",
+    "name": "MIEJSCE PIASTOWE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149210480",
+    "id": "cmbjrk9jg03brjo0jl26y9sdf",
+    "name": "WISŁOK WIELKI",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149220010",
+    "id": "cmbjkoxdk0182ikijdqfev3nl",
+    "name": "Nowosielce",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149220020",
+    "id": "cmbjkohgt0159ikijqjnc4x3g",
+    "name": "Szczawne",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149220030",
+    "id": "cmbjkszl301zhikijzvzb0yed",
+    "name": "Olchowce",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "149220040",
+    "id": "cmbjkycf602voikijnnwzt536",
+    "name": "Dynów",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149220050",
+    "id": "cmbjkskm801wmikijpau7h3pa",
+    "name": "Zagórz",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149220060",
+    "id": "cmbjkqcb601hlikijwiwgboaa",
+    "name": "Lesko",
+    "measurementsCount": 15
+  },
+  {
+    "stationCode": "149220070",
+    "id": "cmbjktrz60247ikij6vmhteml",
+    "name": "Hoczew",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149220080",
+    "id": "cmbjkry5t01sjikijte8h2414",
+    "name": "Cisna",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "149220100",
+    "id": "cmbjkq5l301gfikijvupwrmf9",
+    "name": "Terka",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "149220110",
+    "id": "cmbjkvla902htikijfvdrb4t0",
+    "name": "Kalnica",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149220130",
+    "id": "cmbjkvhag02gzikijnqnxnbb7",
+    "name": "Zatwarnica",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149220140",
+    "id": "cmbjkudng028iikij2p458vc6",
+    "name": "Polana",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "149220150",
+    "id": "cmbjkqcwa01hrikij6fsbtja9",
+    "name": "Dwernik",
+    "measurementsCount": 11
+  },
+  {
+    "stationCode": "149220160",
+    "id": "cmbjrlqu203dxjo0j26cxathk",
+    "name": "RYBOTYCZE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149220170",
+    "id": "cmbjrlj7903dljo0jx8cy3nm9",
+    "name": "KROŚCIENKO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149220180",
+    "id": "cmbjkohk5015aikijtlneuzjv",
+    "name": "Stuposiany",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149220190",
+    "id": "cmbjkozuk018mikij92n030x7",
+    "name": "Przemyśl",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "149220200",
+    "id": "cmbjkwowm02oqikij9afj9mdj",
+    "name": "Krówniki",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "149220210",
+    "id": "cmbjkrmtp01q6ikijlvhlrmlo",
+    "name": "Nienowice",
+    "measurementsCount": 13
+  },
+  {
+    "stationCode": "149229998",
+    "id": "cmbjrkbhj03bujo0jvkpji7zg",
+    "name": "KAŃCZUGA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149229999",
+    "id": "cmbjrkdgv03bxjo0jo2sczxva",
+    "name": "MANASTERZ",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "149230020",
+    "id": "cmbjrrqhz03qnjo0jsn4c67dw",
+    "name": "BUDZYŃ",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150140010",
+    "id": "cmbjrll4903dojo0j6rb4bbwz",
+    "name": "PORAJÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150140020",
+    "id": "cmbjrasj802i7jo0jcszklp5p",
+    "name": "SIENIAWKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150140030",
+    "id": "cmbjktfuv0224ikijvpjmj0ir",
+    "name": "Turoszów",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "150140100",
+    "id": "cmbjkol48015wikijiwtp444c",
+    "name": "Bogatynia",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150140140",
+    "id": "cmbjrkfnl03c0jo0jsw5x20mg",
+    "name": "KOPACZÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150150010",
+    "id": "cmbjktus3024oikijofqyj45p",
+    "name": "Mirsk",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150150020",
+    "id": "cmbjkt3h60200ikij0pyu93a5",
+    "name": "Mirsk 2",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150150030",
+    "id": "cmbjksnoa01x8ikijtc5000as",
+    "name": "Jakuszyce",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150150040",
+    "id": "cmbjkrvjs01s1ikijt9jng26n",
+    "name": "Barcinek",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150150050",
+    "id": "cmbjkqffb01i8ikij96ibowwb",
+    "name": "Piechowice",
+    "measurementsCount": 14
+  },
+  {
+    "stationCode": "150150060",
+    "id": "cmbjkschl01vaikijajd5c8jw",
+    "name": "Pilchowice",
+    "measurementsCount": 14
+  },
+  {
+    "stationCode": "150150070",
+    "id": "cmbjkrr2o01qzikijr9o3cwnb",
+    "name": "Jelenia Góra 2",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150150080",
+    "id": "cmbjkuclf0288ikijbm4rgtc3",
+    "name": "Jelenia Góra",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150150090",
+    "id": "cmbjkqw9f01lgikijznrjggwd",
+    "name": "Łomnica",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150150100",
+    "id": "cmbjkvt9202jdikijighmho9a",
+    "name": "Wojanów",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150150110",
+    "id": "cmbjkryge01smikija19v30jv",
+    "name": "Kowary",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150150120",
+    "id": "cmbjkt4x00209ikijvt1uv38o",
+    "name": "Bukówka",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150150130",
+    "id": "cmbjkxei702shikijvgf9dfzd",
+    "name": "Błażkowa",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150150190",
+    "id": "cmbjr9rhw02ddjo0juigbmrpm",
+    "name": "PODGÓRZYN",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150150200",
+    "id": "cmbjksx0x01ywikij5qnldypt",
+    "name": "Sosnówka",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150150230",
+    "id": "cmbjrkhl203c3jo0jyyu58c9g",
+    "name": "OPAWA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150159997",
+    "id": "cmbjrkjj303c6jo0j69okz03u",
+    "name": "MISZKOWICE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150160010",
+    "id": "cmbjkre4o01olikijei17lagg",
+    "name": "Kamienna Góra",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150160020",
+    "id": "cmbjkr2q701mjikijmts6xv58",
+    "name": "Świebodzice",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150160030",
+    "id": "cmbjkqle801jbikij5cok198z",
+    "name": "Chwaliszów",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150160040",
+    "id": "cmbjkum1i02afikijwyafsq4i",
+    "name": "Kudowa Zdrój-Zakrze",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "150160060",
+    "id": "cmbjksj7b01whikij77hrtlck",
+    "name": "Jugowice",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150160070",
+    "id": "cmbjksx4n01yzikijvvk462g3",
+    "name": "Lubachów",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150160080",
+    "id": "cmbjr34ai01x9jo0jekc9ws4h",
+    "name": "TŁUMACZÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150160090",
+    "id": "cmbjkvd5502g5ikijurcp1ahg",
+    "name": "Łażany",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "150160100",
+    "id": "cmbjkoy2w018aikijjqvl2vtf",
+    "name": "Gorzuchów",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150160110",
+    "id": "cmbjkskip01wlikijcvc513bw",
+    "name": "Szalejów Dolny",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150160120",
+    "id": "cmbjktw5r024xikijdo4s39k9",
+    "name": "Krasków",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150160130",
+    "id": "cmbjkqx1g01llikijrv9scodf",
+    "name": "Mościsko",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150160140",
+    "id": "cmbjkwrlg02peikij75kyr3i0",
+    "name": "Dzierżoniów",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150160150",
+    "id": "cmbjkp0gh018rikijxpkrsq39",
+    "name": "Bystrzyca Kłodzka 2",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150160160",
+    "id": "cmbjktwfp024zikijh5ieueay",
+    "name": "Mietków",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150160170",
+    "id": "cmbjksupo01yjikijyzsvwnmy",
+    "name": "Bystrzyca Kłodzka",
+    "measurementsCount": 15
+  },
+  {
+    "stationCode": "150160180",
+    "id": "cmbjkqvkl01l8ikijhyfm6rpk",
+    "name": "Kłodzko",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "150160190",
+    "id": "cmbjr2xar01wwjo0jgxmocnae",
+    "name": "MIĘDZYLESIE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150160200",
+    "id": "cmbjkqjkt01j3ikijiwpgmdlh",
+    "name": "Żelazno",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150160210",
+    "id": "cmbjkv7eb02esikijjw9rcsx1",
+    "name": "Wilkanów",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150160220",
+    "id": "cmbjkx0zz02qpikijiks3vm4o",
+    "name": "Bardo Śląskie",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150160230",
+    "id": "cmbjkogz40153ikijxzhxg1kh",
+    "name": "Lądek Zdrój",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150160250",
+    "id": "cmbjkqcpa01hoikijnwnb638g",
+    "name": "Białobrzezie",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150160270",
+    "id": "cmbjkpv2y01efikijy695wt5q",
+    "name": "Kamieniec Ząbkowicki",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150160280",
+    "id": "cmbjkqn1l01jmikija89c40aa",
+    "name": "Borów",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "150160290",
+    "id": "cmbjkpeun01bjikij3tnm4cax",
+    "name": "Gniechowice",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150160330",
+    "id": "cmbjreeep02vljo0jlu3l1isp",
+    "name": "SZCZYTNA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150160340",
+    "id": "cmbjregxw02vwjo0jm9q4ks9n",
+    "name": "SARNY",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150160350",
+    "id": "cmbjrejcx02w7jo0jph5alra4",
+    "name": "SZALEJÓW GÓRNY",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150160360",
+    "id": "cmbjrelpp02wijo0jzo6ycnrd",
+    "name": "STARKÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150160370",
+    "id": "cmbjreo4d02wtjo0jugzu2r33",
+    "name": "TOPOLICE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150160380",
+    "id": "cmbjreqh302x4jo0j79dqdz8n",
+    "name": "KROSNOWICE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150160390",
+    "id": "cmbjresv102xfjo0jnedcf5rp",
+    "name": "ROZTOKI BYSTRZYCKIE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150160400",
+    "id": "cmbjrmxq903g9jo0jpshr6r4f",
+    "name": "BOBOSZÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150160410",
+    "id": "cmbjreva402xqjo0j9g1x8gc8",
+    "name": "GAJNIK",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150160420",
+    "id": "cmbjrexku02y1jo0jjh1ut1ss",
+    "name": "GOWORÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150160430",
+    "id": "cmbjrphj803ltjo0jyv7wrkth",
+    "name": "DOMANICE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150169999",
+    "id": "cmbjrezy402ycjo0jf10d4lmf",
+    "name": "SĘDZISŁAW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150170010",
+    "id": "cmbjkwjw102nwikijmwwcqo2r",
+    "name": "Zborowice",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150170030",
+    "id": "cmbjr0mu301tojo0jwcyjttqh",
+    "name": "OŁAWA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150170040",
+    "id": "cmbjqnzy001qljo0jadfcamte",
+    "name": "OŁAWA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150170050",
+    "id": "cmbjkqpr801k4ikijip0kca1m",
+    "name": "Biała Nyska",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150170060",
+    "id": "cmbjku84v0279ikijbujc44pg",
+    "name": "Nysa",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150170070",
+    "id": "cmbjkol7u015xikijmv4mxlq0",
+    "name": "Głuchołazy",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150170080",
+    "id": "cmbjkx9f202rvikij47ch6x24",
+    "name": "Jarnołtówek",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150170090",
+    "id": "cmbjkpfcw01boikij4gy0rhan",
+    "name": "Brzeg (most)",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150170100",
+    "id": "cmbjks5i501tzikijsl9e0bkx",
+    "name": "Kopice",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150170110",
+    "id": "cmbjksjsn01wiikij00wn44w1",
+    "name": "Prudnik",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150170120",
+    "id": "cmbjkre0401okikijde257q2s",
+    "name": "Niemodlin",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150170130",
+    "id": "cmbjqjuea01m0jo0jqofu3ztw",
+    "name": "UJŚCIE NYSY KŁODZKIEJ",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150170140",
+    "id": "cmbjkq2ws01fyikijevh88pcn",
+    "name": "Skorogoszcz",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150170150",
+    "id": "cmbjkv9t602fhikijmme4ptpz",
+    "name": "Karłowice (Wapienniki)",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150170160",
+    "id": "cmbjkqeja01hzikijg7unzk0e",
+    "name": "Branice 1",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "150170170",
+    "id": "cmbjl0mj5035cikije67k762z",
+    "name": "Branice 2",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150170180",
+    "id": "cmbjksddl01vdikij9770nhc8",
+    "name": "Racławice Śląskie",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150170200",
+    "id": "cmbjkt5m7020eikijzmho5twu",
+    "name": "Domaradz",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150170210",
+    "id": "cmbjrl8xi03d7jo0jybkkukmo",
+    "name": "KRZYWA GÓRA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150170220",
+    "id": "cmbjkolix0163ikijjt38lelz",
+    "name": "Dobra",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150170240",
+    "id": "cmbjrlsqx03e0jo0j17sri2n0",
+    "name": "KRAPKOWICE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150170290",
+    "id": "cmbjqi74i01i1jo0jcvft7fdr",
+    "name": "OPOLE-GROSZOWICE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150170320",
+    "id": "cmbjrf2fy02ynjo0jof43h1py",
+    "name": "MALERZOWICE WIELKIE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150170330",
+    "id": "cmbjrp3cw03kxjo0jdb58jp19",
+    "name": "PACZKÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150170340",
+    "id": "cmbjrpczo03lijo0jsvgastxe",
+    "name": "DZIEWIĘTLICE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150170350",
+    "id": "cmbjrpb1203lfjo0j1xdbcj6l",
+    "name": "KAŁKÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150170360",
+    "id": "cmbjrp1g303kujo0jt39phxww",
+    "name": "STEBLÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150180010",
+    "id": "cmbjkpxp201ewikijc9g34yto",
+    "name": "Kamionka",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150180020",
+    "id": "cmbjkzxsv032bikij6dnyfpey",
+    "name": "Turawa",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "150180030",
+    "id": "cmbjkv6lx02epikijjefz7woc",
+    "name": "Koźle",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150180040",
+    "id": "cmbjkszfs01zgikijh1tnors1",
+    "name": "Bojanów",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150180050",
+    "id": "cmbjkp7wp01a7ikij7qbljyv1",
+    "name": "Ozimek",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150180060",
+    "id": "cmbjku9jy027jikiji6r01xka",
+    "name": "Racibórz Miedonia",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150180070",
+    "id": "cmbjkrg3101oxikijork1sn0o",
+    "name": "Lenartowice",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150180080",
+    "id": "cmbjkr6sq01n9ikij7te3gqzq",
+    "name": "Grabówka",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150180090",
+    "id": "cmbjrf4mh02ywjo0js1t83syv",
+    "name": "NĘDZA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150180100",
+    "id": "cmbjkourn017kikij65kd1jcr",
+    "name": "Staniszcze Wielkie",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150180110",
+    "id": "cmbjktg2d0225ikijgjr4js3a",
+    "name": "Ruda Kozielska",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150180130",
+    "id": "cmbjkq66g01gjikijclh6kdj0",
+    "name": "Rybnik Stodoły",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150180140",
+    "id": "cmbjrf6zm02z3jo0jndmbkh67",
+    "name": "RYBNIK",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150180150",
+    "id": "cmbjkvhkn02h0ikij5bwaii5w",
+    "name": "Pyskowice Dzierżno",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150180160",
+    "id": "cmbjkvdw602g9ikijfs146ypw",
+    "name": "Pyskowice Dzierżno",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150180170",
+    "id": "cmbjkz2v602yrikij68oxhpgr",
+    "name": "Pyskowice",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150180180",
+    "id": "cmbjkr99r01noikij55udfb9e",
+    "name": "Gliwice-Łabędy",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150180190",
+    "id": "cmbjkrgqw01p5ikijxiakaru8",
+    "name": "Krupski Młyn",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150180210",
+    "id": "cmbjksoyx01xgikijwxiitv6s",
+    "name": "Niwki",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150180220",
+    "id": "cmbjkvav902flikijs0ojuauz",
+    "name": "Gliwice",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150180230",
+    "id": "cmbjrf95u02zajo0j7c84nk9x",
+    "name": "WESOŁA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150180250",
+    "id": "cmbjrfbdo02zhjo0jx4vgsxtl",
+    "name": "KŁODNICA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150180270",
+    "id": "cmbjkr2ee01miikijfs5vjth2",
+    "name": "Kozłowa Góra",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150180280",
+    "id": "cmbjkod61014fikijl3ovbiz7",
+    "name": "Rybnik Gotartowice",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "150180300",
+    "id": "cmbjrfdjy02zojo0j7ggyokgs",
+    "name": "TYCHY",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150180310",
+    "id": "cmbjrffrs02zvjo0ji7javhmu",
+    "name": "BOBROWNIKI",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150180320",
+    "id": "cmbjroone03k2jo0jx7d1un3y",
+    "name": "RUDZINIEC",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150180330",
+    "id": "cmbjrfhy70302jo0j8je1nw3m",
+    "name": "RYBNIK-PARUSZOWIEC",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150180340",
+    "id": "cmbjrmnj903fojo0jc5pj1xfa",
+    "name": "KLUCZBORK",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150190010",
+    "id": "cmbjkp63q019vikij890cebjb",
+    "name": "Brynica",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150190050",
+    "id": "cmbjrqm6f03o7jo0j021gkxkz",
+    "name": "BIERUŃ STARY",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150190060",
+    "id": "cmbjktu2s024hikijwgwq1og7",
+    "name": "Bojszowy",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150190070",
+    "id": "cmbjkrnj901qcikij9xfwuf5o",
+    "name": "Szabelnia",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150190080",
+    "id": "cmbjkobwo0146ikijpfj2f5ly",
+    "name": "Radocha",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150190100",
+    "id": "cmbjkoyy5018eikij382ypige",
+    "name": "Niwka",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150190120",
+    "id": "cmbjkqwd201lhikijh9sbxm3b",
+    "name": "Przeczyce",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150190130",
+    "id": "cmbjku3x8026hikijq3heexk0",
+    "name": "Łagisza",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150190140",
+    "id": "cmbjkozr4018likijcz8p9q7j",
+    "name": "Bieruń Nowy",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150190150",
+    "id": "cmbjkse5k01vjikij1qhwvgub",
+    "name": "Poraj",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150190160",
+    "id": "cmbjkq24b01ftikij9uv84kex",
+    "name": "Oświęcim",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150190170",
+    "id": "cmbjkt3ns0203ikijtv1k7jsv",
+    "name": "Pustynia",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "150190180",
+    "id": "cmbjkyjp502wfikij4p17ned2",
+    "name": "Jeleń",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150190190",
+    "id": "cmbjku0fm025tikijjyj8rdgk",
+    "name": "Piwoń",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150190200",
+    "id": "cmbjkqirb01itikijvhtft2d8",
+    "name": "Lgota Nadwarcie",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "150190210",
+    "id": "cmbjksboi01v1ikijtfsqjztx",
+    "name": "Kuźnica Sulikowska",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150190220",
+    "id": "cmbjrfk4u0309jo0j7ti1k1rq",
+    "name": "MSTÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150190240",
+    "id": "cmbjks99m01ulikijhqojfxj8",
+    "name": "Kręciwilk",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150190250",
+    "id": "cmbjrfma9030gjo0j9l2be1f1",
+    "name": "SŁAWKÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150190260",
+    "id": "cmbjkzj9o030qikijnoj7kt4p",
+    "name": "Smolice",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150190270",
+    "id": "cmbjrfogv030njo0jahmyt675",
+    "name": "GOLCZOWICE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150190280",
+    "id": "cmbjkt7pt020xikijjylfvtmx",
+    "name": "Wąsosz",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150190310",
+    "id": "cmbjkq6dk01gmikijy9xsw4br",
+    "name": "Balice",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "150190330",
+    "id": "cmbjkqu4m01kxikij5ijyawgh",
+    "name": "Ojców",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150190340",
+    "id": "cmbjkx3wk02r7ikij7d8bs1m7",
+    "name": "Kraków - Bielany",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150190350",
+    "id": "cmbjkptl601e5ikijdqjeivlz",
+    "name": "Januszewice",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150190360",
+    "id": "cmbjkrkoq01ptikijwi7asz32",
+    "name": "Gromiec",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150190390",
+    "id": "cmbjrfqpu030ujo0j2pa8fvwz",
+    "name": "CZĘSTOCHOWA 1",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150190400",
+    "id": "cmbjrfswj0311jo0jew5z0tov",
+    "name": "CZĘSTOCHOWA 2",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150190410",
+    "id": "cmbjrfv2q0318jo0jgiiwh3d5",
+    "name": "CZĘSTOCHOWA 3",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150190430",
+    "id": "cmbjrmz7v03gdjo0juenx8o6z",
+    "name": "KAMIENICA POLSKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150190440",
+    "id": "cmbjrfx9w031fjo0jirtphuib",
+    "name": "SŁOWIK",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150190450",
+    "id": "cmbjrfzfc031mjo0j0bgftd1n",
+    "name": "NOWA KUŹNICA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150190460",
+    "id": "cmbjrg1m3031tjo0jzia61awh",
+    "name": "MASŁOŃSKIE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150190470",
+    "id": "cmbjrg3ro0320jo0jgdxg1eyi",
+    "name": "DĄBEK",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150190480",
+    "id": "cmbjrg5yp0327jo0jdge89eqh",
+    "name": "KRAKÓW-ŁAGIEWNIKI",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150200010",
+    "id": "cmbjkr7ig01nhikijgj55nlmn",
+    "name": "Mniszek",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150200020",
+    "id": "cmbjku08k025sikijwzeaosdq",
+    "name": "Bocheniec",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "150200030",
+    "id": "cmbjksb3m01uwikijxicgtxpr",
+    "name": "Brzegi",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150200040",
+    "id": "cmbjkt9g70212ikijeohb8c3q",
+    "name": "Tokarnia",
+    "measurementsCount": 10
+  },
+  {
+    "stationCode": "150200050",
+    "id": "cmbjksg2001vsikij7s3wa6o4",
+    "name": "Michałów",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150200060",
+    "id": "cmbjktcy2021nikiju5lfw46p",
+    "name": "Sierosławice",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150200070",
+    "id": "cmbjkv31002dyikij9y8jk9mh",
+    "name": "Biskupice",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150200080",
+    "id": "cmbjkr4en01mtikijra1pl1gz",
+    "name": "Pinczów",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150200090",
+    "id": "cmbjkq3j301g1ikijfk4yts37",
+    "name": "Slowik",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150200100",
+    "id": "cmbjkqq6j01kaikijqmfn71nl",
+    "name": "Popędzynka",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150200120",
+    "id": "cmbjktbj1021gikijdq52s45e",
+    "name": "Morawica",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150200140",
+    "id": "cmbjkunpf02aqikijb86hix0n",
+    "name": "Borzęcin",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150200150",
+    "id": "cmbjkq8ov01h3ikijfmzzeyou",
+    "name": "Karsy",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150200160",
+    "id": "cmbjks79001u9ikijwe8foeyx",
+    "name": "Daleszyce",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150200170",
+    "id": "cmbjkq7tn01gtikijr9ncybmm",
+    "name": "Żabno",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150200180",
+    "id": "cmbjrlyku03e9jo0jc56tfybj",
+    "name": "ORŁÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150200190",
+    "id": "cmbjrp0cc03kqjo0jpg2sdskh",
+    "name": "KAMYSZÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150200200",
+    "id": "cmbjrg843032ejo0jb0ytpu1h",
+    "name": "WIŚLICA 2",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150200210",
+    "id": "cmbjrm8sc03etjo0jjd2nheta",
+    "name": "LESZCZYNY",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150200220",
+    "id": "cmbjrpe1t03lmjo0j9z0zfkj2",
+    "name": "GRABIE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150210010",
+    "id": "cmbjr2e0p01w1jo0jd58p2js5",
+    "name": "RAKÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150210020",
+    "id": "cmbjqyyqt01t8jo0jhjhtu4gb",
+    "name": "SZCZUCIN",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150210030",
+    "id": "cmbjkva3502fiikij0sw5fqlo",
+    "name": "Mocha",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150210040",
+    "id": "cmbjkthtj022bikijdgt300e8",
+    "name": "Rzepin",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150210050",
+    "id": "cmbjrgaam032ljo0jwue5g1vn",
+    "name": "WILKOWA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150210060",
+    "id": "cmbjks7ng01ufikijbqy7qg5i",
+    "name": "Staszów",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150210070",
+    "id": "cmbjkq6h501gnikijri6csea0",
+    "name": "Wampierzów",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150210080",
+    "id": "cmbjksif701waikijrgzhwdav",
+    "name": "Nietulisko Duże",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "150210090",
+    "id": "cmbjkvm1p02hwikiji7758q4i",
+    "name": "Kunów",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150210100",
+    "id": "cmbjkq1xb01fqikijslleao69",
+    "name": "Połaniec",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150210110",
+    "id": "cmbjkoazq013zikijr14n8re0",
+    "name": "Głowaczowa",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150210120",
+    "id": "cmbjkrw8e01s4ikijx058b7e1",
+    "name": "Mielec 2",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150210130",
+    "id": "cmbjkvzey02klikijptgoj59w",
+    "name": "Pustków",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150210140",
+    "id": "cmbjkrd6v01odikijmxz5dxtm",
+    "name": "Brzeźnica",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "150210150",
+    "id": "cmbjkxn8202tfikijqr2eaos1",
+    "name": "Koło",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150210160",
+    "id": "cmbjkrwyy01seikijsovayl6c",
+    "name": "Koprzywnica",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150210170",
+    "id": "cmbjktps2023rikijnyknipyi",
+    "name": "Sandomierz",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150210180",
+    "id": "cmbjktjyf022sikijgtvretvc",
+    "name": "Annopol",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "150210190",
+    "id": "cmbjks9ke01uqikij255x2skg",
+    "name": "Zawichost",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150210200",
+    "id": "cmbjkvmn502i3ikij2x36cz3r",
+    "name": "Grębów",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150210210",
+    "id": "cmbjkr9lm01ntikijctu8pe70",
+    "name": "Radomysl",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "150210220",
+    "id": "cmbjkxxei02u9ikij6zpalfkn",
+    "name": "Włochy",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150210410",
+    "id": "cmbjrm2iq03efjo0j6hs17pkw",
+    "name": "WOLA RANIŻOWSKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150220010",
+    "id": "cmbjkr9pq01nuikijkwznvm84",
+    "name": "Rzeszów",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150220020",
+    "id": "cmbjkqqsk01kfikijgycjly31",
+    "name": "Ruda Jastkowska",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150220030",
+    "id": "cmbjkojcl015likijruaasa94",
+    "name": "Nisko",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150220040",
+    "id": "cmbjkrytu01soikijxx7zm1hp",
+    "name": "Sarzyna",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "150220050",
+    "id": "cmbjkp121018sikij45akk1ba",
+    "name": "Harasiuki",
+    "measurementsCount": 15
+  },
+  {
+    "stationCode": "150220060",
+    "id": "cmbjkxiax02swikij00y9ntin",
+    "name": "Gorliczyna",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150220070",
+    "id": "cmbjkrqyw01qyikij585602sq",
+    "name": "Rzuchów",
+    "measurementsCount": 12
+  },
+  {
+    "stationCode": "150220080",
+    "id": "cmbjkocli0148ikij1arovg2r",
+    "name": "Tryńcza",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150220090",
+    "id": "cmbjks7cl01uaikijdbmba55b",
+    "name": "Leżachów",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150220100",
+    "id": "cmbjkoprc016pikijwmiif73n",
+    "name": "Jarosław",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150220110",
+    "id": "cmbjkwsnj02pjikijnahulpaz",
+    "name": "Biłgoraj",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150220120",
+    "id": "cmbjksz5401zcikijv48yzefk",
+    "name": "Zakłodzie",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150220130",
+    "id": "cmbjkrier01pdikijhqknz6vg",
+    "name": "Zapałów",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150220140",
+    "id": "cmbjkzeif0307ikij4nm1ig02",
+    "name": "Charytany",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "150220160",
+    "id": "cmbjkshqh01w5ikijhmd3hj9t",
+    "name": "Osuchy",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150220170",
+    "id": "cmbjrl7tj03d6jo0jho4nwdtl",
+    "name": "ZWIERZYNIEC",
+    "measurementsCount": 0
+  },
+  {
+    "stationCode": "150230010",
+    "id": "cmbjks54401ttikijaj4dffgl",
+    "name": "Nielisz",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "150230020",
+    "id": "cmbjrnh6d03hfjo0jac9rsepf",
+    "name": "WIRKOWICE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150230030",
+    "id": "cmbjrnc5l03h5jo0jqm6vp8j7",
+    "name": "KRZAK",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150230040",
+    "id": "cmbjkolfa0162ikijl3ipixdd",
+    "name": "Krasnystaw",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "150230050",
+    "id": "cmbjrnu4s03i7jo0jtxw8s4kl",
+    "name": "ORŁÓW DREWNIANY",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150230070",
+    "id": "cmbjkovd7017rikijt25i964u",
+    "name": "Gozdów",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "150230080",
+    "id": "cmbjksv9t01yqikijmeugu7kn",
+    "name": "Michałów",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "150240010",
+    "id": "cmbjqjc1y01ksjo0jy6n38gv3",
+    "name": "STRZYŻÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "150240020",
+    "id": "cmbjktxh90254ikij8ex5o2ev",
+    "name": "Kryłów",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "151140010",
+    "id": "cmbjkttjc024eikijmccqq9v4",
+    "name": "Gubin",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "151140020",
+    "id": "cmbjkt8400210ikijo6hxfgmh",
+    "name": "Pleśno",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151140030",
+    "id": "cmbjn195i0000zvzudw80exgw",
+    "name": "Przewoźniki",
+    "measurementsCount": 14
+  },
+  {
+    "stationCode": "151140040",
+    "id": "cmbjkssc401y4ikijwx3j914n",
+    "name": "Przewóz",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "151140050",
+    "id": "cmbjkrc0d01oaikijtdm78vjl",
+    "name": "Ręczyn",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151140060",
+    "id": "cmbjkvvtp02jwikijy0nn50ui",
+    "name": "Zgorzelec",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "151140170",
+    "id": "cmbjrgcfv032sjo0j33yqbkza",
+    "name": "JANISZOWICE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151140180",
+    "id": "cmbjrowvi03kjjo0j9sf20q52",
+    "name": "OLSZYNA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151140190",
+    "id": "cmbjrgem7032zjo0jj4l5gie2",
+    "name": "GUBIN",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151140200",
+    "id": "cmbjrggve0336jo0j493iu20c",
+    "name": "SANICE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151150010",
+    "id": "cmbjrleth03dfjo0jodtomnp9",
+    "name": "ZGORZELEC",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151150020",
+    "id": "cmbjksove01xfikijxlhk5zy2",
+    "name": "Ostróżno",
+    "measurementsCount": 15
+  },
+  {
+    "stationCode": "151150030",
+    "id": "cmbjkytby02xnikij4lwku3il",
+    "name": "Iłowa",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "151150040",
+    "id": "cmbjkpk9c01cjikijuzzz5n3q",
+    "name": "Nowogród Bobrzański",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "151150050",
+    "id": "cmbjkr2tf01mkikij0zjwynqa",
+    "name": "Dobroszów Wielki",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "151150060",
+    "id": "cmbjkp4ub019oikijgaozpitd",
+    "name": "Leśna",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151150070",
+    "id": "cmbjkpkh701cmikij6ujseygl",
+    "name": "Żagań",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151150080",
+    "id": "cmbjqkzp201ocjo0jckbfh0lw",
+    "name": "ŻAGAŃ",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151150090",
+    "id": "cmbjkqpuu01k5ikijcf4yzg43",
+    "name": "Łozy",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "151150100",
+    "id": "cmbjkrkem01poikij1c7eoqw6",
+    "name": "Nowogrodziec",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "151150110",
+    "id": "cmbjkvkp102hnikij8nc8xd3d",
+    "name": "Gryfów Śląski",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "151150120",
+    "id": "cmbjqy1cy01t1jo0j2sgf3bca",
+    "name": "SZPROTAWA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151150130",
+    "id": "cmbjktbsy021iikij0ts37o08",
+    "name": "Szprotawa 2",
+    "measurementsCount": 13
+  },
+  {
+    "stationCode": "151150140",
+    "id": "cmbjkvww102k1ikijccg4zffq",
+    "name": "Dąbrowa Bolesławiecka",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "151150150",
+    "id": "cmbjkpthi01e4ikij3ci9oh6u",
+    "name": "Nowa Sól",
+    "measurementsCount": 15
+  },
+  {
+    "stationCode": "151150160",
+    "id": "cmbjku599026oikijhp62imc0",
+    "name": "Zagrodno",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "151150170",
+    "id": "cmbjktfr80223ikijw2jx4bc9",
+    "name": "Świerzawa",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "151150180",
+    "id": "cmbjkp3v9019cikijkslgzwjw",
+    "name": "Chojnów",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151160020",
+    "id": "cmbjkuyqh02d2ikijca0he689",
+    "name": "Rzymówka",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "151160030",
+    "id": "cmbjrrsfg03qqjo0jqqq7eemz",
+    "name": "RADZYŃ",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151160040",
+    "id": "cmbjkq5vw01giikijist60hco",
+    "name": "Bukowna",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151160050",
+    "id": "cmbjkv5y402ekikijydehhy2t",
+    "name": "Dunino",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "151160060",
+    "id": "cmbjkp9vq01alikijz81bfeo1",
+    "name": "Głogów",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "151160070",
+    "id": "cmbjrc8hv02nkjo0j0a6oiogs",
+    "name": "WINNICA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151160080",
+    "id": "cmbjkujn7029uikij5nzfoitd",
+    "name": "Rzeszotary",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "151160090",
+    "id": "cmbjksqjy01xtikijxdbj8hy4",
+    "name": "Jawor",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151160100",
+    "id": "cmbjkrqv901qxikijstu2xrtw",
+    "name": "Piątnica",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "151160130",
+    "id": "cmbjkownw017wikijsrjsc6j5",
+    "name": "Ścinawa",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "151160140",
+    "id": "cmbjkwnu502olikijpeslzzcs",
+    "name": "Osetno",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "151160150",
+    "id": "cmbjkro8d01qfikijpvauwspa",
+    "name": "Malczyce",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151160160",
+    "id": "cmbjkrq7701qsikij4t00carq",
+    "name": "Rydzyna",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "151160170",
+    "id": "cmbjre6se02usjo0jpzknugif",
+    "name": "BRZEG DOLNY",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151160180",
+    "id": "cmbjkw0j502koikijayxiruv8",
+    "name": "Bogdaszowice",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151160190",
+    "id": "cmbjkpejg01bhikijqt68rnhb",
+    "name": "Jarnołtów",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "151160200",
+    "id": "cmbjktjv2022rikij2eaqqg2n",
+    "name": "Korzeńsko",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "151160220",
+    "id": "cmbjkqhli01ipikijlmd7qdkp",
+    "name": "Kanclerzowice",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "151160230",
+    "id": "cmbjks8v601ukikijh8yqkmi2",
+    "name": "Ślęza",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151160260",
+    "id": "cmbjrrpfi03qjjo0jju34zc01",
+    "name": "SŁAWA ŚLĄSKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151160300",
+    "id": "cmbjrqfnz03ntjo0j7t39dvaf",
+    "name": "WĄSOSZ",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151170010",
+    "id": "cmbjkoq63016vikijhmmkmj9s",
+    "name": "Krzyżanowice",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151170030",
+    "id": "cmbjku2ml0268ikijyy89lygg",
+    "name": "Trestno",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151170040",
+    "id": "cmbjkunav02alikijsl16j7ic",
+    "name": "Łąki",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "151170050",
+    "id": "cmbjkt7iy020wikijjcfu7lhn",
+    "name": "Zbytowa",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "151170060",
+    "id": "cmbjkrdah01oeikijfebq6xob",
+    "name": "Bogdaj",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151170070",
+    "id": "cmbjksgtk01w1ikij5eek5ozg",
+    "name": "Odolanów",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "151170080",
+    "id": "cmbjkrhj901p6ikijgnyrqrzr",
+    "name": "Odolanów 2",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "151170090",
+    "id": "cmbjkqamx01hbikijlhj7se8c",
+    "name": "Namysłów",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151170110",
+    "id": "cmbjkprz401dzikijsc8it82s",
+    "name": "Bogusław",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151180010",
+    "id": "cmbjr9vsp02dwjo0jvpveuvgp",
+    "name": "OŁOBOK",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151180020",
+    "id": "cmbjpe9qo015czesz0zco917h",
+    "name": "PIWONICE",
+    "measurementsCount": 3
+  },
+  {
+    "stationCode": "151180030",
+    "id": "cmbjkqaci01h9ikij2dwgbgen",
+    "name": "Kuźnica Skakawska",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151180040",
+    "id": "cmbjkpk5501ciikij8w53twh5",
+    "name": "Mirków",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151180050",
+    "id": "cmbjkyoh602x2ikijziss6c6d",
+    "name": "Dębe",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "151180060",
+    "id": "cmbjr0pqf01trjo0jouyl31mx",
+    "name": "KRASZEWICE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151180070",
+    "id": "cmbjkvenb02gcikij9aj1jmqv",
+    "name": "Gorzów Śląski",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "151180080",
+    "id": "cmbjkr8vm01nlikijfvtg9gg3",
+    "name": "Sieradz",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151180090",
+    "id": "cmbjkt8vz0211ikijfphxrqwb",
+    "name": "Niechmirów",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "151180100",
+    "id": "cmbjkw4zk02lhikij02l1nqsl",
+    "name": "Osjaków",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "151180110",
+    "id": "cmbjrcy4c02q9jo0jjynxsj28",
+    "name": "UNIEJÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151180120",
+    "id": "cmbjkqzqa01m2ikijm666hq60",
+    "name": "Burzenin",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "151180130",
+    "id": "cmbjkszw501ziikij1w6m6yhy",
+    "name": "Działoszyn",
+    "measurementsCount": 15
+  },
+  {
+    "stationCode": "151180140",
+    "id": "cmbjkrdou01ofikij1dvuypd3",
+    "name": "Podgórze",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "151180150",
+    "id": "cmbjr5aw0020qjo0jh3okudfo",
+    "name": "WIDAWA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151180160",
+    "id": "cmbjkof1h014rikij0yzgjjs5",
+    "name": "Poddębice",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "151180170",
+    "id": "cmbjkts9d0249ikijcjvg8dt3",
+    "name": "Rogóźno",
+    "measurementsCount": 9
+  },
+  {
+    "stationCode": "151180180",
+    "id": "cmbjkonkw016dikijyczr4xte",
+    "name": "Grabno",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "151180190",
+    "id": "cmbjrgj3b033djo0jc0tmj70o",
+    "name": "GRABÓW NAD PROSNĄ",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151180200",
+    "id": "cmbjrgl9y033kjo0juxal34dy",
+    "name": "KUŚNIE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151180210",
+    "id": "cmbjrgnfv033rjo0jow9ufua1",
+    "name": "SMARDZEW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151180220",
+    "id": "cmbjrpkkg03m0jo0jso1v7bdd",
+    "name": "GRABINA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151190010",
+    "id": "cmbjkpx3v01etikiju0sou2ep",
+    "name": "Kule",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "151190020",
+    "id": "cmbjkpagw01arikij5c7am70r",
+    "name": "Szczerców",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "151190030",
+    "id": "cmbjkvppo02ioikiju5rpua9g",
+    "name": "Łask",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "151190040",
+    "id": "cmbjkzo1o0319ikijp910w7gj",
+    "name": "Lutomiersk",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151190060",
+    "id": "cmbjktl7p022yikijmbhimopl",
+    "name": "Bobry",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "151190070",
+    "id": "cmbjrrfjs03pyjo0jhxeoq2cb",
+    "name": "GIECZNO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151190080",
+    "id": "cmbjkphq801c8ikijnfpvs6we",
+    "name": "Kłudzice",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151190090",
+    "id": "cmbjkux3r02cqikijkvwhaagw",
+    "name": "Przedbórz",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "151190100",
+    "id": "cmbjkrgdc01p2ikij7574ajty",
+    "name": "Sulejów",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "151190110",
+    "id": "cmbjrnaoj03h1jo0jm0xjsnal",
+    "name": "ZAWADA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151190120",
+    "id": "cmbjkqs7w01kmikijomyr3o1e",
+    "name": "Dąbrowa",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151190130",
+    "id": "cmbjrgpp6033yjo0jap2qhy45",
+    "name": "KAZIMIERZ",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151200020",
+    "id": "cmbjkrl2p01pwikijjn1e5n6v",
+    "name": "Spała",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "151200040",
+    "id": "cmbjrn8qn03gyjo0j91zvp923",
+    "name": "OPOCZNO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151200080",
+    "id": "cmbjkqy6901lrikij2kahjuhr",
+    "name": "Odrzywół",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151200090",
+    "id": "cmbjkoz9g018fikijamri8in8",
+    "name": "Nowe Miasto/Pilicą",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151200100",
+    "id": "cmbjkp1nh018xikijf8o8s4xb",
+    "name": "Bzin",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151200110",
+    "id": "cmbjrnnsf03htjo0jwj9nhdpc",
+    "name": "SŁOWIKÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151200120",
+    "id": "cmbjl0hkk034rikijj01v9yje",
+    "name": "Białobrzegi",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "151210010",
+    "id": "cmbjks2rj01tdikijsr6pnbfw",
+    "name": "Wąchock",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "151210020",
+    "id": "cmbjkpcik01b3ikijm2vgecc5",
+    "name": "Michałów 2",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151210040",
+    "id": "cmbjl071k033nikij24d4uu22",
+    "name": "Brody Iłżeckie",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "151210050",
+    "id": "cmbjksij401wbikijumi03hw3",
+    "name": "Gusin",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "151210060",
+    "id": "cmbjkz9yg02zkikijlcyiya2k",
+    "name": "Rogożek",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "151210070",
+    "id": "cmbjrgryp0345jo0jl8c598j3",
+    "name": "CYGANÓWKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151210080",
+    "id": "cmbjkqlt301jhikij2sux1ozi",
+    "name": "Kazanów",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "151210090",
+    "id": "cmbjkocsi014aikijg6bw7lgo",
+    "name": "Czekarzewice",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151210100",
+    "id": "cmbjrnyje03iijo0j4dth6wxb",
+    "name": "OZIEMKÓWKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151210110",
+    "id": "cmbjrnr3003i0jo0joxnf2p4l",
+    "name": "MIKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151210120",
+    "id": "cmbjkphxk01cbikijt7m1lobx",
+    "name": "Dęblin",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "151210130",
+    "id": "cmbjrnvh403ibjo0jup4wqe3z",
+    "name": "BÓR",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151210190",
+    "id": "cmbjky2hg02uqikijwz2b8ejo",
+    "name": "Puławy",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "151210220",
+    "id": "cmbjronk303jyjo0j695sasgk",
+    "name": "KOLONIA NADWIŚLAŃSKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151220010",
+    "id": "cmbjks4pq01tqikijmhkzxws9",
+    "name": "Kośmin",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151220040",
+    "id": "cmbjrgu3j034cjo0j8rj7eyfo",
+    "name": "WITOWICE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151220050",
+    "id": "cmbjrmlla03fljo0jy6dtvzro",
+    "name": "MŁYNISKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151220070",
+    "id": "cmbjrgw79034jjo0j1ciwu07c",
+    "name": "LUBLIN",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151220080",
+    "id": "cmbjkvp0u02ijikijl5wae0jb",
+    "name": "Tchórzew",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "151220090",
+    "id": "cmbjkogrv0150ikijmtwtpwor",
+    "name": "Lubartów",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "151220100",
+    "id": "cmbjkpo6f01d7ikij5pqbfbrs",
+    "name": "Sobianowice",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "151220110",
+    "id": "cmbjrof5003jhjo0jvii3evfd",
+    "name": "SIEMIEŃ",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151220120",
+    "id": "cmbjro40v03isjo0jq1ci587f",
+    "name": "PARCZEW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151220130",
+    "id": "cmbjrolku03jvjo0jupjmmucq",
+    "name": "BISKUPICE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151220150",
+    "id": "cmbjrgyd5034ojo0jais4wmj9",
+    "name": "ZEMBORZYCE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151230010",
+    "id": "cmbjku6ik026yikijs7y9fs97",
+    "name": "Trawniki",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "151230020",
+    "id": "cmbjroqm203k5jo0jlznjc6nu",
+    "name": "ROSSOSZ",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151230030",
+    "id": "cmbjrr5vs03pdjo0jht5o4zvg",
+    "name": "OKUNINKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151230040",
+    "id": "cmbjkp5g4019pikij6vir2wuv",
+    "name": "Włodawa",
+    "measurementsCount": 15
+  },
+  {
+    "stationCode": "151230050",
+    "id": "cmbjrmbwd03f0jo0j35411vkh",
+    "name": "RUDA-OPALIN",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "151230060",
+    "id": "cmbjr9hbc02cejo0jivyo327n",
+    "name": "DOROHUSK",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152140010",
+    "id": "cmbjqjxvb01mdjo0j2u1cedjh",
+    "name": "BIELINEK",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152140020",
+    "id": "cmbjkp682019wikijq1ijpza1",
+    "name": "Gozdowice",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "152140050",
+    "id": "cmbjkwcg602moikijnrqba35p",
+    "name": "Słubice",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "152140060",
+    "id": "cmbjqoyds01qtjo0joqonqzu3",
+    "name": "KOSTRZYN NAD ODRĄ",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152140070",
+    "id": "cmbjkwxeh02q9ikijcpg0unxq",
+    "name": "Kostrzyn n. Odrą",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "152140080",
+    "id": "cmbjrh0iw034vjo0jsu0vpeqm",
+    "name": "MACZKÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152140090",
+    "id": "cmbjquvkt01s4jo0jo3mz5s16",
+    "name": "BIAŁA GÓRA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152140100",
+    "id": "cmbjrh2pw0352jo0j3p93786m",
+    "name": "DOLSK",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152140110",
+    "id": "cmbjrh4vg0359jo0jeldm8m55",
+    "name": "SĄDÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152140120",
+    "id": "cmbjrnim603hjjo0jwbcvcrrn",
+    "name": "MYŚLIBÓRZ",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152140130",
+    "id": "cmbjr5dmi0211jo0ju15e8gtw",
+    "name": "POŁĘCKO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152150010",
+    "id": "cmbjkpake01asikijw30uqr1h",
+    "name": "Świerkocin",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "152150020",
+    "id": "cmbjkqfbt01i7ikij9y66lyrh",
+    "name": "Stary Raduszec",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "152150040",
+    "id": "cmbjks5eg01tyikijzx3zx3nk",
+    "name": "Gorzów Wielkopolski",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "152150050",
+    "id": "cmbjqs8te01rjjo0jj8o9oqfi",
+    "name": "NIETKÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152150080",
+    "id": "cmbjkpoym01dcikijs2j295in",
+    "name": "Santok 2",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "152150090",
+    "id": "cmbjkx51102raikijdn24t8vc",
+    "name": "Santok",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "152150100",
+    "id": "cmbjky7d002v9ikijz0b6klg9",
+    "name": "Bledzew",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "152150110",
+    "id": "cmbjqimd501j6jo0jbfqng3qf",
+    "name": "SKWIERZYNA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152150130",
+    "id": "cmbjqw3qy01sjjo0jiej4l22w",
+    "name": "CIGACICE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152150140",
+    "id": "cmbjkwhlh02njikijezn6cpcz",
+    "name": "Gościmiec",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "152150150",
+    "id": "cmbjrpsy703mhjo0jvhry6f4u",
+    "name": "ŁUGI",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152150180",
+    "id": "cmbjrh6z7035gjo0jd0tbxxx8",
+    "name": "MIERZĘCIN",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152150190",
+    "id": "cmbjqwhm201sqjo0j8wli3rvj",
+    "name": "NOWE DREZDENKO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152150200",
+    "id": "cmbjkqf5101i4ikijho1h11by",
+    "name": "Międzychód",
+    "measurementsCount": 3
+  },
+  {
+    "stationCode": "152150220",
+    "id": "cmbjrh948035njo0j6shstz01",
+    "name": "ZBĄSZYŃ",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152150230",
+    "id": "cmbjrm4h803eijo0jyxuta2ve",
+    "name": "CHEŁST",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152150240",
+    "id": "cmbjpeddj0169zesz973cfqsu",
+    "name": "DRAWINY",
+    "measurementsCount": 3
+  },
+  {
+    "stationCode": "152150270",
+    "id": "cmbjkuh7h029bikij9075lwup",
+    "name": "Zbąszyń",
+    "measurementsCount": 11
+  },
+  {
+    "stationCode": "152160010",
+    "id": "cmbjkwdiv02mrikijj7up59h5",
+    "name": "Krzyż",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "152160050",
+    "id": "cmbjks1az01t7ikij5qmlnpsi",
+    "name": "Wronki",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "152160060",
+    "id": "cmbjrhba6035ujo0jxpyrzhgt",
+    "name": "KONOJAD",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152160070",
+    "id": "cmbjkvf7p02gjikijffdt0te2",
+    "name": "Czarnków",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "152160080",
+    "id": "cmbjrhdmi0361jo0jmznc0we7",
+    "name": "SZAMOTUŁY",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152160090",
+    "id": "cmbjkur9802biikijjpb7o6ej",
+    "name": "Kościan",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "152160100",
+    "id": "cmbjkrhmj01p7ikijmdl6w4lx",
+    "name": "Oborniki",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "152160110",
+    "id": "cmbjqzvhe01tdjo0j3z0d5fix",
+    "name": "KOWANÓWKO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152160120",
+    "id": "cmbjkug9i028zikij30159631",
+    "name": "Ryczywół",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "152160130",
+    "id": "cmbjrdel602s0jo0jhoqu3z7m",
+    "name": "MOSINA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152160140",
+    "id": "cmbjkr33t01mpikijwnyaqzar",
+    "name": "Poznań Most Rocha",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "152160150",
+    "id": "cmbjrhfqx0368jo0j3l325asg",
+    "name": "GŁUSZYNA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152170010",
+    "id": "cmbjkpjhx01cfikijf6zdg9cp",
+    "name": "Śrem",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "152170030",
+    "id": "cmbjrhhvw036fjo0jdeqc8gty",
+    "name": "WIERZENICA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152170040",
+    "id": "cmbjrhk1x036mjo0jwbazhs3d",
+    "name": "PRUŚCE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152170060",
+    "id": "cmbjkqzuc01m3ikije9qfeeur",
+    "name": "Nowa Wieś Podgórna",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "152170080",
+    "id": "cmbjkv7yv02ezikijz70bge82",
+    "name": "Pyzdry",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "152170120",
+    "id": "cmbjkso9301x9ikij9lbajnn8",
+    "name": "Samarzewo",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "152170130",
+    "id": "cmbjqu9a101s1jo0j7nqpo0wh",
+    "name": "LĄD",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152170150",
+    "id": "cmbjkpheu01c3ikijvamvcgcs",
+    "name": "Trąbczyn",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "152179994",
+    "id": "cmbjrhm79036tjo0jtk5idmcw",
+    "name": "RASZEWY",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152180010",
+    "id": "cmbjrhoby0370jo0jss7w1tcb",
+    "name": "GĘBICE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152180020",
+    "id": "cmbjrhqi20377jo0jotul281t",
+    "name": "GORYSZEWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152180030",
+    "id": "cmbjkokx5015tikijhvexebp4",
+    "name": "Pakość",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "152180050",
+    "id": "cmbjqjp3t01lljo0jrrvlni75",
+    "name": "SŁAWSK",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152180060",
+    "id": "cmbjkrp1a01qnikij6thi0hbo",
+    "name": "Posoka",
+    "measurementsCount": 15
+  },
+  {
+    "stationCode": "152180090",
+    "id": "cmbjrhsq5037ejo0j17msdgjq",
+    "name": "NOĆ KALINA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152180100",
+    "id": "cmbjrhuue037ljo0jo2ayu2kh",
+    "name": "ŁYSEK",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152180110",
+    "id": "cmbjkqykk01lxikijbwtg3agi",
+    "name": "Kościelec",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "152180120",
+    "id": "cmbjqmp8r01q1jo0j0kyu7c0g",
+    "name": "KOŁO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152180130",
+    "id": "cmbjrhx8g037sjo0jx9kpyvi4",
+    "name": "OTŁOCZYNEK",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152180140",
+    "id": "cmbjksfh401vpikijqzfxv6sh",
+    "name": "Grzegorzew",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152180150",
+    "id": "cmbjkugn10294ikijdy2vnqxt",
+    "name": "Dąbie",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "152180160",
+    "id": "cmbjkuodv02avikijoghbzjyf",
+    "name": "Konin-Morzysław",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "152180170",
+    "id": "cmbjktw94024yikijlcdzr5ei",
+    "name": "Popowo",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152180180",
+    "id": "cmbjrhzfd037zjo0j7i5r3xkm",
+    "name": "ZABOROWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152190030",
+    "id": "cmbjksgfm01vyikijxosbu0dd",
+    "name": "Włocławek",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "152190050",
+    "id": "cmbjkuk0o029zikijru8gpsem",
+    "name": "Kwiatkówek",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "152190100",
+    "id": "cmbjkrusk01rwikijd1zu41kh",
+    "name": "Bielawy",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "152190110",
+    "id": "cmbjrq5sl03n8jo0j2vweauva",
+    "name": "SIERPC",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152190120",
+    "id": "cmbjkwpj102ovikij5baeez6m",
+    "name": "Kępa Polska",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "152190160",
+    "id": "cmbjrr3vh03pajo0jskfxjr5s",
+    "name": "BABIEC",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152199992",
+    "id": "cmbjrl5x703d3jo0jg1tjj3ca",
+    "name": "ŁOWICZ",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152199997",
+    "id": "cmbjrr90903pkjo0jertqqycj",
+    "name": "KUTNO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152200010",
+    "id": "cmbjkqnv001jtikij11canovi",
+    "name": "Kęszyce",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "152200020",
+    "id": "cmbjkp5jh019qikijkafqpfls",
+    "name": "Trzciniec",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "152200030",
+    "id": "cmbjkuvp102cgikij0i1663xv",
+    "name": "Wyszogród",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "152200050",
+    "id": "cmbjkuuz202cbikijs9fxjf5k",
+    "name": "Żuków",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "152200070",
+    "id": "cmbjrr72503phjo0jfdd9zsyu",
+    "name": "WŁADYSŁAWÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152200080",
+    "id": "cmbjrnkmd03hmjo0j8v2rmimf",
+    "name": "STRACHOWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152200090",
+    "id": "cmbjkp49o019likijzc1os9go",
+    "name": "Krubice",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "152200100",
+    "id": "cmbjri1lh0386jo0jwq7pmefc",
+    "name": "LUBERADZ",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152200110",
+    "id": "cmbjkurx402bnikijclmjf1td",
+    "name": "Modlin",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "152200120",
+    "id": "cmbjkruoz01rvikijv0nzbks1",
+    "name": "Borkowo",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "152200130",
+    "id": "cmbjkv2dc02dtikijn6au3puf",
+    "name": "Orzechowo",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "152200150",
+    "id": "cmbjkuze802d7ikij2s26crxb",
+    "name": "Wychódźc",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "152209994",
+    "id": "cmbjrns6803i4jo0jdj455ggo",
+    "name": "NOWE MIASTO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152209996",
+    "id": "cmbjrnxft03iejo0jm8iwp1ky",
+    "name": "SOCHOCIN",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152209997",
+    "id": "cmbjrok6p03jrjo0jl6hselex",
+    "name": "DURANÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152210010",
+    "id": "cmbjktlp80231ikijykqoz9jl",
+    "name": "Warszawa",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152210020",
+    "id": "cmbjksr4h01y2ikijtp26hewb",
+    "name": "Piaseczno",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "152210030",
+    "id": "cmbjkpvv501eoikijlm4uwscp",
+    "name": "Maków Mazowiecki",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "152210040",
+    "id": "cmbjkpzap01f9ikij9n0l8e4z",
+    "name": "Warszawa - Nadwilanówka",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "152210060",
+    "id": "cmbjkpmx201d3ikijybd36sgu",
+    "name": "Zambski Kościelne",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "152210070",
+    "id": "cmbjkq28101fuikij4epyt8we",
+    "name": "Wólka Mlądzka",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "152210090",
+    "id": "cmbjkw6pr02lqikijcz9emy6x",
+    "name": "Wyszków",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "152210100",
+    "id": "cmbjkpzvv01fcikij0gympjae",
+    "name": "Czarnowo",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "152210110",
+    "id": "cmbjrq73q03ncjo0jsgdvr7ft",
+    "name": "ZAWISZYN",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152210120",
+    "id": "cmbjkp606019uikijgvnqhgcj",
+    "name": "Łochów",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "152210130",
+    "id": "cmbjrp6oa03l4jo0juxh3j7pw",
+    "name": "NOWE KACZKOWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152210140",
+    "id": "cmbjrrtru03qujo0jwc5b442k",
+    "name": "JAGODNE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152210150",
+    "id": "cmbjkrib301pcikijn11paqs6",
+    "name": "Popowo",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "152210170",
+    "id": "cmbjkteiy021yikijin5c5dlf",
+    "name": "Warszawa-Bulwary",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "152210180",
+    "id": "cmbjrppxh03majo0j3eh94mul",
+    "name": "PUŁTUSK",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152219993",
+    "id": "cmbjri3rc038djo0jues1zeyl",
+    "name": "RÓŻAN",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152219996",
+    "id": "cmbjri5xy038kjo0j172ji683",
+    "name": "ZIELONKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152220010",
+    "id": "cmbjkx80f02rsikij70a7aejk",
+    "name": "Zaliwie-Piegawki",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "152220050",
+    "id": "cmbjkuwh502cjikijlztg45bm",
+    "name": "Frankopol",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "152220060",
+    "id": "cmbjro1ui03ipjo0jighdsnn0",
+    "name": "HRUSZEW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152220070",
+    "id": "cmbjkp7zu01a8ikijz7lwrpu8",
+    "name": "Brańsk",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "152220080",
+    "id": "cmbjku47a026jikijhg7cxn0r",
+    "name": "Suraż",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "152220100",
+    "id": "cmbjro77f03izjo0jthju9kb4",
+    "name": "KOZARZE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152229999",
+    "id": "cmbjkp1qu018yikij3xg4u6k1",
+    "name": "Małkinia",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "152230010",
+    "id": "cmbjrp7pq03l8jo0jaxuexwgv",
+    "name": "BOĆKI",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152230020",
+    "id": "cmbjri8b2038rjo0jngasm0jr",
+    "name": "POROSIUKI",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152230030",
+    "id": "cmbjkpadn01aqikijeiuvdm2d",
+    "name": "Chraboły",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "152230040",
+    "id": "cmbjktql5023yikij35jbkzt5",
+    "name": "Ploski",
+    "measurementsCount": 15
+  },
+  {
+    "stationCode": "152230050",
+    "id": "cmbjro0h903iljo0j7s8faqg3",
+    "name": "PERKOWICE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152230060",
+    "id": "cmbjrn17y03ggjo0j3ej9uybx",
+    "name": "TRZEŚCIANKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "152230070",
+    "id": "cmbjkwt9402poikijcpukxsdv",
+    "name": "Malowa Góra",
+    "measurementsCount": 3
+  },
+  {
+    "stationCode": "152230080",
+    "id": "cmbjkxse602tuikijzl6wrpnl",
+    "name": "Krzyczew",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "152230090",
+    "id": "cmbjkw81002lvikijundcx749",
+    "name": "Narew",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "152230100",
+    "id": "cmbjktnsj023hikijqopwmrem",
+    "name": "Narewka",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "152230110",
+    "id": "cmbjktbmd021hikijdfhh0h6b",
+    "name": "Bondary - Siemianówka",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "152230120",
+    "id": "cmbjktmd50238ikijxaemwjvu",
+    "name": "Bondary - Siemianówka",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "152230190",
+    "id": "cmbjkof4z014sikijyjqg9l05",
+    "name": "Białowieża",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "152230200",
+    "id": "cmbjkqjh901j2ikijtmedf46f",
+    "name": "Zabuże",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "153140010",
+    "id": "cmbjkrrgv01r2ikijd5bz9342",
+    "name": "Świnoujście",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "153140020",
+    "id": "cmbjkppdx01dhikij0sjqi0aj",
+    "name": "Widuchowa",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "153140030",
+    "id": "cmbjkq6v801gqikijwiua5pnm",
+    "name": "Gryfino",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "153140040",
+    "id": "cmbjkrz9c01svikijd5lf73c0",
+    "name": "Trzebież",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "153140050",
+    "id": "cmbjkqwqw01lkikijl0hityr9",
+    "name": "Szczecin",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "153140060",
+    "id": "cmbjks3q201tnikijgkhtjg4s",
+    "name": "Wolin",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "153140070",
+    "id": "cmbjkrv9o01s0ikijlac8d6te",
+    "name": "Dziwnów",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "153140080",
+    "id": "cmbjrqvw303osjo0jrvyoejip",
+    "name": "WIDZIEŃSKO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153140090",
+    "id": "cmbjkosjd0178ikijx38fu2gn",
+    "name": "Goleniów",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "153140100",
+    "id": "cmbjrrj4n03q5jo0j4wmq47t0",
+    "name": "ŻELEWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153140110",
+    "id": "cmbjrmaph03ewjo0j3h2br333",
+    "name": "OKUNICA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153140190",
+    "id": "cmbjkp6qm01a0ikijh7wh7oyu",
+    "name": "Regalica Szczecin",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "153140200",
+    "id": "cmbjksmzv01x4ikijdxz32mkq",
+    "name": "Morzyczyn",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "153150010",
+    "id": "cmbjksbrt01v2ikij841tr7ix",
+    "name": "Stargard",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "153150020",
+    "id": "cmbjriaby038ujo0jtbn6kvyj",
+    "name": "MORZYCA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153150030",
+    "id": "cmbjrp4pf03l1jo0j527so44v",
+    "name": "KULICE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153150040",
+    "id": "cmbjrradb03pojo0jlyhgr1sq",
+    "name": "GOGOLEWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153150050",
+    "id": "cmbjktyyt025eikijx0f7venv",
+    "name": "Resko",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "153150080",
+    "id": "cmbjrrk6w03q9jo0j7ea8feet",
+    "name": "ŁOBEZ",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153150090",
+    "id": "cmbjrpjhv03lwjo0je3miconi",
+    "name": "GOLA DOLNA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153150100",
+    "id": "cmbjricgw038xjo0jnngaevqa",
+    "name": "DRAWNO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153150120",
+    "id": "cmbjrrdlv03pvjo0jxn04asyn",
+    "name": "DRAWSKO POMORSKIE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153150190",
+    "id": "cmbjriehq0390jo0j1divd1j0",
+    "name": "MOŁSTOWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153160020",
+    "id": "cmbjkquiw01l3ikijfihyfmi7",
+    "name": "Tychówko",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "153160030",
+    "id": "cmbjrqp7q03oejo0jfvkpm6au",
+    "name": "STARE DRAWSKO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153160040",
+    "id": "cmbjkrspl01raikij2x3sq8o5",
+    "name": "Czaplinek",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "153160070",
+    "id": "cmbjrqbzy03nmjo0j9frcj7fx",
+    "name": "NADARZYCE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153160080",
+    "id": "cmbjrpnxw03m7jo0jk4ivziz1",
+    "name": "STORKOWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153160110",
+    "id": "cmbjrigjc0393jo0jlrd2m7de",
+    "name": "WIESIÓŁKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153160160",
+    "id": "cmbjrloxd03dujo0jumxsidf2",
+    "name": "UJŚCIE 2",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153160170",
+    "id": "cmbjkw2zh02l5ikij628j2uyq",
+    "name": "Ujście",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "153160180",
+    "id": "cmbjqslu301rojo0j1ftt6ng1",
+    "name": "PIŁA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153160190",
+    "id": "cmbjriihz0396jo0jbdzo7cm9",
+    "name": "ZABRODZIE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153160200",
+    "id": "cmbjrikk50399jo0jhz980h9v",
+    "name": "GWDA WIELKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153160210",
+    "id": "cmbjkuf1v028tikij9ka4h40a",
+    "name": "Ptusza",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "153160250",
+    "id": "cmbjrrnij03qgjo0jxbmo1y8g",
+    "name": "OKONEK",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153160260",
+    "id": "cmbjrr2iy03p6jo0j5ng4s9ha",
+    "name": "CZARNE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153160300",
+    "id": "cmbjkqsbe01knikij8n49abmm",
+    "name": "Wielimie",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153170010",
+    "id": "cmbjkvrzr02j7ikij8njzouo7",
+    "name": "Białośliwie",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "153170040",
+    "id": "cmbjkoj1z015fikijhrem5kp6",
+    "name": "Wyrzysk",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "153170050",
+    "id": "cmbjrkzfp03cujo0jakzekgba",
+    "name": "CIECHOLEWY",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153170060",
+    "id": "cmbjrimkq039cjo0je153pcnt",
+    "name": "SWORNEGACIE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153170070",
+    "id": "cmbjrioku039fjo0jsts2j78n",
+    "name": "SWORNEGACIE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153170100",
+    "id": "cmbjkov5t017pikijvn512hrp",
+    "name": "Nakło-Zachód",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "153170110",
+    "id": "cmbjrnf6v03hcjo0jut6qeryp",
+    "name": "MOTYL",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153170120",
+    "id": "cmbjkrlzx01pyikij7k81sv6k",
+    "name": "Tuchola",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "153170140",
+    "id": "cmbjkvbfb02fsikijnq0x1zni",
+    "name": "Smukała",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "153179996",
+    "id": "cmbjriqo2039ijo0jdqd57o2m",
+    "name": "CHOCIŃSKI MŁYN",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153180010",
+    "id": "cmbjksr1801y1ikijq8f0dpxu",
+    "name": "Czarna Woda",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "153180020",
+    "id": "cmbjkqvo501l9ikijxqw3zio2",
+    "name": "Fordon",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "153180030",
+    "id": "cmbjkru7f01rmikijiinl9qvx",
+    "name": "Bożepole",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "153180040",
+    "id": "cmbjrouxk03kgjo0jhixqmk4s",
+    "name": "TLEŃ",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153180050",
+    "id": "cmbjrms4e03fzjo0jtn3z96xp",
+    "name": "BŁĘDNO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153180060",
+    "id": "cmbjkwfzx02nbikijnhyqeiu3",
+    "name": "Krąplewice",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "153180080",
+    "id": "cmbjkszcd01zfikijxe6271jw",
+    "name": "Chełmno",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "153180090",
+    "id": "cmbjks09501syikijjb6pbkis",
+    "name": "Toruń",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "153180100",
+    "id": "cmbjkutah02bzikijs8lsint1",
+    "name": "Grudziądz",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "153180110",
+    "id": "cmbjqoeud01qojo0jhl6sadxl",
+    "name": "BRODY POMORSKIE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153180120",
+    "id": "cmbjkq2ms01fxikij1956k11k",
+    "name": "Hel",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "153180130",
+    "id": "cmbjkq44p01g5ikij7bouhovv",
+    "name": "Kwidzyn",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "153180140",
+    "id": "cmbjkprgx01dvikij81p106nn",
+    "name": "Elgiszewo",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "153180150",
+    "id": "cmbjkpwbq01erikijlre52j4k",
+    "name": "Rogóźno",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "153190010",
+    "id": "cmbjrqgq103nxjo0jh3e1c1e7",
+    "name": "ŚWIECIE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153190020",
+    "id": "cmbjrpucg03mljo0jkcb3bpcm",
+    "name": "LISNOWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153190030",
+    "id": "cmbjrrm5303qcjo0jjzl4gnrb",
+    "name": "PRABUTY",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153190040",
+    "id": "cmbjn19rh0003zvzu76gtymdb",
+    "name": "Bągart",
+    "measurementsCount": 14
+  },
+  {
+    "stationCode": "153190050",
+    "id": "cmbjkrkb901pnikijxpeqigf3",
+    "name": "Brodnica",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "153190080",
+    "id": "cmbjrl3ao03d0jo0jjilvzp5l",
+    "name": "IŁAWA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153190090",
+    "id": "cmbjkum8t02agikijqz590f27",
+    "name": "Nowe Miasto Lubawskie",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "153190100",
+    "id": "cmbjrl1dk03cxjo0jederinju",
+    "name": "DZIARNY",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153190120",
+    "id": "cmbjkqd6m01hwikijbt431bcc",
+    "name": "Rodzone",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "153190130",
+    "id": "cmbjkqax601hfikijct6wgai3",
+    "name": "Kuligi (Nowe Miasto)",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "153190140",
+    "id": "cmbjro8m503j3jo0jbaou6q1h",
+    "name": "SAMBOROWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153190150",
+    "id": "cmbjkt0rb01zjikijq69ecs17",
+    "name": "Lidzbark",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "153190170",
+    "id": "cmbjksiwr01weikij6h3hj4ee",
+    "name": "Ostróda",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "153190180",
+    "id": "cmbjrmfcr03f7jo0jg0k6cdzy",
+    "name": "BACHOTEK",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153190190",
+    "id": "cmbjrme0c03f3jo0j87gar6l6",
+    "name": "TAMA BRODZKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153200010",
+    "id": "cmbjroi8803jojo0jrbbi4u6c",
+    "name": "IDZBARK",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153200020",
+    "id": "cmbjks32401tfikij3i0vcb38",
+    "name": "Szreńsk",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153200030",
+    "id": "cmbjkw45s02laikijdst1rig1",
+    "name": "Kalisty",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "153200040",
+    "id": "cmbjkoq9k016wikijtvrezc25",
+    "name": "Tomaryny",
+    "measurementsCount": 3
+  },
+  {
+    "stationCode": "153200050",
+    "id": "cmbjrisme039ljo0jr07aq3uc",
+    "name": "SARNOWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153200070",
+    "id": "cmbjkochi0147ikijly2093eg",
+    "name": "Olsztyn",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "153200090",
+    "id": "cmbjkuppr02b6ikijfwr4h4o0",
+    "name": "Szypry",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "153200160",
+    "id": "cmbjrr0l803p3jo0jkg9x2u4j",
+    "name": "WIELBARK",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153210010",
+    "id": "cmbjrqinj03o0jo0jo6bt4w4m",
+    "name": "KRUKOWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153210020",
+    "id": "cmbjrqtlx03opjo0jl3ayamb6",
+    "name": "KRASNOSIELC",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153210040",
+    "id": "cmbjrqx8i03owjo0juctxwmy6",
+    "name": "MYSZYNIEC",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153210050",
+    "id": "cmbjrqk0f03o4jo0jd0i3zbv9",
+    "name": "SPYCHOWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153210070",
+    "id": "cmbjkwh1802neikijoav1qgfd",
+    "name": "Białobrzeg Bliższy",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "153210090",
+    "id": "cmbjkr8s601nkikijgoabfxhr",
+    "name": "Ostrołęka",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "153210120",
+    "id": "cmbjkubnz0283ikij833wdf77",
+    "name": "Walery",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "153210130",
+    "id": "cmbjriulm039ojo0jl9nuetlm",
+    "name": "GŁODOWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153210140",
+    "id": "cmbjkta020219ikijacbtjc86",
+    "name": "Szkwa",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "153210170",
+    "id": "cmbjkqy9q01lsikijclgufe95",
+    "name": "Ptaki",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "153210180",
+    "id": "cmbjkvgvm02gwikij96r0d0jc",
+    "name": "Zaruzie",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "153210190",
+    "id": "cmbjkts2g0248ikijjek6gjzt",
+    "name": "Pisz",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "153210200",
+    "id": "cmbjl0c8a0346ikij4ng6wfgw",
+    "name": "Maldanin",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "153210210",
+    "id": "cmbjku1hk025yikij0bkohbzm",
+    "name": "Nowogród",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "153210220",
+    "id": "cmbjkpov101dbikijpcj5egtz",
+    "name": "Dobrylas",
+    "measurementsCount": 14
+  },
+  {
+    "stationCode": "153220010",
+    "id": "cmbjktc6p021likijrznisu0a",
+    "name": "Piątnica-Łomża",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "153220050",
+    "id": "cmbjkuim1029pikijg5192dw0",
+    "name": "Ełk 2",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "153220060",
+    "id": "cmbjkpori01daikij6w4un8lw",
+    "name": "Ełk",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "153220070",
+    "id": "cmbjkwljq02o6ikij9cokaegq",
+    "name": "Wizna",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "153220080",
+    "id": "cmbjkwvos02q1ikijgx7l46rq",
+    "name": "Prostki",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "153220090",
+    "id": "cmbjkoq2q016uikij1hekkmj3",
+    "name": "Czachy",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "153220100",
+    "id": "cmbjkq4fs01gaikijhx3ptk1v",
+    "name": "Burzyn",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "153220110",
+    "id": "cmbjrne3l03h8jo0j5ey0x2d9",
+    "name": "CHEŁCHY",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153220130",
+    "id": "cmbjkpd2y01beikij2mdrle76",
+    "name": "Strękowa Góra",
+    "measurementsCount": 15
+  },
+  {
+    "stationCode": "153220140",
+    "id": "cmbjkvvn002jvikijeze82ccd",
+    "name": "Przechody",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "153220150",
+    "id": "cmbjroh5703jkjo0jun2mcpo4",
+    "name": "KUCZE ",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153220160",
+    "id": "cmbjkte8m021vikijoich4tiq",
+    "name": "Osowiec 2",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "153220170",
+    "id": "cmbjkr0qm01m9ikij6n7wq9jt",
+    "name": "Osowiec",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "153220180",
+    "id": "cmbjkoznb018kikij2cz824b4",
+    "name": "Zawady",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "153220190",
+    "id": "cmbjkviyd02haikij83ojz3f4",
+    "name": "Rajgród 2",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "153220200",
+    "id": "cmbjktdjz021oikijgt7h3i7t",
+    "name": "Rajgród",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "153220220",
+    "id": "cmbjrobrb03jajo0jom5z9huo",
+    "name": "WOŹNAWIEŚ",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153220230",
+    "id": "cmbjksv6e01ypikijkq957v4d",
+    "name": "Kulesze Chobotki",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "153220240",
+    "id": "cmbjrn5qb03grjo0jbs766wsx",
+    "name": "RACZKI",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153220250",
+    "id": "cmbjriwi4039rjo0jueqnfc20",
+    "name": "DOLISTOWO STARE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153220260",
+    "id": "cmbjkx1k002quikijwccwkjes",
+    "name": "Dębowo",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "153220270",
+    "id": "cmbjktihv022iikij0xzqafkx",
+    "name": "Babino",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "153220280",
+    "id": "cmbjkzt1b031sikij3xg0l2lv",
+    "name": "Białobrzegi",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "153220290",
+    "id": "cmbjrmv6303g6jo0jpebi27k6",
+    "name": "SZCZEBRA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153220310",
+    "id": "cmbjriyg9039ujo0jyjo32zd2",
+    "name": "CZARNA WIEŚ",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153230010",
+    "id": "cmbjkuf8j028uikijozsgkbz2",
+    "name": "Fasty",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "153230020",
+    "id": "cmbjkqrhn01khikijy2j6u0tm",
+    "name": "Karpowicze",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "153230060",
+    "id": "cmbjkpxsf01ezikijemk66r9b",
+    "name": "Zawady",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "153230070",
+    "id": "cmbjkpxvp01f0ikijnmixy5l4",
+    "name": "Sztabin",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "153230080",
+    "id": "cmbjkov9r017qikij61o92jtt",
+    "name": "Sochonie",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "153230110",
+    "id": "cmbjkv0x702diikijqk1pldoo",
+    "name": "Supraśl",
+    "measurementsCount": 13
+  },
+  {
+    "stationCode": "153230120",
+    "id": "cmbjrj0dx039xjo0j6jgsvuhy",
+    "name": "JAŁOWY RÓG",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153230130",
+    "id": "cmbjkqjye01j6ikij7pd1uupl",
+    "name": "Harasimowicze",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "153230140",
+    "id": "cmbjrlup403e3jo0joymvp84f",
+    "name": "SOKOŁDA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153230160",
+    "id": "cmbjrj2e003a0jo0jlhgzcokg",
+    "name": "GRÓDEK",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "153230170",
+    "id": "cmbjku04q025rikijqgjx83hi",
+    "name": "Nowosiółki",
+    "measurementsCount": 14
+  },
+  {
+    "stationCode": "154150010",
+    "id": "cmbjqphx401qyjo0jo9i949j7",
+    "name": "TRZEBIATÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154150030",
+    "id": "cmbjkreig01ooikij6z3kimzz",
+    "name": "Kołobrzeg",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154150040",
+    "id": "cmbjkr54301n0ikijfbo8vo7n",
+    "name": "Bardy",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "154150050",
+    "id": "cmbjkornp0170ikijesybh6tj",
+    "name": "Białogard",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "154150060",
+    "id": "cmbjrorxz03k9jo0jposj35m8",
+    "name": "ROŚCIĘCINO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154150070",
+    "id": "cmbjrq3vd03n5jo0jcyrycnxp",
+    "name": "KARLINO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154150080",
+    "id": "cmbjrrw1003qxjo0jtelm7497",
+    "name": "MRZEŻYNO",
+    "measurementsCount": 0
+  },
+  {
+    "stationCode": "154160020",
+    "id": "cmbjkpao501atikijf3yii1es",
+    "name": "Białogórzyno",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "154160030",
+    "id": "cmbjrpzjq03mvjo0j0awajogk",
+    "name": "KOSZALIN",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154160060",
+    "id": "cmbjrj4cb03a3jo0jk5odacqk",
+    "name": "GRABOWO",
+    "measurementsCount": 0
+  },
+  {
+    "stationCode": "154160070",
+    "id": "cmbjqnhk901qcjo0jftja4sd3",
+    "name": "STARY KRAKÓW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154160080",
+    "id": "cmbjrpqzl03mejo0jv7jkufnc",
+    "name": "CYBULINO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154160090",
+    "id": "cmbjrqdru03nqjo0jclk32nhi",
+    "name": "KRĄG",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154160100",
+    "id": "cmbjrqqkq03oijo0ju2nlo83v",
+    "name": "PIESZCZ",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154160110",
+    "id": "cmbjkpu2801eaikij8mh8c3ce",
+    "name": "Ustka",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154160120",
+    "id": "cmbjkot8a017gikijgwi6wxma",
+    "name": "Korzybie",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "154160130",
+    "id": "cmbjrmhb803fajo0j5tru2txb",
+    "name": "CIECHOLUB",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154160140",
+    "id": "cmbjpv01z0001jo0jgmqsf7eo",
+    "name": "CHARNOWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154160150",
+    "id": "cmbjkpb2601awikij4wwdl7jn",
+    "name": "Darłowo",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154160160",
+    "id": "cmbjrq2u003n1jo0j7ak088bw",
+    "name": "ZIELNOWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154169997",
+    "id": "cmbjrqsij03oljo0jv9w9rphe",
+    "name": "SŁAWNO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154170010",
+    "id": "cmbjkoktk015sikijrgppl7r1",
+    "name": "Słupsk",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "154170020",
+    "id": "cmbjrq92303nfjo0jiomfevhz",
+    "name": "KRĘPA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154170030",
+    "id": "cmbjrqa3a03njjo0jpt4stggh",
+    "name": "SKARSZÓW DOLNY",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154170040",
+    "id": "cmbjrpxlw03msjo0jp9yr54xp",
+    "name": "KWISNO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154170060",
+    "id": "cmbjkqh3p01ihikij4nsaq5ml",
+    "name": "Smołdzino",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154170070",
+    "id": "cmbjptzep0000jo0jykg0m0zy",
+    "name": "GAŁĄŹNIA MAŁA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154170080",
+    "id": "cmbjl2k1e03cvikijkcbi6634",
+    "name": "Łupawa",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154170090",
+    "id": "cmbjksa1g01uuikijvgutbb7n",
+    "name": "Izbica",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154170100",
+    "id": "cmbjkqoco01jxikij673lnvav",
+    "name": "Łeba",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154170110",
+    "id": "cmbjrm0j603ecjo0jf51cf442",
+    "name": "CECENOWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154170120",
+    "id": "cmbjkqk1o01j7ikijynvohynt",
+    "name": "Soszyca",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154170130",
+    "id": "cmbjrpml903m3jo0j6ceyck4x",
+    "name": "POGORZELICE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154170150",
+    "id": "cmbjrpg5y03lpjo0jgy7usmjp",
+    "name": "ZAWIATY",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154170160",
+    "id": "cmbjkrbm801o4ikijoy0z5hvc",
+    "name": "Lębork",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "154170180",
+    "id": "cmbjrmoqn03fsjo0jh1f48hr5",
+    "name": "WAWRZYNOWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154170190",
+    "id": "cmbjksrfg01y3ikijip7nn339",
+    "name": "Borucino",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154170230",
+    "id": "cmbjrp9nr03lbjo0jfdgzp0x9",
+    "name": "OBROWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154170240",
+    "id": "cmbjrj5ca03a4jo0jifs0yp5c",
+    "name": "BORUCINO ",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154170320",
+    "id": "cmbjrj7a403a7jo0j0apnhe0p",
+    "name": "GŁUSZYNKO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154170330",
+    "id": "cmbjrj98j03aajo0jnxkko33k",
+    "name": "ŁEBSKO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154170340",
+    "id": "cmbjplzqq0000n3q0qpyxgh2f",
+    "name": "ŻELKÓWKO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154179991",
+    "id": "cmbjrqn9i03objo0jxmvmpc31",
+    "name": "STĘŻYCA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154179998",
+    "id": "cmbjrjd7503afjo0jyxe4xssg",
+    "name": "DAMNO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154180010",
+    "id": "cmbjrn4bn03gnjo0j846v5xdd",
+    "name": "SARNOWY",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154180020",
+    "id": "cmbjkw8vc02m2ikijiizeaj45",
+    "name": "Miłoszewo",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "154180030",
+    "id": "cmbjrjf7g03aijo0j8oeyegb7",
+    "name": "ZAMOSTNE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154180040",
+    "id": "cmbjroao503j6jo0jb1v50qw3",
+    "name": "OSTRZYCE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154180050",
+    "id": "cmbjrjha003aljo0jt2ktm3kb",
+    "name": "WARSZKOWSKI MŁYN",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154180060",
+    "id": "cmbjkp8l601ahikijroo9ilss",
+    "name": "Goręczyno",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "154180070",
+    "id": "cmbjrjjdq03aojo0jecs0geck",
+    "name": "BOLSZEWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154180080",
+    "id": "cmbjkruvx01rxikijnobu33v9",
+    "name": "Wejherowo",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "154180090",
+    "id": "cmbjkrn7g01q9ikijrdkfid0t",
+    "name": "Puck",
+    "measurementsCount": 15
+  },
+  {
+    "stationCode": "154180100",
+    "id": "cmbjkpfw701buikijobvqhn7m",
+    "name": "Władysławowo",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154180110",
+    "id": "cmbjrotvp03kcjo0jy2azq33p",
+    "name": "ZAPOWIEDNIK",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154180120",
+    "id": "cmbjkr5lp01n4ikijpe1oocrf",
+    "name": "Gdynia",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154180140",
+    "id": "cmbjkqbba01hiikijrs2ttzy3",
+    "name": "Gdańsk",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "154180150",
+    "id": "cmbjqio1001jdjo0jolst3nmq",
+    "name": "TCZEW",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154180160",
+    "id": "cmbjkqsp301kqikiji128ye62",
+    "name": "Sobieszewo",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154180170",
+    "id": "cmbjksek801vmikijldz8mhzd",
+    "name": "Wiślina",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154180180",
+    "id": "cmbjkqfss01ibikijd6mbn9bq",
+    "name": "Suchy Dąb",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "154180190",
+    "id": "cmbjkot4w017fikijivmzrcxg",
+    "name": "Przegalina",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154180200",
+    "id": "cmbjkp2f60195ikijrlcbed03",
+    "name": "Świbno",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154180210",
+    "id": "cmbjkoo9u016likij5uoxne8q",
+    "name": "Ujście Wisły",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154180220",
+    "id": "cmbjn1aok000czvzutq8o0qlu",
+    "name": "Gdańska Głowa",
+    "measurementsCount": 13
+  },
+  {
+    "stationCode": "154180230",
+    "id": "cmbjrjlcy03arjo0jzv4ye8ww",
+    "name": "BORUCINO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154180260",
+    "id": "cmbjkukor02a4ikijta3zmj54",
+    "name": "Pruszcz Gdański_kanał",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "154180270",
+    "id": "cmbjkv4it02e9ikijfebyhhce",
+    "name": "Pruszcz Gdański",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "154180280",
+    "id": "cmbjrjncb03aujo0jgef53au8",
+    "name": "DĘBKI",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154180290",
+    "id": "cmbjrjpao03axjo0jawsj4xu5",
+    "name": "REDA-CEDRON",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154180300",
+    "id": "cmbjrlwmk03e6jo0jca8cchmj",
+    "name": "SKARSZEWY",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154190010",
+    "id": "cmbjkris601pgikij9bh3mqi9",
+    "name": "Nowy Dwór Gdański",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154190020",
+    "id": "cmbjkpkxw01cpikij8w92eqpm",
+    "name": "Tujsk",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154190030",
+    "id": "cmbjkr17r01mdikijzahwc7c9",
+    "name": "Osłonka",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154190040",
+    "id": "cmbjkra4801nxikijq4dh8c8t",
+    "name": "Dolna Kępa",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154190050",
+    "id": "cmbjn1azz000fzvzut35j1mh3",
+    "name": "Nowe Batorowo",
+    "measurementsCount": 14
+  },
+  {
+    "stationCode": "154190060",
+    "id": "cmbjkoxzc0189ikijhixfkk38",
+    "name": "Elbląg",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154190070",
+    "id": "cmbjrnlp403hqjo0jd1iykzd9",
+    "name": "KRYNICA MORSKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154190080",
+    "id": "cmbjn1adf0009zvzuosshwnzl",
+    "name": "Żukowo",
+    "measurementsCount": 14
+  },
+  {
+    "stationCode": "154190090",
+    "id": "cmbjkpya501f3ikijgt58kf1j",
+    "name": "Tolkmicko",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154190100",
+    "id": "cmbjksvnw01ysikij0uicspht",
+    "name": "Pasłęk",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154190110",
+    "id": "cmbjkod9x014gikijyb4428pz",
+    "name": "Nowe Sadłuki",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "154190130",
+    "id": "cmbjqhvnp01h4jo0jlt8m95u2",
+    "name": "NOWA PASŁĘKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154190140",
+    "id": "cmbjkt3dt01zzikijrr2fbwmx",
+    "name": "Braniewo",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "154190150",
+    "id": "cmbjksndt01x7ikijea21iw4w",
+    "name": "Pierzchały",
+    "measurementsCount": 16
+  },
+  {
+    "stationCode": "154190160",
+    "id": "cmbjkvuaw02jmikijjh9or56s",
+    "name": "Pierzchały",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "154190170",
+    "id": "cmbjksm6101wyikij5ybopzjd",
+    "name": "Łozy",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "154190180",
+    "id": "cmbjrm5j903emjo0jxav81e4k",
+    "name": "NOWY ŚWIAT - UJŚCIE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154200010",
+    "id": "cmbjkxd0z02seikijy9x0bibm",
+    "name": "Bornity",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "154200020",
+    "id": "cmbjkuxao02crikij2926ltd5",
+    "name": "Krosno",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "154200030",
+    "id": "cmbjku7up0277ikijys9di1za",
+    "name": "Smolajny",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "154200040",
+    "id": "cmbjro53w03iwjo0j3vhnn7fj",
+    "name": "PIASECZNO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154209999",
+    "id": "cmbjrmk9m03fhjo0js3kcx5jh",
+    "name": "OLKOWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154210010",
+    "id": "cmbjkroq201qgikijcl2fqptb",
+    "name": "Sępopol",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "154210020",
+    "id": "cmbjkq07n01fhikij4lu1eavj",
+    "name": "Prosna",
+    "measurementsCount": 14
+  },
+  {
+    "stationCode": "154210030",
+    "id": "cmbjrqzid03ozjo0jajkcjrfj",
+    "name": "BYKOWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154210060",
+    "id": "cmbjkvoqk02iiikijwg88c235",
+    "name": "Przystań",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "154210070",
+    "id": "cmbjkv4c702e8ikij9ziybk2c",
+    "name": "Węgorzewo",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "154210080",
+    "id": "cmbjkoubz017jikijb9q2ya2v",
+    "name": "Prynowo",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "154210090",
+    "id": "cmbjkq8e601gyikij1asbfftq",
+    "name": "Giżycko",
+    "measurementsCount": 19
+  },
+  {
+    "stationCode": "154210100",
+    "id": "cmbjkuifb029oikijd3ghpab5",
+    "name": "Mieduniszki",
+    "measurementsCount": 18
+  },
+  {
+    "stationCode": "154210110",
+    "id": "cmbjrmqom03fvjo0jcyihb6nb",
+    "name": "SMOKOWO",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154220010",
+    "id": "cmbjkqgt201ieikijw21q7kf5",
+    "name": "Banie Mazurskie",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154220030",
+    "id": "cmbjrmidb03fejo0jnkspsqro",
+    "name": "MAŁE WRONKI",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154220050",
+    "id": "cmbjkt3r80204ikijzu3iyyi5",
+    "name": "Jurkiszki",
+    "measurementsCount": 11
+  },
+  {
+    "stationCode": "154220070",
+    "id": "cmbjrjreg03b0jo0jwithszpx",
+    "name": "WÓLKA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154220090",
+    "id": "cmbjrjtes03b3jo0j6n9pwna0",
+    "name": "BRÓD STARY",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154220100",
+    "id": "cmbjrjvf503b6jo0je24gs0qr",
+    "name": "KLESZCZÓWEK",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154220110",
+    "id": "cmbjkrfzi01owikijizddbt13",
+    "name": "Gołdap 2",
+    "measurementsCount": 17
+  },
+  {
+    "stationCode": "154230010",
+    "id": "cmbjrjxir03b9jo0je39nwhy4",
+    "name": "POSZESZUPIE",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154230030",
+    "id": "cmbjrnp5d03hxjo0jhrvjgipt",
+    "name": "CZERWONY FOLWARK",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "154230040",
+    "id": "cmbjrmu2y03g2jo0jnwyprwon",
+    "name": "ZELWA",
+    "measurementsCount": 2
+  },
+  {
+    "stationCode": "250161110",
+    "id": "cmbjrrwzz03qzjo0jd7202ruf",
+    "name": "GOLIŃSK",
+    "measurementsCount": 0
+  }
+]

@@ -1,6 +1,6 @@
 // app/api/stations/route.ts
 import { NextRequest, NextResponse } from 'next/server';
-import { SmartDataService } from '@/lib/smart-data-service';
+import { IMGWCacheService } from '@/lib/imgw-cache-service';
 import { prisma } from '@/lib/prisma';
 
 export async function GET(request: NextRequest) {
@@ -12,8 +12,8 @@ export async function GET(request: NextRequest) {
     const limit = searchParams.get('limit');
     const freshOnly = searchParams.get('fresh') === 'true';
 
-    // Pobierz inteligentne dane ze wszystkich stacji (najświeższe z obu endpointów)
-    let allStations = await SmartDataService.getSmartStationsData();
+    // Pobierz inteligentne dane ze wszystkich stacji (najświeższe z obu endpointów) - z cache
+    let allStations = await IMGWCacheService.getSmartStationsData();
 
     // Pobierz dane z bazy danych dla wszystkich stacji
     let dbStationsMap = new Map();

@@ -246,7 +246,10 @@ export default function StatsPage() {
     fetchStats();
   }, [selectedPeriod, selectedRiver]);
 
-  const formatNumber = (num: number, decimals: number = 1): string => {
+  const formatNumber = (num: number | null | undefined, decimals: number = 1): string => {
+    if (num === null || num === undefined || isNaN(num)) {
+      return '0';
+    }
     return num.toFixed(decimals);
   };
 

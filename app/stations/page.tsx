@@ -19,6 +19,10 @@ export default function StationsPage() {
   const [showFilters, setShowFilters] = useState(false);
   const [editingStation, setEditingStation] = useState<StationData | null>(null);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [chartDays, setChartDays] = useState(7);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [stationsPerPage] = useState(50); // Ograniczenie do 50 stacji na stronę
+  const [showCharts, setShowCharts] = useState(true); // Opcja wyłączenia wykresów
 
   useEffect(() => {
     fetchStations();
@@ -89,6 +93,17 @@ export default function StationsPage() {
 
   const trendStats = getTrendStats();
 
+  // Paginacja
+  const totalPages = Math.ceil(filteredStations.length / stationsPerPage);
+  const startIndex = (currentPage - 1) * stationsPerPage;
+  const endIndex = startIndex + stationsPerPage;
+  const currentStations = filteredStations.slice(startIndex, endIndex);
+
+  // Reset strony przy zmianie filtrów
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm, selectedVoivodeship, selectedRiver, selectedTrend]);
+
   const handleEditStation = (station: StationData) => {
     setEditingStation(station);
     setIsEditModalOpen(true);
@@ -144,10 +159,49 @@ export default function StationsPage() {
         <div>
           <h2 className="text-3xl font-bold text-gray-900">Stacje hydrologiczne</h2>
           <p className="mt-2 text-gray-600">
-            {filteredStations.length} z {stations.length} stacji
+            Pokazano {currentStations.length} z {filteredStations.length} stacji (łącznie: {stations.length})
           </p>
         </div>
         <div className="flex items-center space-x-3">
+          {/* Chart controls */}
+          <div className="flex items-center space-x-3">
+            <button
+              onClick={() => setShowCharts(!showCharts)}
+              className={`px-3 py-2 text-sm rounded-md transition-colors ${
+                showCharts 
+                  ? 'bg-green-50 text-green-700 hover:bg-green-100' 
+                  : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
+              }`}
+            >
+              {showCharts ? '📊 Ukryj wykresy' : '📊 Pokaż wykresy'}
+            </button>
+            
+            {showCharts && (
+              <div className="flex items-center space-x-2 bg-gray-50 rounded-lg p-1">
+                <button
+                  onClick={() => setChartDays(3)}
+                  className={`px-3 py-1 text-sm rounded-md transition-colors ${
+                    chartDays === 3 
+                      ? 'bg-white text-gray-900 shadow-sm' 
+                      : 'text-gray-600 hover:text-gray-900'
+                  }`}
+                >
+                  3 dni
+                </button>
+                <button
+                  onClick={() => setChartDays(7)}
+                  className={`px-3 py-1 text-sm rounded-md transition-colors ${
+                    chartDays === 7 
+                      ? 'bg-white text-gray-900 shadow-sm' 
+                      : 'text-gray-600 hover:text-gray-900'
+                  }`}
+                >
+                  7 dni
+                </button>
+              </div>
+            )}
+          </div>
+          
           <Link
             href="/stations/visibility"
             className="flex items-center space-x-2 px-4 py-2 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors"
@@ -169,19 +223,19 @@ export default function StationsPage() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
           <div className="flex items-center space-x-3">
-            <TrendingUp className="h-5 w-5 text-green-600" />
+            <TrendingUp className="h-5 w-5 text-red-600" />
             <div>
               <p className="text-sm text-gray-600">Poziom rośnie</p>
-              <p className="text-xl font-bold text-green-600">{trendStats.rising}</p>
+              <p className="text-xl font-bold text-red-600">{trendStats.rising}</p>
             </div>
           </div>
         </div>
         <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
           <div className="flex items-center space-x-3">
-            <TrendingDown className="h-5 w-5 text-red-600" />
+            <TrendingDown className="h-5 w-5 text-green-600" />
             <div>
               <p className="text-sm text-gray-600">Poziom spada</p>
-              <p className="text-xl font-bold text-red-600">{trendStats.falling}</p>
+              <p className="text-xl font-bold text-green-600">{trendStats.falling}</p>
             </div>
           </div>
         </div>
@@ -292,14 +346,96 @@ export default function StationsPage() {
 
       {/* Stations grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredStations.map((station) => (
+        {currentStations.map((station) => (
           <StationCard 
             key={station.id_stacji} 
             station={station} 
             onEdit={handleEditStation}
+            chartDays={chartDays}
+            showChart={showCharts}
           />
         ))}
       </div>
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
+          <div className="flex flex-1 justify-between sm:hidden">
+            <button
+              onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
+              disabled={currentPage === 1}
+              className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              Poprzednia
+            </button>
+            <button
+              onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
+              disabled={currentPage === totalPages}
+              className="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              Następna
+            </button>
+          </div>
+          <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+            <div>
+              <p className="text-sm text-gray-700">
+                Pokazano <span className="font-medium">{startIndex + 1}</span> do{' '}
+                <span className="font-medium">{Math.min(endIndex, filteredStations.length)}</span> z{' '}
+                <span className="font-medium">{filteredStations.length}</span> stacji
+              </p>
+            </div>
+            <div>
+              <nav className="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
+                <button
+                  onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
+                  disabled={currentPage === 1}
+                  className="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  <span className="sr-only">Poprzednia</span>
+                  ←
+                </button>
+                
+                {/* Page numbers */}
+                {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
+                  let pageNum;
+                  if (totalPages <= 5) {
+                    pageNum = i + 1;
+                  } else if (currentPage <= 3) {
+                    pageNum = i + 1;
+                  } else if (currentPage >= totalPages - 2) {
+                    pageNum = totalPages - 4 + i;
+                  } else {
+                    pageNum = currentPage - 2 + i;
+                  }
+                  
+                  return (
+                    <button
+                      key={pageNum}
+                      onClick={() => setCurrentPage(pageNum)}
+                      className={`relative inline-flex items-center px-4 py-2 text-sm font-semibold ${
+                        currentPage === pageNum
+                          ? 'z-10 bg-blue-600 text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600'
+                          : 'text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0'
+                      }`}
+                    >
+                      {pageNum}
+                    </button>
+                  );
+                })}
+                
+                <button
+                  onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
+                  disabled={currentPage === totalPages}
+                  className="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  <span className="sr-only">Następna</span>
+                  →
+                </button>
+              </nav>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Empty state */}
       {filteredStations.length === 0 && !loading && (

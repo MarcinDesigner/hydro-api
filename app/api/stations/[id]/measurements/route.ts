@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
+import { IMGWCacheService } from '@/lib/imgw-cache-service';
 
 export async function GET(
   request: NextRequest,
@@ -14,52 +15,77 @@ export async function GET(
     const limit = parseInt(searchParams.get('limit') || '1000'); // domyślnie 1000 pomiarów
     const source = searchParams.get('source'); // opcjonalnie filtruj po źródle
     
-    // Sprawdź czy stacja istnieje
-    const station = await prisma.station.findFirst({
-      where: { stationCode: stationId }
-    });
+    // Funkcja do pobierania danych z bazy (bez cache)
+    const fetchMeasurementsFromDB = async () => {
+      // Sprawdź czy stacja istnieje
+      const station = await prisma.station.findFirst({
+        where: { stationCode: stationId }
+      });
 
-    if (!station) {
-      return NextResponse.json(
-        { 
-          status: 'error',
-          error: 'Station not found',
-          stationId 
-        },
-        { status: 404 }
-      );
-    }
-
-    // Oblicz datę początkową
-    const startDate = new Date();
-    startDate.setDate(startDate.getDate() - days);
-
-    // Pobierz pomiary
-    const whereClause: any = {
-      stationId: station.id,
-      measurementTimestamp: {
-        gte: startDate
+      if (!station) {
+        throw new Error(`Station ${stationId} not found`);
       }
+
+      // Oblicz datę początkową
+      const startDate = new Date();
+      startDate.setDate(startDate.getDate() - days);
+
+      // Pobierz pomiary
+      const whereClause: any = {
+        stationId: station.id,
+        measurementTimestamp: {
+          gte: startDate
+        }
+      };
+
+      if (source) {
+        whereClause.source = source;
+      }
+
+      const measurements = await prisma.measurement.findMany({
+        where: whereClause,
+        orderBy: { measurementTimestamp: 'desc' },
+        take: limit,
+        select: {
+          id: true,
+          measurementTimestamp: true,
+          waterLevel: true,
+          flowRate: true,
+          temperature: true,
+          source: true,
+          createdAt: true
+        }
+      });
+
+      return { station, measurements };
     };
 
-    if (source) {
-      whereClause.source = source;
-    }
-
-    const measurements = await prisma.measurement.findMany({
-      where: whereClause,
-      orderBy: { measurementTimestamp: 'desc' },
-      take: limit,
-      select: {
-        id: true,
-        measurementTimestamp: true,
-        waterLevel: true,
-        flowRate: true,
-        temperature: true,
-        source: true,
-        createdAt: true
+    // Pobierz dane z cache lub bazy danych
+    let station, measurements;
+    try {
+      console.log(`🔍 Fetching measurements for station ${stationId}, days: ${days}, limit: ${limit}`);
+      const result = await IMGWCacheService.getStationMeasurements(
+        stationId,
+        days,
+        limit,
+        fetchMeasurementsFromDB
+      );
+      console.log(`✅ Got measurements for station ${stationId}: ${result.measurements?.length || 0} records`);
+      station = result.station;
+      measurements = result.measurements;
+    } catch (error) {
+      if (error instanceof Error && error.message.includes('not found')) {
+        return NextResponse.json(
+          { 
+            status: 'error',
+            error: 'Station not found',
+            stationId 
+          },
+          { status: 404 }
+        );
       }
-    });
+      throw error; // Re-throw other errors
+    }
 
     // Oblicz statystyki
     const stats = {
@@ -69,25 +95,25 @@ export async function GET(
         to: measurements.length > 0 ? measurements[0]?.measurementTimestamp : null
       },
       waterLevel: (() => {
-        const validMeasurements = measurements.filter(m => m.waterLevel !== null);
+        const validMeasurements = measurements.filter((m: any) => m.waterLevel !== null);
         if (validMeasurements.length === 0) {
           return { min: null, max: null, avg: null };
         }
-        const levels = validMeasurements.map(m => m.waterLevel!);
+        const levels = validMeasurements.map((m: any) => m.waterLevel!);
         return {
           min: Math.min(...levels),
           max: Math.max(...levels),
-          avg: Math.round(levels.reduce((sum, level) => sum + level, 0) / levels.length)
+          avg: Math.round(levels.reduce((sum: number, level: number) => sum + level, 0) / levels.length)
         };
       })(),
-      sources: measurements.reduce((acc: any, m) => {
+      sources: measurements.reduce((acc: any, m: any) => {
         acc[m.source] = (acc[m.source] || 0) + 1;
         return acc;
       }, {})
     };
 
     // Przygotuj dane do wykresu (grupuj po godzinach dla lepszej czytelności)
-    const chartData = measurements.map(measurement => ({
+    const chartData = measurements.map((measurement: any) => ({
       timestamp: measurement.measurementTimestamp,
       waterLevel: measurement.waterLevel,
       flowRate: measurement.flowRate,

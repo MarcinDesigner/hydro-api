@@ -9,11 +9,36 @@
       "maxDuration": 30
     }
   },
+  "crons": [
+    {
+      "path": "/api/cache/auto-refresh",
+      "schedule": "0 * * * *"
+    }
+  ],
   "env": {
     "IMGW_API_URL": "https://danepubliczne.imgw.pl/api/data",
     "IMGW_API_ENDPOINT": "hydro",
     "SYNC_INTERVAL_MINUTES": "60",
     "PRISMA_CLIENT_ENGINE_TYPE": "binary",
     "PGOPTIONS": "--client-min-messages=warning"
-  }
+  },
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Authorization"
+        }
+      ]
+    }
+  ]
 } 

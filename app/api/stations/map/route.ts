@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server';
-import { SmartDataService } from '@/lib/smart-data-service';
+import { IMGWCacheService } from '@/lib/imgw-cache-service';
 
 export async function GET() {
   try {
-    const stations = await SmartDataService.getSmartStationsForMap();
+    const stations = await IMGWCacheService.getSmartStationsForMap();
     
     return NextResponse.json({
       status: 'success',

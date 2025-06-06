@@ -1,39 +1,47 @@
 // components/StationCard.tsx
 'use client';
 
+import { useState } from 'react';
 import { StationData } from '@/types/hydro';
 import { MapPin, Droplets, Thermometer, TrendingUp, TrendingDown, Minus, AlertTriangle, Edit } from 'lucide-react';
+import { MiniChart } from './MiniChart';
 
 interface StationCardProps {
   station: StationData;
   onEdit?: (station: StationData) => void;
+  chartDays?: number;
+  showChart?: boolean;
 }
 
-export function StationCard({ station, onEdit }: StationCardProps) {
+export function StationCard({ station, onEdit, chartDays = 7, showChart = true }: StationCardProps) {
+  const [dynamicTrend, setDynamicTrend] = useState<'rising' | 'falling' | 'stable' | null>(null);
   const getTrendIcon = () => {
-    switch (station.trend) {
+    const currentTrend = dynamicTrend || station.trend;
+    switch (currentTrend) {
       case 'rising':
-        return <TrendingUp className="h-4 w-4 text-green-600" />;
+        return <TrendingUp className="h-4 w-4 text-red-600" />; // czerwony - poziom rośnie (zagrożenie)
       case 'falling':
-        return <TrendingDown className="h-4 w-4 text-red-600" />;
+        return <TrendingDown className="h-4 w-4 text-green-600" />; // zielony - poziom spada (bezpieczne)
       default:
         return <Minus className="h-4 w-4 text-blue-600" />;
     }
   };
 
   const getTrendColor = () => {
-    switch (station.trend) {
+    const currentTrend = dynamicTrend || station.trend;
+    switch (currentTrend) {
       case 'rising':
-        return 'text-green-600 bg-green-50';
+        return 'text-red-600 bg-red-50'; // czerwony - poziom rośnie (zagrożenie)
       case 'falling':
-        return 'text-red-600 bg-red-50';
+        return 'text-green-600 bg-green-50'; // zielony - poziom spada (bezpieczne)
       default:
         return 'text-blue-600 bg-blue-50';
     }
   };
 
   const getTrendText = () => {
-    switch (station.trend) {
+    const currentTrend = dynamicTrend || station.trend;
+    switch (currentTrend) {
       case 'rising':
         return 'Rośnie';
       case 'falling':
@@ -187,6 +195,19 @@ export function StationCard({ station, onEdit }: StationCardProps) {
           </div>
         )}
       </div>
+
+      {/* Mini wykres ostatnich dni */}
+      {showChart && (
+        <div className="mb-4">
+          <div className="text-xs text-gray-600 mb-2">Ostatnie {chartDays} dni:</div>
+          <MiniChart 
+            stationId={station.id_stacji} 
+            days={chartDays} 
+            height={50} 
+            onTrendChange={setDynamicTrend}
+          />
+        </div>
+      )}
 
       {/* Warning/Alarm levels */}
       {(station.poziom_ostrzegawczy || station.poziom_alarmowy) && (
