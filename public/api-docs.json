@@ -1,0 +1,9 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Hydro API",
+    "version": "1.0.0",
+    "description": "API dla danych hydrologicznych z IMGW"
+  },
+  "paths": {}
+} 

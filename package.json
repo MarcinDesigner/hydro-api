@@ -1,0 +1,44 @@
+{
+  "name": "hydro-api-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "prisma generate && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postinstall": "prisma generate",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "node prisma/seed.js",
+    "db:import": "psql $DATABASE_URL -f ./prisma/sample_data.sql"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.19.1",
+    "@types/leaflet": "^1.9.18",
+    "axios": "^1.6.8",
+    "clsx": "^2.1.0",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.367.0",
+    "next": "^14.2.0",
+    "node-cron": "^3.0.3",
+    "prisma": "^5.19.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1",
+    "tailwind-merge": "^2.3.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "@types/node": "^20.12.0",
+    "@types/node-cron": "^3.0.11",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.4.0"
+  }
+}

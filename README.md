@@ -227,4 +227,4 @@ MIT License - szczegóły w pliku `LICENSE`
 
 **Ostatnia aktualizacja:** Czerwiec 2025  
 **Wersja:** 1.0.0  
-**Status:** ✅ Produkcyjny 
+**Status:** ✅ Produkcyjny
