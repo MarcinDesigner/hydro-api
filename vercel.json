@@ -1,12 +1,11 @@
 {
   "framework": "nextjs",
-  "buildCommand": "cd hydro-api && npm run build",
-  "devCommand": "cd hydro-api && npm run dev",
-  "installCommand": "cd hydro-api && npm install",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
   "outputDirectory": "hydro-api/.next",
-  "rootDirectory": "hydro-api",
   "functions": {
-    "app/api/**/*.ts": {
+    "hydro-api/app/api/**/*.ts": {
       "maxDuration": 30
     }
   },
