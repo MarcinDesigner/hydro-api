@@ -2,17 +2,20 @@
 
 import { useState, useEffect } from 'react';
 import { HardDrive, RefreshCw, Trash2, Clock, Database, Activity, CheckCircle, AlertCircle } from 'lucide-react';
+import { useSettings } from '../../hooks/useSettings';
+import { useAutoRefresh } from '../../hooks/useAutoRefresh';
 
 interface CacheStats {
   totalStations: number;
   cacheAge: string;
-  cacheStatus: 'fresh' | 'cached' | 'stale';
+  cacheStatus: 'fresh' | 'cached' | 'stale' | 'disabled';
   lastUpdate: string;
   hitRate: number;
   size: string;
 }
 
 export default function CachePage() {
+  const { settings, isCacheEnabled } = useSettings();
   const [cacheStats, setCacheStats] = useState<CacheStats | null>(null);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
@@ -20,10 +23,14 @@ export default function CachePage() {
 
   const fetchCacheStats = async () => {
     try {
+      // Sprawdź czy cache jest włączony w ustawieniach
+      const cacheEnabled = isCacheEnabled();
+      
       const response = await fetch('/api/stations/map', {
-        cache: 'no-cache',
+        cache: cacheEnabled ? 'default' : 'no-cache',
         headers: {
-          'Cache-Control': 'no-cache'
+          'Cache-Control': cacheEnabled ? 'max-age=300' : 'no-cache',
+          'X-Cache-Enabled': cacheEnabled.toString()
         }
       });
       const data = await response.json();
@@ -32,10 +39,10 @@ export default function CachePage() {
         setCacheStats({
           totalStations: data.count,
           cacheAge: data.cacheAge || 'Nieznany',
-          cacheStatus: data.cacheStatus || 'fresh',
+          cacheStatus: cacheEnabled ? (data.cacheStatus || 'fresh') : 'disabled',
           lastUpdate: data.timestamp || new Date().toISOString(),
-          hitRate: Math.random() * 100, // Symulacja hit rate
-          size: `${Math.round(data.count * 2.5)}KB` // Symulacja rozmiaru
+          hitRate: cacheEnabled ? Math.random() * 100 : 0, // Symulacja hit rate
+          size: cacheEnabled ? `${Math.round(data.count * 2.5)}KB` : '0KB'
         });
       }
     } catch (error) {
@@ -88,12 +95,27 @@ export default function CachePage() {
     }
   };
 
+  // Użyj auto-refresh z ustawień
+  const { isActive: autoRefreshActive, interval: refreshInterval } = useAutoRefresh({
+    onRefresh: fetchCacheStats,
+    enabled: true
+  });
+
   useEffect(() => {
     fetchCacheStats();
+  }, []);
+
+  // Nasłuchuj zmian ustawień cache
+  useEffect(() => {
+    const handleCacheSettingsChange = () => {
+      fetchCacheStats();
+    };
+
+    window.addEventListener('cacheSettingsChanged', handleCacheSettingsChange);
     
-    // Auto-refresh co 30 sekund
-    const interval = setInterval(fetchCacheStats, 30000);
-    return () => clearInterval(interval);
+    return () => {
+      window.removeEventListener('cacheSettingsChanged', handleCacheSettingsChange);
+    };
   }, []);
 
   const getStatusColor = (status: string) => {
@@ -101,6 +123,7 @@ export default function CachePage() {
       case 'fresh': return 'text-green-600 bg-green-50';
       case 'cached': return 'text-blue-600 bg-blue-50';
       case 'stale': return 'text-orange-600 bg-orange-50';
+      case 'disabled': return 'text-red-600 bg-red-50';
       default: return 'text-gray-600 bg-gray-50';
     }
   };
@@ -110,6 +133,7 @@ export default function CachePage() {
       case 'fresh': return <CheckCircle className="h-4 w-4" />;
       case 'cached': return <Clock className="h-4 w-4" />;
       case 'stale': return <AlertCircle className="h-4 w-4" />;
+      case 'disabled': return <AlertCircle className="h-4 w-4" />;
       default: return <Database className="h-4 w-4" />;
     }
   };
@@ -218,10 +242,11 @@ export default function CachePage() {
             <span className="text-sm font-medium text-gray-700">Status:</span>
             <div className={`px-3 py-1 rounded-full text-sm font-medium flex items-center gap-2 ${getStatusColor(cacheStats?.cacheStatus || 'unknown')}`}>
               {getStatusIcon(cacheStats?.cacheStatus || 'unknown')}
-              {cacheStats?.cacheStatus === 'fresh' && 'Świeże dane'}
-              {cacheStats?.cacheStatus === 'cached' && 'Dane z cache'}
-              {cacheStats?.cacheStatus === 'stale' && 'Przestarzałe dane'}
-              {!cacheStats?.cacheStatus && 'Nieznany'}
+                             {cacheStats?.cacheStatus === 'fresh' && 'Świeże dane'}
+               {cacheStats?.cacheStatus === 'cached' && 'Dane z cache'}
+               {cacheStats?.cacheStatus === 'stale' && 'Przestarzałe dane'}
+               {cacheStats?.cacheStatus === 'disabled' && 'Cache wyłączony'}
+               {!cacheStats?.cacheStatus && 'Nieznany'}
             </div>
           </div>
           
@@ -234,6 +259,41 @@ export default function CachePage() {
         </div>
       </div>
 
+      {/* Aktualne ustawienia */}
+      <div className="bg-white rounded-lg shadow p-6 mb-6">
+        <h2 className="text-lg font-semibold text-gray-900 mb-4">Aktualne ustawienia</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+            <span className="text-sm font-medium text-gray-700">Cache:</span>
+            <span className={`text-sm font-medium ${settings.cacheEnabled ? 'text-green-600' : 'text-red-600'}`}>
+              {settings.cacheEnabled ? 'Włączony' : 'Wyłączony'}
+            </span>
+          </div>
+          
+          <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+            <span className="text-sm font-medium text-gray-700">Auto-refresh:</span>
+            <span className={`text-sm font-medium ${settings.autoRefresh ? 'text-green-600' : 'text-red-600'}`}>
+              {settings.autoRefresh ? 'Włączony' : 'Wyłączony'}
+            </span>
+          </div>
+          
+          <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+            <span className="text-sm font-medium text-gray-700">Interwał odświeżania:</span>
+            <span className="text-sm font-medium text-gray-900">
+              {settings.refreshInterval} minut
+            </span>
+          </div>
+          
+          <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+            <span className="text-sm font-medium text-gray-700">Status auto-refresh:</span>
+            <span className={`text-sm font-medium ${autoRefreshActive ? 'text-green-600' : 'text-gray-600'}`}>
+              {autoRefreshActive ? 'Aktywny' : 'Nieaktywny'}
+            </span>
+          </div>
+        </div>
+      </div>
+
       {/* Informacje o Cache */}
       <div className="bg-white rounded-lg shadow p-6">
         <h2 className="text-lg font-semibold text-gray-900 mb-4">Informacje o systemie Cache</h2>
@@ -241,12 +301,12 @@ export default function CachePage() {
         <div className="space-y-3 text-sm text-gray-600">
           <div className="flex items-start gap-2">
             <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-            <span>Cache automatycznie odświeża się co 5 minut</span>
+            <span>Cache można włączać/wyłączać w ustawieniach</span>
           </div>
           
           <div className="flex items-start gap-2">
             <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-            <span>Dane są przechowywane przez maksymalnie 1 godzinę</span>
+            <span>Auto-refresh dostosowuje się do ustawień użytkownika</span>
           </div>
           
           <div className="flex items-start gap-2">

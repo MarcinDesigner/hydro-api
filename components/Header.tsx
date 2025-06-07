@@ -6,16 +6,32 @@ import { Bell, Settings, RefreshCw, Activity } from 'lucide-react';
 
 interface SystemStatus {
   status: string;
-  stations_count: number;
-  data_freshness: string;
+  stations_count?: number;
+  data_freshness?: string;
   latest_measurement?: {
     age_minutes: number;
+  };
+  // Dodaj właściwości z faktycznego API response
+  services?: {
+    database?: {
+      status: string;
+      stats?: {
+        total_stations: number;
+        active_stations_24h: number;
+        measurements_today: number;
+      };
+    };
+    imgw_api?: {
+      status: string;
+      stations_available: number;
+    };
   };
 }
 
 export function Header() {
   const [systemStatus, setSystemStatus] = useState<SystemStatus | null>(null);
   const [isRefreshing, setIsRefreshing] = useState(false);
+  const [syncMessage, setSyncMessage] = useState<string>('');
 
   useEffect(() => {
     fetchSystemStatus();
@@ -35,23 +51,76 @@ export function Header() {
 
   const handleManualSync = async () => {
     setIsRefreshing(true);
+    setSyncMessage('');
+    
     try {
-      const response = await fetch('/api/sync', { method: 'POST' });
-      const result = await response.json();
+      // Najpierw spróbuj sync-simple (szybsze, 10 stacji)
+      const response = await fetch('/api/sync-simple', { 
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${process.env.NEXT_PUBLIC_CRON_SECRET_TOKEN || 'hydro-cron-secret-2025'}`
+        },
+        body: JSON.stringify({ source: 'manual' })
+      });
       
-      if (result.status === 'success') {
-        // Refresh status after sync
-        setTimeout(fetchSystemStatus, 2000);
+      if (!response.ok) {
+        // Jeśli sync-simple nie działa, spróbuj sync-dev (bez autoryzacji)
+        console.log('Sync-simple failed, trying sync-dev...');
+        const devResponse = await fetch('/api/sync-dev', { 
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ source: 'manual' })
+        });
+        
+        if (!devResponse.ok) {
+          throw new Error(`HTTP error! status: ${devResponse.status}`);
+        }
+        
+        const devResult = await devResponse.json();
+        setSyncMessage(`✅ Zsynchronizowano ${devResult.stats?.synced_stations || 0} stacji (tryb dev)`);
+      } else {
+        const result = await response.json();
+        
+        if (result.status === 'success') {
+          setSyncMessage(`✅ Zsynchronizowano ${result.stats?.synced_stations || 0} stacji`);
+          // Odśwież status po synchronizacji
+          setTimeout(fetchSystemStatus, 2000);
+        } else {
+          setSyncMessage('⚠️ ' + (result.message || 'Synchronizacja nieudana'));
+        }
       }
     } catch (error) {
       console.error('Error during manual sync:', error);
+      setSyncMessage('❌ Błąd synchronizacji');
+      
+      // Ostatnia próba - użyj health check do weryfikacji
+      try {
+        const healthResponse = await fetch('/api/health');
+        if (healthResponse.ok) {
+          setSyncMessage('⚠️ API działa, ale synchronizacja nie powiodła się');
+        }
+      } catch (healthError) {
+        setSyncMessage('❌ Błąd połączenia z API');
+      }
     } finally {
       setIsRefreshing(false);
+      // Wyczyść wiadomość po 5 sekundach
+      setTimeout(() => setSyncMessage(''), 5000);
     }
   };
 
   const getStatusColor = () => {
     if (!systemStatus) return 'bg-gray-500';
+    
+    // Sprawdź status z nowego formatu API
+    if (systemStatus.services?.imgw_api?.status === 'healthy') {
+      return 'bg-green-500';
+    }
+    
+    // Fallback do starego formatu
     if (systemStatus.status === 'healthy' && systemStatus.data_freshness === 'fresh') {
       return 'bg-green-500';
     }
@@ -61,6 +130,13 @@ export function Header() {
 
   const getStatusText = () => {
     if (!systemStatus) return 'Sprawdzanie...';
+    
+    // Sprawdź nowy format API
+    if (systemStatus.services?.imgw_api?.status === 'healthy') {
+      return 'System działa prawidłowo';
+    }
+    
+    // Fallback do starego formatu
     if (systemStatus.status === 'healthy' && systemStatus.data_freshness === 'fresh') {
       return 'System działa prawidłowo';
     }
@@ -68,6 +144,20 @@ export function Header() {
       return 'Dane nieaktualne';
     }
     return 'Problemy z systemem';
+  };
+
+  const getStationsCount = () => {
+    // Sprawdź różne możliwe lokalizacje liczby stacji
+    if (systemStatus?.services?.imgw_api?.stations_available) {
+      return systemStatus.services.imgw_api.stations_available;
+    }
+    if (systemStatus?.services?.database?.stats?.total_stations) {
+      return systemStatus.services.database.stats.total_stations;
+    }
+    if (systemStatus?.stations_count) {
+      return systemStatus.stations_count;
+    }
+    return 0;
   };
 
   return (
@@ -93,10 +183,17 @@ export function Header() {
               <span className="text-sm text-gray-700">{getStatusText()}</span>
               {systemStatus && (
                 <span className="text-xs text-gray-500">
-                  ({systemStatus.stations_count} stacji)
+                  ({getStationsCount()} stacji)
                 </span>
               )}
             </div>
+
+            {/* Sync message */}
+            {syncMessage && (
+              <div className="text-sm px-3 py-1 bg-blue-50 text-blue-700 rounded-md">
+                {syncMessage}
+              </div>
+            )}
 
             {/* Manual refresh */}
             <button
@@ -105,7 +202,7 @@ export function Header() {
               className="flex items-center space-x-1 px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-md hover:bg-blue-100 transition-colors disabled:opacity-50"
             >
               <RefreshCw className={`h-4 w-4 ${isRefreshing ? 'animate-spin' : ''}`} />
-              <span>Synchronizuj</span>
+              <span>{isRefreshing ? 'Synchronizuję...' : 'Synchronizuj'}</span>
             </button>
 
             {/* Notifications */}
