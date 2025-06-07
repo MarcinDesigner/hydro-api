@@ -25,7 +25,7 @@ const API_ENDPOINTS: APIEndpoint[] = [
   {
     method: 'GET',
     path: '/api/stations',
-    description: 'Pobiera listę wszystkich stacji hydrologicznych z najświeższymi danymi',
+    description: '🔥 REAL-TIME: Pobiera listę wszystkich stacji hydrologicznych z najświeższymi danymi z API IMGW',
     parameters: [
       { name: 'voivodeship', type: 'string', required: false, description: 'Filtruj po województwie' },
       { name: 'river', type: 'string', required: false, description: 'Filtruj po nazwie rzeki' },
@@ -38,23 +38,22 @@ const API_ENDPOINTS: APIEndpoint[] = [
         status: 'success',
         stations: [
           {
-            id_stacji: '152210010',
-            stacja: 'Warszawa',
-            rzeka: 'Wisła',
-            województwo: 'mazowieckie',
-            stan_wody: '162',
-            stan_wody_data_pomiaru: '2025-06-05 16:10:00',
-            poziom_ostrzegawczy: '500',
-            poziom_alarmowy: '600',
-            status_alarmowy: 'normal',
+            id: '152210010',
+            name: 'Warszawa',
+            river: 'Wisła',
+            voivodeship: 'mazowieckie',
+            waterLevel: 162,
+            waterLevelDate: '2025-06-07T16:10:00.000Z',
             longitude: 21.0122,
-            latitude: 52.2297
+            latitude: 52.2297,
+            alarmStatus: 'normal',
+            source: 'hydro'
           }
         ],
         count: 1
       }
     },
-    category: 'Stacje'
+    category: 'Stacje Real-time'
   },
   {
     method: 'GET',
@@ -68,83 +67,21 @@ const API_ENDPOINTS: APIEndpoint[] = [
       response: {
         status: 'success',
         station: {
-          stationCode: '152210010',
-          stationName: 'Warszawa',
-          riverName: 'Wisła',
+          id: '152210010',
+          name: 'Warszawa',
+          river: 'Wisła',
           voivodeship: 'mazowieckie',
-          warningLevel: 500,
-          alarmLevel: 600
+          waterLevel: 162,
+          alarmStatus: 'normal'
         }
       }
     },
-    category: 'Stacje'
+    category: 'Stacje Real-time'
   },
-  {
-    method: 'PUT',
-    path: '/api/stations/{id}',
-    description: 'Aktualizuje dane stacji (nazwa rzeki, poziomy alarmowe)',
-    parameters: [
-      { name: 'id', type: 'string', required: true, description: 'Kod stacji' }
-    ],
-    example: {
-      request: '/api/stations/152210010',
-      response: {
-        status: 'success',
-        message: 'Station updated successfully',
-        station: {
-          stationCode: '152210010',
-          riverName: 'Wisła Warszawska',
-          warningLevel: 520,
-          alarmLevel: 620
-        }
-      }
-    },
-    category: 'Stacje'
-  },
-  // Pomiary historyczne
-  {
-    method: 'GET',
-    path: '/api/stations/{id}/measurements',
-    description: 'Pobiera historyczne pomiary dla stacji (do wykresów)',
-    parameters: [
-      { name: 'id', type: 'string', required: true, description: 'Kod stacji' },
-      { name: 'days', type: 'number', required: false, description: 'Liczba dni wstecz', default: '30' },
-      { name: 'limit', type: 'number', required: false, description: 'Maksymalna liczba pomiarów', default: '1000' },
-      { name: 'source', type: 'string', required: false, description: 'Źródło danych: hydro lub hydro2' }
-    ],
-    example: {
-      request: '/api/stations/152210010/measurements?days=7&limit=100',
-      response: {
-        status: 'success',
-        data: {
-          station: {
-            id: '152210010',
-            name: 'Warszawa',
-            river: 'Wisła'
-          },
-          measurements: [
-            {
-              timestamp: '2025-06-05T16:10:00.000Z',
-              waterLevel: 162,
-              flowRate: null,
-              temperature: null,
-              source: 'hydro'
-            }
-          ],
-          stats: {
-            totalMeasurements: 1,
-            waterLevel: { min: 162, max: 162, avg: 162 }
-          }
-        }
-      }
-    },
-    category: 'Pomiary'
-  },
-  // Mapa
   {
     method: 'GET',
     path: '/api/stations/map',
-    description: 'Pobiera stacje z współrzędnymi geograficznymi do wyświetlenia na mapie',
+    description: '🗺️ Pobiera stacje z współrzędnymi geograficznymi do wyświetlenia na mapie',
     example: {
       request: '/api/stations/map',
       response: {
@@ -164,27 +101,6 @@ const API_ENDPOINTS: APIEndpoint[] = [
     },
     category: 'Mapa'
   },
-  // Synchronizacja
-  {
-    method: 'POST',
-    path: '/api/sync',
-    description: 'Synchronizuje dane z API IMGW do bazy danych (używane przez cron job)',
-    example: {
-      request: '/api/sync',
-      response: {
-        status: 'success',
-        message: 'Data synchronized successfully with database',
-        stats: {
-          total_stations: 866,
-          synced_stations: 10,
-          synced_measurements: 15,
-          errors: 0
-        }
-      }
-    },
-    category: 'Synchronizacja'
-  },
-  // Widoczność stacji
   {
     method: 'GET',
     path: '/api/stations/visibility',
@@ -194,9 +110,9 @@ const API_ENDPOINTS: APIEndpoint[] = [
       response: {
         status: 'success',
         data: {
-          totalStations: 866,
-          visibleStations: 860,
-          hiddenStations: 6
+          totalStations: 871,
+          visibleStations: 870,
+          hiddenStations: 1
         }
       }
     },
@@ -219,24 +135,155 @@ const API_ENDPOINTS: APIEndpoint[] = [
     },
     category: 'Zarządzanie'
   },
-  // Statystyki
+  // Pomiary historyczne
+  {
+    method: 'GET',
+    path: '/api/stations/{id}/measurements',
+    description: '📊 HISTORYCZNE: Pobiera historyczne pomiary dla stacji z bazy danych (do wykresów)',
+    parameters: [
+      { name: 'id', type: 'string', required: true, description: 'Kod stacji' },
+      { name: 'days', type: 'number', required: false, description: 'Liczba dni wstecz', default: '30' },
+      { name: 'limit', type: 'number', required: false, description: 'Maksymalna liczba pomiarów', default: '1000' },
+      { name: 'source', type: 'string', required: false, description: 'Źródło danych: hydro lub hydro2' }
+    ],
+    example: {
+      request: '/api/stations/152210010/measurements?days=7&limit=100',
+      response: {
+        status: 'success',
+        data: {
+          station: {
+            id: '152210010',
+            name: 'Warszawa',
+            river: 'Wisła'
+          },
+          measurements: [
+            {
+              timestamp: '2025-06-07T16:10:00.000Z',
+              waterLevel: 162,
+              flowRate: null,
+              temperature: null,
+              source: 'hydro'
+            }
+          ],
+          stats: {
+            totalMeasurements: 1,
+            waterLevel: { min: 162, max: 162, avg: 162 }
+          }
+        }
+      }
+    },
+    category: 'Pomiary Historyczne'
+  },
+  {
+    method: 'GET',
+    path: '/api/database/recent-measurements',
+    description: '📊 Pobiera najnowsze pomiary z bazy danych PostgreSQL',
+    parameters: [
+      { name: 'limit', type: 'number', required: false, description: 'Maksymalna liczba pomiarów', default: '20' },
+      { name: 'hours', type: 'number', required: false, description: 'Liczba godzin wstecz', default: '24' }
+    ],
+    example: {
+      request: '/api/database/recent-measurements?limit=5&hours=24',
+      response: {
+        success: true,
+        data: {
+          measurements: [
+            {
+              id: 'cmbmnuemi000r60zytcbqx2bk',
+              stationId: 'cmbjktql5023yikij35jbkzt5',
+              measurementTimestamp: '2025-06-07T19:20:00.000Z',
+              waterLevel: 188,
+              flowRate: 2.42,
+              source: 'hydro2',
+              station: {
+                stationName: 'PLOSKI',
+                riverName: 'Narew',
+                voivodeship: 'podlaskie'
+              }
+            }
+          ],
+          stats: {
+            totalFound: 5,
+            todayCount: 1264,
+            last24hCount: 1264
+          }
+        }
+      }
+    },
+    category: 'Pomiary Historyczne'
+  },
+  // Statystyki Real-time
   {
     method: 'GET',
     path: '/api/stats',
-    description: 'Pobiera statystyki systemu i stacji',
+    description: '🔥 REAL-TIME: Pobiera aktualne statystyki systemu bezpośrednio z API IMGW',
     example: {
       request: '/api/stats',
       response: {
         status: 'success',
         stats: {
-          totalStations: 866,
-          activeStations: 560,
-          measurementsToday: 551,
-          lastSync: '2025-06-05T16:10:00.000Z'
+          total_stations: 871,
+          fresh_data_stations: 833,
+          stale_data_stations: 38,
+          from_hydro: 559,
+          from_hydro2: 312,
+          rivers_count: 156,
+          top_rivers: [
+            { name: 'Wisła', stations: 38 },
+            { name: 'Warta', stations: 18 }
+          ],
+          alarm_stats: {
+            normal: 750,
+            warning: 85,
+            alarm: 12,
+            unknown: 24
+          },
+          data_freshness: {
+            fresh_percentage: 96,
+            stale_percentage: 4,
+            coordinates_coverage: 89
+          }
+        },
+        timestamp: '2025-06-07T20:30:00.000Z'
+      }
+    },
+    category: 'Statystyki Real-time'
+  },
+  {
+    method: 'GET',
+    path: '/api/stats/detailed',
+    description: '📊 HISTORYCZNE: Pobiera szczegółowe statystyki z bazy danych PostgreSQL',
+    parameters: [
+      { name: 'period', type: 'string', required: false, description: 'Okres: 7d, 30d, 90d, 1y', default: '30d' },
+      { name: 'river', type: 'string', required: false, description: 'Filtruj po rzece', default: 'all' }
+    ],
+    example: {
+      request: '/api/stats/detailed?period=7d&river=all',
+      response: {
+        status: 'success',
+        data: {
+          overview: {
+            totalMeasurements: 50000,
+            activeStations: 842,
+            averageWaterLevel: 255.57,
+            globalMinLevel: 1,
+            globalMaxLevel: 70400,
+            globalRange: 70399
+          },
+          riverStats: [
+            {
+              river: 'Wisła',
+              stationCount: 38,
+              averageLevel: 600.29,
+              trend: 'stable'
+            }
+          ],
+          monthlyStats: [],
+          stationStats: []
         }
       }
     },
-    category: 'Statystyki'
+    category: 'Statystyki Historyczne'
   },
   // Alerty
   {
@@ -255,7 +302,7 @@ const API_ENDPOINTS: APIEndpoint[] = [
             alertType: 'warning',
             waterLevel: 520,
             threshold: 500,
-            timestamp: '2025-06-05T16:10:00.000Z'
+            timestamp: '2025-06-07T16:10:00.000Z'
           }
         ],
         count: 1
@@ -263,116 +310,11 @@ const API_ENDPOINTS: APIEndpoint[] = [
     },
     category: 'Alerty'
   },
-  {
-    method: 'POST',
-    path: '/api/alerts',
-    description: 'Tworzy nowy alert hydrologiczny',
-    parameters: [
-      { name: 'stationCode', type: 'string', required: true, description: 'Kod stacji' },
-      { name: 'alertType', type: 'string', required: true, description: 'Typ alertu: warning lub alarm' },
-      { name: 'message', type: 'string', required: false, description: 'Dodatkowa wiadomość' }
-    ],
-    example: {
-      request: '/api/alerts',
-      response: {
-        status: 'success',
-        message: 'Alert created successfully',
-        alertId: 123
-      }
-    },
-    category: 'Alerty'
-  },
-  // Konfiguracja
-  {
-    method: 'GET',
-    path: '/api/config',
-    description: 'Pobiera konfigurację systemu',
-    example: {
-      request: '/api/config',
-      response: {
-        status: 'success',
-        config: {
-          syncInterval: 3600,
-          alertThresholds: {
-            warning: 0.8,
-            alarm: 0.9
-          },
-          enabledFeatures: ['alerts', 'sync', 'maps']
-        }
-      }
-    },
-    category: 'Konfiguracja'
-  },
-  {
-    method: 'POST',
-    path: '/api/config',
-    description: 'Aktualizuje konfigurację systemu',
-    parameters: [
-      { name: 'syncInterval', type: 'number', required: false, description: 'Interwał synchronizacji w sekundach' },
-      { name: 'alertThresholds', type: 'object', required: false, description: 'Progi alertów' }
-    ],
-    example: {
-      request: '/api/config',
-      response: {
-        status: 'success',
-        message: 'Configuration updated successfully'
-      }
-    },
-    category: 'Konfiguracja'
-  },
-  // Współrzędne
-  {
-    method: 'GET',
-    path: '/api/coordinates/stats',
-    description: 'Pobiera statystyki współrzędnych geograficznych stacji',
-    example: {
-      request: '/api/coordinates/stats',
-      response: {
-        status: 'success',
-        stats: {
-          totalStations: 866,
-          withCoordinates: 850,
-          withoutCoordinates: 16,
-          coverage: 98.2
-        }
-      }
-    },
-    category: 'Współrzędne'
-  },
-  {
-    method: 'POST',
-    path: '/api/coordinates/initialize',
-    description: 'Inicjalizuje współrzędne geograficzne dla wszystkich stacji',
-    example: {
-      request: '/api/coordinates/initialize',
-      response: {
-        status: 'success',
-        message: 'Coordinates initialization started',
-        processed: 866,
-        updated: 16
-      }
-    },
-    category: 'Współrzędne'
-  },
-  {
-    method: 'POST',
-    path: '/api/coordinates/refresh',
-    description: 'Odświeża współrzędne geograficzne dla stacji bez współrzędnych',
-    example: {
-      request: '/api/coordinates/refresh',
-      response: {
-        status: 'success',
-        message: 'Coordinates refresh completed',
-        updated: 5
-      }
-    },
-    category: 'Współrzędne'
-  },
   // System
   {
     method: 'GET',
     path: '/api/health',
-    description: 'Sprawdza status systemu, bazy danych i API IMGW',
+    description: '⚡ Sprawdza status systemu, bazy danych i API IMGW',
     example: {
       request: '/api/health',
       response: {
@@ -381,14 +323,14 @@ const API_ENDPOINTS: APIEndpoint[] = [
           database: {
             status: 'healthy',
             stats: {
-              total_stations: 560,
-              active_stations_24h: 533,
-              measurements_today: 551
+              total_stations: 871,
+              active_stations_24h: 833,
+              measurements_today: 1264
             }
           },
           imgw_api: {
             status: 'healthy',
-            stations_available: 609
+            stations_available: 871
           }
         }
       }
@@ -405,17 +347,27 @@ const API_ENDPOINTS: APIEndpoint[] = [
         env_vars: {
           NODE_ENV: 'development',
           CRON_SECRET_TOKEN: 'SET'
-        }
+        },
+        timestamp: '2025-06-07T21:31:45.878Z'
       }
     },
     category: 'System'
   }
 ];
 
-const CATEGORIES = ['Stacje', 'Pomiary', 'Mapa', 'Synchronizacja', 'Zarządzanie', 'Statystyki', 'Alerty', 'Konfiguracja', 'Współrzędne', 'System'];
+const CATEGORIES = [
+  'Stacje Real-time', 
+  'Pomiary Historyczne', 
+  'Mapa', 
+  'Statystyki Real-time', 
+  'Statystyki Historyczne',
+  'Zarządzanie', 
+  'Alerty', 
+  'System'
+];
 
 export default function APIDocsPage() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('Stacje');
+  const [selectedCategory, setSelectedCategory] = useState<string>('Statystyki Real-time');
   const [baseUrl, setBaseUrl] = useState<string>('');
 
   useEffect(() => {
@@ -447,10 +399,10 @@ export default function APIDocsPage() {
             <h3 className="font-semibold text-blue-900 mb-2">🌐 Base URL</h3>
             <div className="flex items-center space-x-2">
               <code className="bg-blue-100 px-3 py-1 rounded text-blue-800 font-mono">
-                {baseUrl || 'http://localhost:3000'}
+                {baseUrl || 'https://hydro-main.vercel.app'}
               </code>
               <button
-                onClick={() => copyToClipboard(baseUrl || 'http://localhost:3000')}
+                onClick={() => copyToClipboard(baseUrl || 'https://hydro-main.vercel.app')}
                 className="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm"
               >
                 Kopiuj
@@ -465,16 +417,16 @@ export default function APIDocsPage() {
               <div className="text-sm text-gray-600">Endpointów API</div>
             </div>
             <div className="bg-white p-4 rounded-lg shadow">
-              <div className="text-2xl font-bold text-green-600">866</div>
+              <div className="text-2xl font-bold text-green-600">871</div>
               <div className="text-sm text-gray-600">Stacji dostępnych</div>
             </div>
             <div className="bg-white p-4 rounded-lg shadow">
-              <div className="text-2xl font-bold text-purple-600">7+ lat</div>
-              <div className="text-sm text-gray-600">Danych historycznych</div>
+              <div className="text-2xl font-bold text-purple-600">Real-time</div>
+              <div className="text-sm text-gray-600">Dane z API IMGW</div>
             </div>
             <div className="bg-white p-4 rounded-lg shadow">
-              <div className="text-2xl font-bold text-orange-600">Co godzinę</div>
-              <div className="text-sm text-gray-600">Aktualizacja danych</div>
+              <div className="text-2xl font-bold text-orange-600">PostgreSQL</div>
+              <div className="text-sm text-gray-600">Baza historyczna</div>
             </div>
           </div>
         </div>
@@ -634,37 +586,27 @@ export default function APIDocsPage() {
           <h3 className="font-semibold text-gray-900 mb-4">🚀 Przewodnik szybkiego startu</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-medium text-gray-900 mb-3">1. Pobierz listę stacji</h4>
+              <h4 className="font-medium text-gray-900 mb-3">1. 🔥 Pobierz statystyki real-time</h4>
               <div className="bg-gray-900 rounded p-3 mb-3">
                 <code className="text-green-300 text-sm">
-                  curl "{baseUrl}/api/stations?limit=10"
+                  curl "{baseUrl}/api/stats"
                 </code>
               </div>
-              <p className="text-sm text-gray-600">Pobiera 10 pierwszych stacji z najświeższymi danymi</p>
+              <p className="text-sm text-gray-600">Pobiera aktualne statystyki 871 stacji z API IMGW</p>
             </div>
             
             <div>
-              <h4 className="font-medium text-gray-900 mb-3">2. Sprawdź dane historyczne</h4>
+              <h4 className="font-medium text-gray-900 mb-3">2. 📊 Sprawdź dane historyczne</h4>
               <div className="bg-gray-900 rounded p-3 mb-3">
                 <code className="text-green-300 text-sm">
-                  curl "{baseUrl}/api/stations/152210010/measurements?days=7"
+                  curl "{baseUrl}/api/stats/detailed?period=7d"
                 </code>
               </div>
-              <p className="text-sm text-gray-600">Pobiera pomiary z ostatnich 7 dni dla stacji Warszawa</p>
+              <p className="text-sm text-gray-600">Pobiera statystyki z ostatnich 7 dni z bazy PostgreSQL</p>
             </div>
             
             <div>
-              <h4 className="font-medium text-gray-900 mb-3">3. Sprawdź status systemu</h4>
-              <div className="bg-gray-900 rounded p-3 mb-3">
-                <code className="text-green-300 text-sm">
-                  curl "{baseUrl}/api/health"
-                </code>
-              </div>
-              <p className="text-sm text-gray-600">Sprawdza czy system i baza danych działają poprawnie</p>
-            </div>
-            
-            <div>
-              <h4 className="font-medium text-gray-900 mb-3">4. Pobierz stacje na mapę</h4>
+              <h4 className="font-medium text-gray-900 mb-3">3. 🗺️ Pobierz stacje na mapę</h4>
               <div className="bg-gray-900 rounded p-3 mb-3">
                 <code className="text-green-300 text-sm">
                   curl "{baseUrl}/api/stations/map"
@@ -672,59 +614,146 @@ export default function APIDocsPage() {
               </div>
               <p className="text-sm text-gray-600">Pobiera wszystkie stacje z współrzędnymi do wyświetlenia na mapie</p>
             </div>
+            
+            <div>
+              <h4 className="font-medium text-gray-900 mb-3">4. ⚡ Sprawdź status systemu</h4>
+              <div className="bg-gray-900 rounded p-3 mb-3">
+                <code className="text-green-300 text-sm">
+                  curl "{baseUrl}/api/health"
+                </code>
+              </div>
+              <p className="text-sm text-gray-600">Sprawdza czy system i baza danych działają poprawnie</p>
+            </div>
           </div>
         </div>
 
         {/* Use Cases */}
         <div className="mt-8 bg-white rounded-lg shadow p-6">
-          <h3 className="font-semibold text-gray-900 mb-4">💡 Przykłady zastosowań</h3>
+          <h3 className="font-semibold text-gray-900 mb-4">💡 Przypadki użycia API Real-time</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-medium text-gray-900 mb-2">📈 Monitoring poziomu wody</h4>
+              <h4 className="font-medium text-gray-900 mb-2">🔥 Dashboardy w czasie rzeczywistym</h4>
               <p className="text-sm text-gray-600 mb-3">
-                Pobieraj dane w czasie rzeczywistym i twórz wykresy poziomu wody dla wybranych stacji.
+                Twórz dashboardy z aktualnymi danymi z 871 stacji hydrologicznych. Idealne do monitoringu operacyjnego.
               </p>
               <div className="bg-gray-50 rounded p-2">
                 <code className="text-xs text-gray-700">
-                  GET /api/stations?fresh=true&voivodeship=mazowieckie
+                  GET /api/stats → 871 stacji real-time<br/>
+                  GET /api/stations/map → Mapa interaktywna
                 </code>
               </div>
             </div>
             
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-medium text-gray-900 mb-2">🚨 System alertów</h4>
+              <h4 className="font-medium text-gray-900 mb-2">🚨 Systemy ostrzegania</h4>
               <p className="text-sm text-gray-600 mb-3">
-                Monitoruj przekroczenia poziomów ostrzegawczych i alarmowych.
+                Monitoruj przekroczenia poziomów alarmowych i twórz systemy wczesnego ostrzegania przed powodziami.
               </p>
               <div className="bg-gray-50 rounded p-2">
                 <code className="text-xs text-gray-700">
-                  GET /api/alerts<br/>
-                  POST /api/alerts
+                  GET /api/stats → alarm_stats: {`{alarm: 12, warning: 85}`}<br/>
+                  GET /api/alerts → Aktywne alerty
                 </code>
               </div>
             </div>
             
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-medium text-gray-900 mb-2">🗺️ Aplikacje mapowe</h4>
+              <h4 className="font-medium text-gray-900 mb-2">📱 Aplikacje mobilne</h4>
               <p className="text-sm text-gray-600 mb-3">
-                Integruj dane hydrologiczne z mapami interaktywnymi.
+                Integruj dane hydrologiczne z aplikacjami mobilnymi dla żeglarzy, kajakarzy i służb ratunkowych.
               </p>
               <div className="bg-gray-50 rounded p-2">
                 <code className="text-xs text-gray-700">
-                  GET /api/stations/map
+                  GET /api/stations?voivodeship=mazowieckie<br/>
+                  GET /api/stations/map → Współrzędne GPS
                 </code>
               </div>
             </div>
             
+            <div className="border border-gray-200 rounded-lg p-4">
+              <h4 className="font-medium text-gray-900 mb-2">🔗 Integracje IoT</h4>
+              <p className="text-sm text-gray-600 mb-3">
+                Połącz z systemami IoT, Home Assistant, MQTT. Automatyzuj działania na podstawie poziomów wody.
+              </p>
+              <div className="bg-gray-50 rounded p-2">
+                <code className="text-xs text-gray-700">
+                  setInterval(() =&gt; fetch('/api/stats'), 300000)<br/>
+                  MQTT publish hydro/alarms
+                </code>
+              </div>
+            </div>
+
             <div className="border border-gray-200 rounded-lg p-4">
               <h4 className="font-medium text-gray-900 mb-2">📊 Analizy historyczne</h4>
               <p className="text-sm text-gray-600 mb-3">
-                Analizuj trendy i wzorce w danych hydrologicznych z ostatnich lat.
+                Analizuj trendy i wzorce w danych hydrologicznych z bazy PostgreSQL. Porównuj okresy i rzeki.
               </p>
               <div className="bg-gray-50 rounded p-2">
                 <code className="text-xs text-gray-700">
-                  GET /api/stations/[id]/measurements?days=365
+                  GET /api/stats/detailed?period=1y&river=Wisła<br/>
+                  GET /api/database/recent-measurements
                 </code>
+              </div>
+            </div>
+            
+            <div className="border border-gray-200 rounded-lg p-4">
+              <h4 className="font-medium text-gray-900 mb-2">🤖 Automatyzacja</h4>
+              <p className="text-sm text-gray-600 mb-3">
+                Automatyzuj pobieranie danych, twórz raporty, integruj z systemami zewnętrznymi.
+              </p>
+              <div className="bg-gray-50 rounded p-2">
+                <code className="text-xs text-gray-700">
+                  setInterval(() =&gt; fetch('/api/stats'), 60000)<br/>
+                  Webhook notifications
+                </code>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Architecture Overview */}
+        <div className="mt-8 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg shadow p-6">
+          <h3 className="font-semibold text-gray-900 mb-4">🏗️ Architektura systemu</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                <span className="text-2xl">🔥</span>
+              </div>
+              <h4 className="font-medium text-gray-900 mb-2">Real-time API</h4>
+              <p className="text-sm text-gray-600">
+                Dane pobierane bezpośrednio z API IMGW. Zawsze aktualne, cache 5 minut.
+              </p>
+              <div className="mt-2 text-xs text-blue-600 font-mono">
+                /api/stats<br/>
+                /api/stations
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                <span className="text-2xl">📊</span>
+              </div>
+              <h4 className="font-medium text-gray-900 mb-2">Baza PostgreSQL</h4>
+              <p className="text-sm text-gray-600">
+                Dane historyczne, statystyki, trendy. Synchronizacja automatyczna.
+              </p>
+              <div className="mt-2 text-xs text-purple-600 font-mono">
+                /api/stats/detailed<br/>
+                /api/database/*
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                <span className="text-2xl">⚡</span>
+              </div>
+              <h4 className="font-medium text-gray-900 mb-2">System Alertów</h4>
+              <p className="text-sm text-gray-600">
+                Monitorowanie poziomów alarmowych i ostrzeżeń hydrologicznych.
+              </p>
+              <div className="mt-2 text-xs text-green-600 font-mono">
+                /api/alerts<br/>
+                /api/health
               </div>
             </div>
           </div>
@@ -735,25 +764,25 @@ export default function APIDocsPage() {
           <h3 className="font-semibold text-gray-900 mb-4">🔗 Przydatne linki</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <a
-              href="/stations"
+              href="/stats"
               className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50"
             >
-              <h4 className="font-medium text-gray-900">📊 Dashboard Stacji</h4>
-              <p className="text-sm text-gray-600 mt-1">Zarządzaj stacjami i edytuj dane</p>
+              <h4 className="font-medium text-gray-900">📊 Statystyki Historyczne</h4>
+              <p className="text-sm text-gray-600 mt-1">Analizy danych z bazy PostgreSQL</p>
             </a>
             <a
               href="/map"
               className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50"
             >
               <h4 className="font-medium text-gray-900">🗺️ Mapa Stacji</h4>
-              <p className="text-sm text-gray-600 mt-1">Interaktywna mapa wszystkich stacji</p>
+              <p className="text-sm text-gray-600 mt-1">Interaktywna mapa 871 stacji</p>
             </a>
             <a
-              href="/stations/visibility"
+              href="/stations"
               className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50"
             >
-              <h4 className="font-medium text-gray-900">👁️ Zarządzanie Widocznością</h4>
-              <p className="text-sm text-gray-600 mt-1">Ukrywaj/pokazuj stacje w API</p>
+              <h4 className="font-medium text-gray-900">🔥 Dashboard Real-time</h4>
+              <p className="text-sm text-gray-600 mt-1">Aktualne dane z API IMGW</p>
             </a>
           </div>
         </div>
