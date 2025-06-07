@@ -5,7 +5,7 @@
  * Uruchom co minutę: * * * * * /usr/bin/php /path/to/cron-batch.php
  */
 
-$url = 'https://hydro-api-ygjs.vercel.app/api/sync-batch';
+$url = 'https://hydro-main.vercel.app/api/sync-fast';
 $token = 'hydro-cron-secret-2025';
 
 // Przygotuj dane POST
@@ -28,7 +28,7 @@ curl_setopt_array($ch, [
     CURLOPT_POSTFIELDS => $data,
     CURLOPT_HTTPHEADER => $headers,
     CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_TIMEOUT => 30,
+    CURLOPT_TIMEOUT => 15,
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_SSL_VERIFYPEER => true,
     CURLOPT_USERAGENT => 'Hydro-API-Batch-Cron/1.0'

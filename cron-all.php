@@ -5,7 +5,7 @@
  * Uruchom co godzinę: 0 * * * * /usr/bin/php /path/to/cron-all.php
  */
 
-$url = 'https://hydro-api-ygjs.vercel.app/api/sync-all';
+$url = 'https://hydro-main.vercel.app/api/sync-all';
 $token = 'hydro-cron-secret-2025';
 
 // Przygotuj dane POST

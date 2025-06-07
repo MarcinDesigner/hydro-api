@@ -10,7 +10,7 @@
  */
 
 // Konfiguracja
-$VERCEL_API_URL = 'https://hydro-api-ygjs.vercel.app/api/sync';
+$VERCEL_API_URL = 'https://hydro-main.vercel.app/api/sync-batch';
 $CRON_SECRET_TOKEN = 'hydro-cron-secret-2025';
 $LOG_FILE = __DIR__ . '/cron-sync.log';
 
@@ -41,7 +41,7 @@ function syncHydroData() {
             'method' => 'POST',
             'header' => implode("\r\n", $headers),
             'content' => json_encode(['source' => 'cron']),
-            'timeout' => 300
+            'timeout' => 120
         ]
     ]);
     
@@ -82,7 +82,7 @@ function syncHydroData() {
 function checkHealth() {
     global $VERCEL_API_URL;
     
-    $healthUrl = str_replace('/sync', '/health', $VERCEL_API_URL);
+    $healthUrl = str_replace('/sync-batch', '/health', $VERCEL_API_URL);
     $response = @file_get_contents($healthUrl);
     
     if ($response === false) {

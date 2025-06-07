@@ -3,6 +3,7 @@
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
+
   "env": {
     "IMGW_API_URL": "https://danepubliczne.imgw.pl/api/data",
     "IMGW_API_ENDPOINT": "hydro",
