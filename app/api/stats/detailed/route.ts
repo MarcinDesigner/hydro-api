@@ -288,9 +288,9 @@ export async function GET(request: NextRequest) {
       if (stationWaterLevels.length === 0) {
         return {
           stationId,
-          stationName: station.stationName,
-          river: station.riverName || 'Nieznana',
-          voivodeship: station.voivodeship || 'Nieznane',
+          stationName: station?.stationName || 'Nieznana',
+          river: station?.riverName || 'Nieznana',
+          voivodeship: station?.voivodeship || 'Nieznane',
           averageLevel: 0,
           minLevel: 0,
           maxLevel: 0,
@@ -323,9 +323,9 @@ export async function GET(request: NextRequest) {
 
       return {
         stationId,
-        stationName: station.stationName,
-        river: station.riverName || 'Nieznana',
-        voivodeship: station.voivodeship || 'Nieznane',
+        stationName: station?.stationName || 'Nieznana',
+        river: station?.riverName || 'Nieznana',
+        voivodeship: station?.voivodeship || 'Nieznane',
         averageLevel: stationAverage,
         minLevel: stationMin,
         maxLevel: stationMax,
