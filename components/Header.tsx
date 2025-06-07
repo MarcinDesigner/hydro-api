@@ -54,38 +54,58 @@ export function Header() {
     setSyncMessage('');
     
     try {
-      // Najpierw spróbuj sync-simple (szybsze, 10 stacji)
-      const response = await fetch('/api/sync-simple', { 
+      // Użyj sync-smart który pobiera dane z OBUAPI (hydro + hydro2)
+      const response = await fetch('/api/sync-smart', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.NEXT_PUBLIC_CRON_SECRET_TOKEN || 'hydro-cron-secret-2025'}`
+          'Authorization': `Bearer ${process.env.NEXT_PUBLIC_CRON_SECRET_TOKEN || 'hydro-cron-secret-2025'}`,
+          'X-Dev-Mode': 'true' // Pozwól na synchronizację bez tokenu w dev
         },
         body: JSON.stringify({ source: 'manual' })
       });
       
       if (!response.ok) {
-        // Jeśli sync-simple nie działa, spróbuj sync-dev (bez autoryzacji)
-        console.log('Sync-simple failed, trying sync-dev...');
-        const devResponse = await fetch('/api/sync-dev', { 
+        // Jeśli sync-smart nie działa, spróbuj sync-all
+        console.log('Sync-smart failed, trying sync-all...');
+        const allResponse = await fetch('/api/sync-all', { 
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${process.env.NEXT_PUBLIC_CRON_SECRET_TOKEN || 'hydro-cron-secret-2025'}`
           },
           body: JSON.stringify({ source: 'manual' })
         });
         
-        if (!devResponse.ok) {
-          throw new Error(`HTTP error! status: ${devResponse.status}`);
+        if (!allResponse.ok) {
+          // Ostatnia próba - sync-dev
+          const devResponse = await fetch('/api/sync-dev', { 
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ source: 'manual' })
+          });
+          
+          if (!devResponse.ok) {
+            throw new Error(`HTTP error! status: ${devResponse.status}`);
+          }
+          
+          const devResult = await devResponse.json();
+          setSyncMessage(`✅ Zsynchronizowano ${devResult.stats?.synced_stations || 0} stacji (tryb dev)`);
+        } else {
+          const allResult = await allResponse.json();
+          setSyncMessage(`✅ Zsynchronizowano ${allResult.stats?.total_stations || 0} stacji (wszystkie źródła)`);
         }
-        
-        const devResult = await devResponse.json();
-        setSyncMessage(`✅ Zsynchronizowano ${devResult.stats?.synced_stations || 0} stacji (tryb dev)`);
       } else {
         const result = await response.json();
         
         if (result.status === 'success') {
-          setSyncMessage(`✅ Zsynchronizowano ${result.stats?.synced_stations || 0} stacji`);
+          const totalStations = result.stats?.total_stations || 0;
+          const fromHydro = result.stats?.data_sources?.from_hydro || 0;
+          const fromHydro2 = result.stats?.data_sources?.from_hydro2 || 0;
+          
+          setSyncMessage(`✅ Zsynchronizowano ${totalStations} stacji (Hydro: ${fromHydro}, Hydro2: ${fromHydro2})`);
           // Odśwież status po synchronizacji
           setTimeout(fetchSystemStatus, 2000);
         } else {
