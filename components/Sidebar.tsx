@@ -10,7 +10,8 @@ import {
   Settings, 
   FileText,
   Map,
-  AlertTriangle
+  AlertTriangle,
+  HardDrive
 } from 'lucide-react';
 
 const navigation = [
@@ -21,6 +22,7 @@ const navigation = [
   { name: 'Alerty', href: '/alerts', icon: AlertTriangle },
   { name: 'API Docs', href: '/api-docs', icon: FileText },
   { name: 'Baza danych', href: '/database', icon: Database },
+  { name: 'Cache', href: '/cache', icon: HardDrive },
   { name: 'Ustawienia', href: '/settings', icon: Settings },
 ];
 
